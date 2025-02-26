@@ -1,0 +1,53 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "id",
+            "id": "column_4",
+            "label": "id",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "c_libelle",
+            "id": "column_2",
+            "label": "c_libelle",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "c_commune_id",
+            "id": "column_3",
+            "label": "c_commune_id",
+            "sortable": "false",
+            "datalist_type": "column"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Liste des arrondissements",
+    "id": "liste_arrondissements",
+    "binder": {
+        "className": "org.melkart.plugin.JdbcDatalistBinder",
+        "properties": {
+            "querySource": "sql",
+            "pagination": "",
+            "debug": "",
+            "sql": "SELECT id, c_commune_id, c_libelle\n\tFROM app_fd_arrondissement\n",
+            "primaryKey": "id"
+        }
+    },
+    "actions": [],
+    "order": ""
+}

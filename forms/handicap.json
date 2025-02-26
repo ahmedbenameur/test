@@ -1,0 +1,607 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Voir",
+                                    "value": "a",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Entendre",
+                                    "value": "b",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Marcher",
+                                    "value": "b",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Se concentrer",
+                                    "value": "c",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "S\u2019habiller",
+                                    "value": "d",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Communiquer",
+                                    "value": "f",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HP1. <\/strong> A-t-il des difficultés à",
+                            "id": "hp1",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1A.Voir",
+                            "id": "hp1a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1B.Entendre",
+                            "id": "hp1b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1C.Marcher",
+                            "id": "hp1c",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1D.Se concentrer",
+                            "id": "hp1d",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1E.S\u2019habiller",
+                            "id": "hp1e",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non Applicable",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HP1F.Communiquer",
+                            "id": "hp1f",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HP3. <\/strong> Est-il aveugle?",
+                            "id": "hp3",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "NSP",
+                                    "value": "8",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HP4. <\/strong>A-t-il la capacité de faire un travail physique?",
+                            "id": "hp4",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_parent",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Handicap",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "identind",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_enquete",
+                            "value": "#requestParam.id_enquete#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "valide_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "cree_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_creaction",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_modification",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "num_version",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "note",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "QE-Handicap",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "handicap",
+        "postProcessor": {
+            "className": "org.joget.service.data_service.DataUtil",
+            "properties": {"tableList": [{
+                "table_source": "public.app_fd_handicap",
+                "uniqueColumn": "id",
+                "table_destination": "rsu.app_fd_handicap"
+            }]}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "handicap"
+    }
+}

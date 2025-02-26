@@ -1,0 +1,82 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.FileUpload",
+                    "properties": {
+                        "resizeMethod": "",
+                        "permissionType": "",
+                        "padding": "",
+                        "permissionHidden": "",
+                        "maxSizeMsg": "File size limit exceeded",
+                        "resizeWidth": "",
+                        "multiple": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "maxSize": "",
+                        "label": "Recepissé",
+                        "resizeQuality": "0.8",
+                        "removeFile": "",
+                        "readonly": "true",
+                        "attachment": "",
+                        "size": "",
+                        "fileTypeMsg": "Invalid file type",
+                        "id": "recepisse",
+                        "resizeHeight": "",
+                        "fileType": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field2",
+                        "value": "<style>\r\ndiv#section-pdf {\r\n    position: relative;\r\n}\r\n \r\ndiv#section-pdf .form-column:nth-child(3) {\r\n    position: sticky;\r\n    box-sizing: border-box;\r\n    top: 0px;\r\n    transform: translateY(0px);\r\n    position: sticky;\r\n    transition: all 0s ease 0s;\r\n}\r\n<\/style>\r\n\r\n<div id=\"pdfPreview\" style=\"\">\r\n    <iframe src=\"\" id=\"myiframe\" width=\"100%\" height=\"1000rem\" style=\"border: none;\">\r\n        <p>Your browser does not support PDFs. <a href=\"pdfFilePath\">Download the PDF<\/a>.<\/p>\r\n    <\/iframe>\r\n<\/div>\r\n\r\n<script type=\"text/javascript\">\r\n\r\n$( document ).ready(function() {\r\n        window.scrollTo(0, 0);\r\n});\r\n\r\n$(function(){\r\n    window.scrollTo(0, 0);\r\n    // Set default URL to display when the page loads\r\n    var defaultPdfUrl = $(\"ul.form-fileupload-value > li > a\").attr(\"href\");\r\n    \r\n    if (defaultPdfUrl) {\r\n        $(\"#myiframe\").attr(\"src\", defaultPdfUrl);\r\n    }\r\n\r\n    // Handle click event on the list of files\r\n    $(\"ul.form-fileupload-value > li > a\").click(function(e){\r\n        var url = $(this).attr(\"href\");\r\n        console.log(\"ok click\");\r\n\r\n        if (url != undefined) {\r\n            e.preventDefault();\r\n            console.log(url);\r\n            var iframe = document.getElementById(\"myiframe\");\r\n            iframe.src = url;\r\n        } else {\r\n            var iframe = document.getElementById(\"myiframe\");\r\n            iframe.src = \"\";\r\n        }\r\n    });\r\n});\r\n\r\nfunction showPopupActionDialog(url) {\r\n        window.scrollTo(0, 0);\r\n}\r\n<\/script>\r\n"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section-pdf_1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Visualisation recepisse",
+        "description": "",
+        "id": "visualistaion_recepisse",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "d_preinscription"
+    }
+}

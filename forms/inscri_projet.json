@@ -1,0 +1,389 @@
+{
+    "elements": [{
+        "elements": [
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.IdGeneratorField",
+                        "properties": {
+                            "hidden": "",
+                            "format": "Projet-??????",
+                            "workflowVariable": "",
+                            "envVariable": "counter",
+                            "isDistributedGeneration": "",
+                            "label": "Identifiant du projet",
+                            "id": "id_projet"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Nom du projet en langue de travail locale",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nom_projet_locale",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Acronyme du projet",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "acronyme_projet",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Année de démarrage du projet",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "annee_demarrage_projet",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Année de fin du projet",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "annee_fin_projet",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Description du projet",
+                            "id": "desc_projet",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Nombre de composantes ou de volets",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nbre_composantes_volets",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            },
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.FileUpload",
+                        "properties": {
+                            "resizeMethod": "",
+                            "permissionType": "",
+                            "padding": "",
+                            "maxSizeMsg": "Limite de taille de fichier dépassée",
+                            "resizeWidth": "",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "maxSize": "",
+                            "label": "Accord de financement",
+                            "resizeQuality": "0.8",
+                            "removeFile": "",
+                            "readonly": "",
+                            "attachment": "true",
+                            "size": "",
+                            "fileTypeMsg": "type de fichier invalide",
+                            "id": "accord_financement",
+                            "resizeHeight": "",
+                            "fileType": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.FileUpload",
+                        "properties": {
+                            "resizeMethod": "",
+                            "permissionType": "",
+                            "padding": "",
+                            "maxSizeMsg": "Limite de taille de fichier dépassée",
+                            "resizeWidth": "",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "maxSize": "",
+                            "label": "Documents de projet/PAD",
+                            "resizeQuality": "0.8",
+                            "removeFile": "",
+                            "readonly": "",
+                            "attachment": "true",
+                            "size": "",
+                            "fileTypeMsg": "type de fichier invalide",
+                            "id": "doc_projet_pad",
+                            "resizeHeight": "",
+                            "fileType": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "---",
+                                    "value": "",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "National",
+                                    "value": "National",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Financement budget national externe",
+                                    "value": "Financement budget national externe",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Bailleurs",
+                            "id": "bailleurs",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Noms des bailleurs",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "noms_bailleurs",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "---",
+                                    "value": "",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "National",
+                                    "value": "National",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "regional",
+                                    "value": "Regional",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Envergue géographique",
+                            "id": "envergue_geo",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "---",
+                                    "value": "",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Urbain",
+                                    "value": "Urbain",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Rural",
+                                    "value": "Rural",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Milieux d'intervention",
+                            "id": "milieux_intervention",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field14",
+                            "value": "<script>\ndocument.addEventListener('DOMContentLoaded', function () {\n    // Select the input field by its ID\n    const inputField = document.getElementById('annee_demarrage_projet');\n    if (inputField) {\n        inputField.addEventListener('input', function () {\n            // Allow only digits and ensure a max length of 4\n            this.value = this.value.replace(/\\D/g, '').slice(0, 4);\n        });\n    } else {\n        console.error('Input field with ID \"annee_demarrage_projet\" not found.');\n    }\n});\n<\/script>"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            }
+        ],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Fiche de création de projet",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Inscription du projet",
+        "description": "",
+        "id": "inscri_projet",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "insc_projet"
+    }
+}

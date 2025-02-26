@@ -1,0 +1,1876 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="rsu" Name="RSU" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor/>
+        <Created/>
+    </PackageHeader>
+    <Script Type="text/javascript"/>
+    <Participants>
+        <Participant Id="membre_du_menage_membre_gups" Name="Membre du menage/Membre Gups">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process3_participant8" Name="Responsable ANPS">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process3_participant2" Name="Equipe d'enquete">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process4_participant9" Name="Membres d'équipe d'enquete">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="verif_enquete_participant2" Name="Chef d'équipe d'enquête">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="responsableanps" Name="ResponsableANPS">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="equipe_enquete_zone_risque" Name="Equipe d'enquete">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="equipe_d_enquete" Name="Equipe d'enquete">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process7_participant2" Name="Chef d'équipe d'enquete">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="gups_commission" Name="gups">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="president_de_la_commission" Name="président de la commission">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process7_participant15" Name="Participant">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process8_participant16" Name="Participant">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="r_anps_chef_cellue" Name="Responsable ANPS &amp; Chef cellule">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="agent_cellule" Name="agent_cellule&amp;ANPS">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="process9_participant16" Name="Participant">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="responsable_gups" Name="responsable_gups">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="responsable_anps" Name="Responsable_ANPS">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="agent_service_contentieux" Name="agent service contentieux">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+        <Participant Id="responsable_service" Name="responsable service contentieux">
+            <ParticipantType Type="ROLE"/>
+        </Participant>
+    </Participants>
+    <Applications>
+        <Application Id="default_application"/>
+    </Applications>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="demande_preinscription" Name="Demande Preinscription">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="npi_existe" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="gups_member" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="current_user" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="pid" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="consentement" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="npi" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="name" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="birthday" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="place" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="prenom" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="saisir_demande" Name="Saisir et soumettre Demande">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="645.9750366210938,70.12500305175782"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="generer_recepisse" Name="Generer recepisse">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1071.9317626953125,158.80682086523439"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="verif_npi">
+                    <Route/>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="313,190.0000030517578"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="auth" Name="authentification">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="153.35000610351562,49.437503051757815"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool2" Name="Tool 2">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1288.9630126953125,154.27557086523439"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route2">
+                    <Route/>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition_end_route2"/>
+                                    <TransitionRef Id="transition9"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="905.9658813476562,96.56248187597657"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="redirection" Name="redirection">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1091.960205078125,13.451703067382823"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="updatevaluesanip" Name="updateValuesAnip">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>membre_du_menage_membre_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="membre_du_menage_membre_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="454,78.2"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="verif_npi" Id="transition10" To="updatevaluesanip">
+                    <Condition Type="CONDITION">npi_existe !== 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;npi_existe&quot;,&quot;operator&quot;:&quot;!==&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="saisir_demande" Id="transition8" To="route2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="generer_recepisse" Id="transition7" To="tool2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition9" To="generer_recepisse">
+                    <Condition Type="CONDITION">consentement === 'oui'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;consentement&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;oui&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition_end_route2" To="redirection">
+                    <Condition Type="CONDITION">consentement === 'non'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;consentement&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;non&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="updatevaluesanip" Id="transition12" To="saisir_demande">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="auth" Id="transition11" To="verif_npi">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="membre_du_menage_membre_gups"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=membre_du_menage_membre_gups,CONNECTING_ACTIVITY_ID=verif_npi,X_OFFSET=324.9750061035156,Y_OFFSET=63.97500152587891,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=membre_du_menage_membre_gups,CONNECTING_ACTIVITY_ID=auth,X_OFFSET=68.98750305175781,Y_OFFSET=71.075,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=membre_du_menage_membre_gups,CONNECTING_ACTIVITY_ID=tool2,X_OFFSET=1312.96875,Y_OFFSET=83.8352174716797,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=membre_du_menage_membre_gups,CONNECTING_ACTIVITY_ID=redirection,X_OFFSET=1312.9544677734375,Y_OFFSET=32.05965900000001,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="designer_equip_enquete" Name="Planifier enquête PMT">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ids" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="assignees" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="compagne_enquete" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="designer_demandes" Name="designer demandes">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process3_participant8</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process3_participant8"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="297,29"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="designer_equipe" Name="Désigner une équipe d'enquête">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process3_participant8</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process3_participant8"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="461,22.98750228881836"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email_and_notification" Name="email and notification">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process3_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process3_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="676.9791851043701,36.979176254882816"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="notification" Name="Dossiers à enquêter #variable.compagne_enquete#">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process3_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process3_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="833.9757061004639,37.04861900390625"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool2" Name="Tool 2">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process3_participant8</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process3_participant8"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="672,29.062499237060546"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="designer_demandes" Id="transition1" To="designer_equipe">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="email_and_notification" Id="transition3" To="notification">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="designer_equipe" Id="transition4" To="tool2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool2" Id="transition5" To="email_and_notification">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="process3_participant8;process3_participant2"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process3_participant8,CONNECTING_ACTIVITY_ID=designer_demandes,X_OFFSET=81,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process3_participant2,CONNECTING_ACTIVITY_ID=notification,X_OFFSET=1032.9862041473389,Y_OFFSET=59.982655258789066,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="verif_enquete" Name="Verification enquete">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="menage_existe" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="coherence" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="processID" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="lancer_enquete" Name="Lancer l'enquête">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process4_participant9</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="155,16.287501525878906"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route1">
+                    <Route/>
+                    <Performer>process4_participant9</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition15"/>
+                                    <TransitionRef Id="transition21"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="494,22.100001525878906"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool2" Name="Calcul Score et attribution catégorie">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="600.9801025390625,180.41192340429689"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="verifier_coherence" Name="Vérifier Cohérence">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="873,24.44999999999999"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route2">
+                    <Route/>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition13"/>
+                                    <TransitionRef Id="transition19"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="630,31.599993896484364"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="menage_inexistant" Name="Menage inexistant">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process4_participant9</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="716.96875,5.984375"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="rectifier_enquete" Name="Rectifier l'enquête">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process4_participant9</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="471.9886169433594,135.96590518530274"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool4" Name="update menage_existe">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process4_participant9</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="317,14.737502288818359"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5" Name="Catégorisation et mise à jour des demandes">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="894.9857788085938,180.62499713476564"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool6" Name="Enquete à corriger">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="476,22.599993896484364"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool7" Name="Enquete à verifier">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process4_participant9</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process4_participant9"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="870.9801025390625,131.19318484838868"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool8" Name="Enquete verifiée">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>verif_enquete_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="verif_enquete_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="725,25.5625"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="route2" Id="transition13" To="tool2">
+                    <Condition Type="CONDITION">coherence === 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;coherence&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition15" To="menage_inexistant">
+                    <Condition Type="CONDITION">menage_existe !== 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;menage_existe&quot;,&quot;operator&quot;:&quot;!==&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="lancer_enquete" Id="transition14" To="tool4">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool4" Id="transition16" To="route1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool2" Id="transition17" To="tool5">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition19" To="tool6">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool6" Id="transition20" To="rectifier_enquete">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition21" To="tool7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="rectifier_enquete" Id="transition22" To="tool7">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool7" Id="transition23" To="verifier_coherence">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="verifier_coherence" Id="transition24" To="tool8">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool8" Id="transition25" To="route2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="process4_participant9;verif_enquete_participant2"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process4_participant9,CONNECTING_ACTIVITY_ID=lancer_enquete,X_OFFSET=98.99306297302246,Y_OFFSET=35.98958274902344,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process4_participant9,CONNECTING_ACTIVITY_ID=menage_inexistant,X_OFFSET=933,Y_OFFSET=28.3875,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=verif_enquete_participant2,CONNECTING_ACTIVITY_ID=tool5,X_OFFSET=1082.9970703125,Y_OFFSET=207.49999713476564,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="planif_enquete_zar" Name="Planifier enquete ZAR">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="assignees" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="compagne_enquete" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="zar" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="processID" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="designer_enqueteurs" Name="Designer enquêteurs">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>responsableanps</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsableanps"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="561.9744262695312,24.985795016845703"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="email" Name="Email">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>equipe_enquete_zone_risque</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="equipe_enquete_zone_risque"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="534,9.000003051757801"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="Notification" Name="Zones à risque à enquêter-#variable.compagne_enquete#">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>equipe_enquete_zone_risque</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="equipe_enquete_zone_risque"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="704,11.000003051757801"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool2" Name="Setup assignees">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>responsableanps</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsableanps"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="750.9801025390625,42.96875094946289"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="setup" Name="setup">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>responsableanps</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsableanps"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="258.9630432128906,27.059659"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="email" Id="transition5" To="Notification">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="designer_enqueteurs" Id="transition3" To="tool2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool2" Id="transition4" To="email">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="setup" Id="transition7" To="designer_enqueteurs">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="responsableanps;equipe_enquete_zone_risque"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=responsableanps,CONNECTING_ACTIVITY_ID=setup,X_OFFSET=75,Y_OFFSET=46,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=equipe_enquete_zone_risque,CONNECTING_ACTIVITY_ID=Notification,X_OFFSET=948,Y_OFFSET=33.0000030517578,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="verif_enquete_zar" Name="Vérification enquête ZAR">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="coherence" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="verifier_enquete_zar" Name="Vérifier Enquête ZAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process7_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="541,45.987506103515614"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route1">
+                    <Route/>
+                    <Performer>process7_participant2</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition5"/>
+                                    <TransitionRef Id="transition8"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="250,54"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool1" Name="Calcul de score">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process7_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="229.97158813476562,153.25283526953126"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="lancer_enquete_pmt" Name="Lancer enquête ZAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>equipe_d_enquete</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="equipe_d_enquete"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="204,19.984375"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="rectifier_enquete_zar" Name="Rectifier enquête ZAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>equipe_d_enquete</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="equipe_d_enquete"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="219,148"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool2" Name="check route">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process7_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="365,47.1875030517578"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool3" Name="Tool 3">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>equipe_d_enquete</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="equipe_d_enquete"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="549,35.0125"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool4" Name="Tool 4">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process7_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="39,32"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool5" Name="Tool 5">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process7_participant2</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="546.9744262695312,135.72442340429689"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="route1" Id="transition5" To="tool1">
+                    <Condition Type="CONDITION">coherence === 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;coherence&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition8" To="tool4">
+                    <Condition Type="CONDITION">coherence !== 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;coherence&quot;,&quot;operator&quot;:&quot;!==&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="verifier_enquete_zar" Id="transition6" To="tool2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool2" Id="transition10" To="route1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="lancer_enquete_pmt" Id="transition7" To="tool3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool3" Id="transition11" To="verifier_enquete_zar">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="rectifier_enquete_zar" Id="transition9" To="tool3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool4" Id="transition12" To="rectifier_enquete_zar">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool1" Id="transition_end_tool1" To="tool5">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="equipe_d_enquete;process7_participant2"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process7_participant2,CONNECTING_ACTIVITY_ID=tool5,X_OFFSET=779.9857788085938,Y_OFFSET=124.27557086523439,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=equipe_d_enquete,CONNECTING_ACTIVITY_ID=lancer_enquete_pmt,X_OFFSET=49,Y_OFFSET=41,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="validation_communitaire" Name="Validation communitaire">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="president" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="processID" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="date_com" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="adresse" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="departement" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="commune" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="quorum" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="reportee" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="id_commission_reportee" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="validated_report" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="planification_de_la_commission" Name="Planification de la commission">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>gups_commission</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="760.9658813476562,37.9545450168457"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="invitation_membre_commission" Name="invitation membre commission">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gups_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1084.9715576171875,117.98294925268554"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="lancement_de_la_commission" Name="Lancement de la commission">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="572.96875,206.97442340429689"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="generation_pv_commission" Name="generation pv commission">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="902.98291015625,203.9914674716797"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="signee_le_pv_de_la_commission" Name="Signer le PV de la commission">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1089.9857177734375,49.98580646093751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="setup" Name="setUp">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gups_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="202,30"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="valider_dossier" Name="valider_dossier">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gups_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1087.98291015625,22.997159"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="update_dossier_commission" Name="update dossier commission">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="725.9942626953125,206.97443866308595"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="update_status" Name="update_status">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1105.9942626953125,199.54545306738282"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="presence_commission" Name="presence commission">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="94.97158813476562,37.5426149326172"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="set_variable_quorum" Name="set variable quorum">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="97.96874237060547,197.5000123935547"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route1">
+                    <Route/>
+                    <Performer>president_de_la_commission</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition13"/>
+                                    <TransitionRef Id="transition14"/>
+                                    <TransitionRef Id="transition18"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="383.96875,214.515625"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="lancement_nv_commission" Name="lancement_nv_commission">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>president_de_la_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="president_de_la_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="698.991455078125,69.54543780859376"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="reporte" Name="reporte ?">
+                    <Route/>
+                    <Performer>gups_commission</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition15"/>
+                                    <TransitionRef Id="transition16"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="401.97442626953125,38.053975101074215"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="insert_dossier_commission" Name="insert_dossier_commission_reportee">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>gups_commission</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="gups_commission"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="173.99147033691406,132.07386111791993"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="planification_de_la_commission" Id="transition2" To="valider_dossier">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="invitation_membre_commission" Id="transition3" To="presence_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="lancement_de_la_commission" Id="transition4" To="update_dossier_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="generation_pv_commission" Id="transition5" To="update_status">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="setup" Id="transition7" To="reporte">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="valider_dossier" Id="transition8" To="invitation_membre_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="update_dossier_commission" Id="transition9" To="generation_pv_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="update_status" Id="transition10" To="signee_le_pv_de_la_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="presence_commission" Id="transition11" To="set_variable_quorum">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="set_variable_quorum" Id="transition12" To="route1">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition13" To="lancement_de_la_commission">
+                    <Condition Type="CONDITION">quorum === 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;quorum&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition14" To="presence_commission">
+                    <Condition Type="CONDITION">quorum === 'false' &amp;&amp; validated_report === ''</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;quorum&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;false&quot;},{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;validated_report&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="reporte" Id="transition15" To="planification_de_la_commission">
+                    <Condition Type="CONDITION">reportee !== 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;reportee&quot;,&quot;operator&quot;:&quot;!==&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="reporte" Id="transition16" To="insert_dossier_commission">
+                    <Condition Type="CONDITION">reportee === 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;reportee&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="insert_dossier_commission" Id="transition17" To="planification_de_la_commission">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route1" Id="transition18" To="lancement_nv_commission">
+                    <Condition Type="CONDITION">quorum === 'false' &amp;&amp; validated_report === 'true'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;quorum&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;false&quot;},{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;validated_report&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;true&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="gups_commission;president_de_la_commission"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=gups_commission,CONNECTING_ACTIVITY_ID=setup,X_OFFSET=94,Y_OFFSET=52,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=president_de_la_commission,CONNECTING_ACTIVITY_ID=signee_le_pv_de_la_commission,X_OFFSET=1308.991455078125,Y_OFFSET=73.97727679785157,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=president_de_la_commission,CONNECTING_ACTIVITY_ID=lancement_nv_commission,X_OFFSET=934.9715576171875,Y_OFFSET=94.65908526953126,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="process7" Name="Test plugin">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="tool1" Name="Tool 1">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process7_participant15</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process7_participant15"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="286,45.2"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="process7_participant15"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process7_participant15,CONNECTING_ACTIVITY_ID=tool1,X_OFFSET=75,Y_OFFSET=46,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process7_participant15,CONNECTING_ACTIVITY_ID=tool1,X_OFFSET=551,Y_OFFSET=71.8624984741211,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="demande_reclamation" Name="demande de réclamation">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="npi" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="npi_existe" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nom" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="prenom" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="type" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="categorie" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tel" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="delai" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="gravite" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="evaluation_users" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="cat1" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="cat2" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="decision_finale" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="decision_agent" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="validation_chef_agent" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="agent_traitement" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="FormInterm" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="recordId" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="demande_reclamation" Name="Demande de réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process8_participant16</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process8_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="331.9460144042969,156.0227289157715"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="evaluer_reclamation" Name="Evaluation de la réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition6"/>
+                                    <TransitionRef Id="transition8"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="504.928955078125,72.99717425878907"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="traitement_reclamation" Name="Traitement de la réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>agent_cellule</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent_cellule"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="953.9630126953125,28.42330646093751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validaation_de_la_reclamation" Name="validation de la réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="682.96875,164.03408526953126"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="affected_users" Name="affected_users">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="80.92329406738281,41.42045306738282"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="generate_recipisse" Name="generate_recipisse">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="66.9460220336914,143.48009967382814"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="coupon_de_reclamation" Name="Coupon de la réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process8_participant16</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process8_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="616.9885864257812,109.04828738745117"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="tool3" Name="mise a jour des status enquete">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="802.8692626953125,75.36932086523439"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="decision_reclamation" Name="Décision de la réclamation">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>process8_participant16</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process8_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1094.953125,179.0625"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="type_maj" Name="type MAJ ?">
+                    <Route/>
+                    <Performer>agent_cellule</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition12"/>
+                                    <TransitionRef Id="transition13"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent_cellule"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="65.98011016845703,32.85513019140626"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="setupenqinterm" Name="setUpEnqInterm">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>agent_cellule</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent_cellule"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="376.9886169433594,99.87218951757814"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="miseAjourDossier" Name="miseAjourDossier?">
+                    <Route/>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition_end_miseAjourDossier"/>
+                                    <TransitionRef Id="transition15"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1017.9970703125,86.46307086523439"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="miseajourenq" Name="miseAjourEnq">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>r_anps_chef_cellue</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="r_anps_chef_cellue"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1130.9942626953125,184.44602679785157"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="getrecordid" Name="getRecordId">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process8_participant16</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process8_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="172.98294067382812,13.082386966308594"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="traitement_reclamation" Id="transition3" To="validaation_de_la_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="demande_reclamation" Id="transition4" To="affected_users">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="affected_users" Id="transition5" To="evaluer_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="evaluer_reclamation" Id="transition6" To="generate_recipisse">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="generate_recipisse" Id="transition7" To="type_maj">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="evaluer_reclamation" Id="transition8" To="coupon_de_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validaation_de_la_reclamation" Id="transition_end_validaation_de_la_reclamation" To="tool3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="type_maj" Id="transition12" To="traitement_reclamation">
+                    <Condition Type="CONDITION">type !== 'demande _maj'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;!==&quot;,&quot;value&quot;:&quot;demande _maj&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="type_maj" Id="transition13" To="setupenqinterm">
+                    <Condition Type="CONDITION">type === 'demande _maj'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;type&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;demande _maj&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="setupenqinterm" Id="transition14" To="traitement_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="tool3" Id="transition_end_tool3" To="miseAjourDossier">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="miseAjourDossier" Id="transition15" To="miseajourenq">
+                    <Condition Type="CONDITION">decision_finale === 'Mettre à jour le dossier' || decision_finale === 'Passer à une validation communautaire'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;decision_finale&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;Mettre à jour le dossier&quot;},{&quot;join&quot;:&quot;||&quot;,&quot;variable&quot;:&quot;decision_finale&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;Passer à une validation communautaire&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="getrecordid" Id="transition18" To="demande_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="miseAjourDossier" Id="transition_end_miseAjourDossier" To="decision_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="miseajourenq" Id="transition_end_miseajourenq" To="decision_reclamation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="process8_participant16;r_anps_chef_cellue;agent_cellule"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process8_participant16,CONNECTING_ACTIVITY_ID=getrecordid,X_OFFSET=75,Y_OFFSET=34.98579465921783,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process8_participant16,CONNECTING_ACTIVITY_ID=coupon_de_reclamation,X_OFFSET=659.9715576171875,Y_OFFSET=48.21022891577148,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process8_participant16,CONNECTING_ACTIVITY_ID=decision_reclamation,X_OFFSET=1370.015625,Y_OFFSET=202.21875,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+        <WorkflowProcess Id="demade_de_radiation" Name="demande de radiation">
+            <ProcessHeader DurationUnit="h"/>
+            <DataFields>
+                <DataField Id="status" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="requester" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="agent_traitant" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="decision_radiation_agent" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="periode_radiation_agent" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="validation_radiation_responsable" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="processID" IsArray="FALSE">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+                <Activity Id="check_requester" Name="check requester">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process9_participant16</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process9_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="196.94601440429688,25.042614932617187"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="requester" Name="requester ?">
+                    <Route/>
+                    <Performer>process9_participant16</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="transition3"/>
+                                    <TransitionRef Id="transition4"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process9_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="695.9658813476562,70.01419925268554"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validation_responsable_gups" Name="validation responsable GUPS">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>responsable_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="69.97158813476562,57.4289674716797"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validation_responsqble_anps" Name="validation responsqble ANPS">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>responsable_anps</Performer>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_anps"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="412.9829406738281,47.47158526953126"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route2" Name="status">
+                    <Route/>
+                    <Performer>responsable_gups</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_gups"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="267.9403381347656,130.11364459570314"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="route3" Name="status">
+                    <Route/>
+                    <Performer>responsable_anps</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_anps"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="739.9431762695312,76.07955646093751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validation_agent_service" Name="validation agent service contentieux">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>agent_service_contentieux</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="agent_service_contentieux"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="260.9942932128906,43.12496661718751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="validation_responsable_service" Name="validation responsable service contentieux">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>responsable_service</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_service"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="268.9630432128906,60.45455646093751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="set_radiation" Name="set_radiation">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>responsable_service</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="responsable_service"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="536.9885864257812,92.64205646093751"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="update_activityprocessid" Name="update activityProcessID">
+                    <Implementation>
+                        <Tool Id="default_application"/>
+                    </Implementation>
+                    <Performer>process9_participant16</Performer>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="process9_participant16"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="397.9403381347656,14.06250094946289"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="check_requester" Id="transition2" To="update_activityprocessid">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="requester" Id="transition3" To="validation_responsable_gups">
+                    <Condition Type="CONDITION">requester === 'other'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;requester&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;other&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="requester" Id="transition4" To="validation_responsqble_anps">
+                    <Condition Type="CONDITION">requester === 'anps'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;requester&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;anps&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validation_responsable_gups" Id="transition5" To="route2">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route2" Id="transition6" To="validation_responsqble_anps">
+                    <Condition Type="CONDITION">status === 'valider'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;valider&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validation_responsqble_anps" Id="transition8" To="route3">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="route3" Id="transition9" To="validation_agent_service">
+                    <Condition Type="CONDITION">status === 'valider'</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                        <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;valider&quot;}]"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validation_agent_service" Id="transition11" To="validation_responsable_service">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="validation_responsable_service" Id="transition12" To="set_radiation">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="update_activityprocessid" Id="transition14" To="requester">
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="process9_participant16;responsable_gups;responsable_anps;agent_service_contentieux;responsable_service"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=process9_participant16,CONNECTING_ACTIVITY_ID=check_requester,X_OFFSET=75,Y_OFFSET=46,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=responsable_gups,CONNECTING_ACTIVITY_ID=route2,X_OFFSET=432.9829406738281,Y_OFFSET=143.12499713476564,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=agent_service_contentieux,CONNECTING_ACTIVITY_ID=route3,X_OFFSET=895.9942626953125,Y_OFFSET=-100.85226726953124,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=responsable_service,CONNECTING_ACTIVITY_ID=set_radiation,X_OFFSET=758.991455078125,Y_OFFSET=116.46304034765626,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

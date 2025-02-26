@@ -1,0 +1,150 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [{
+        "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+        "id": "rowAction_0",
+        "properties": {
+            "hrefColumn": "",
+            "hrefParam": "",
+            "rules": [{
+                "field": "statut_enquete",
+                "join": "AND",
+                "value": "A vérifier",
+                "operator": "LIKE"
+            }],
+            "label": "Accéder au questionnaire ",
+            "href": "enquete_pmt?embed=true",
+            "confirmation": "",
+            "link-css-display-type": "btn btn-sm btn-primary",
+            "datalist_type": "row_action",
+            "target": "_self",
+            "header_label": ""
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi",
+            "id": "column_1",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "id_enquete",
+            "id": "column_0",
+            "label": "ID enquête",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "statut_enquete",
+            "id": "column_2",
+            "label": "Statut de l'enquête",
+            "sortable": "false"
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "dateCreated",
+    "description": "",
+    "filters": [
+        {
+            "hidden": "",
+            "name": "npi",
+            "id": "filter_2",
+            "label": "NPI",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-8060228-fn_npi"
+        },
+        {
+            "hidden": "",
+            "name": "id_enquete",
+            "id": "filter_0",
+            "label": "ID enquête",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-8060228-fn_id_enquete"
+        },
+        {
+            "hidden": "",
+            "name": "statut_enquete",
+            "id": "filter_1",
+            "label": "Statut de l'enquête",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-8060228-fn_statut_enquete"
+        }
+    ],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "true",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "Liste des ménages à enquêter",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "liste_personnes_aenqueter",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "liste_menages_a_enqueter",
+            "extraCondition": ""
+        }
+    },
+    "actions": [],
+    "order": "2"
+}

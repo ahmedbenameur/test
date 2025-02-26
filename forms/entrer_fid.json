@@ -1,0 +1,129 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.TextField",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "maxlength": "10",
+                        "validator": {
+                            "className": "org.joget.marketplace.MultiFormValidator",
+                            "properties": {
+                                "thirdValidator": {
+                                    "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                    "properties": {
+                                        "decoration": "",
+                                        "script": "import org.joget.commons.util.LogUtil;\r\nimport java.net.HttpURLConnection;\r\nimport java.net.URL;\r\nimport java.io.OutputStream;\r\nimport java.io.InputStream;\r\nimport java.io.BufferedReader;\r\nimport java.io.InputStreamReader;\r\nimport javax.xml.parsers.DocumentBuilder;\r\nimport javax.xml.parsers.DocumentBuilderFactory;\r\nimport org.w3c.dom.Document;\r\nimport javax.xml.xpath.XPath;\r\nimport javax.xml.xpath.XPathConstants;\r\nimport javax.xml.xpath.XPathExpression;\r\nimport javax.xml.xpath.XPathFactory;\r\n\r\nimport org.joget.workflow.model.service.*;\r\nimport java.lang.Exception;\r\nimport org.joget.commons.util.LogUtil;\r\n \r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppService;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.workflow.model.WorkflowAssignment;\r\nimport java.util.Arrays;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.service.FormUtil;\r\n\r\nimport org.joget.workflow.model.service.*;\r\n\r\nimport java.time.LocalDateTime;\r\nimport java.time.format.DateTimeFormatter;\r\nimport java.time.ZoneId;\r\nimport java.time.ZonedDateTime;\r\n\r\n\r\n \r\n\r\n\r\n\r\n\r\n \r\n   String npi=\"\";\r\n\r\n        try {\r\n            // Define SOAP endpoint and request properties\r\n            String endpoint = \"https://10.208.0.78\";\r\n            String soapAction = \"CITIZEN_BY_NPI_ANPS\";\r\n         \r\n\r\n            // Construct SOAP XML request\r\n            String soapRequestXML = \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\"\r\n                + \"<soapenv:Envelope xmlns:soapenv=\\\"http://schemas.xmlsoap.org/soap/envelope/\\\" \"\r\n                + \"xmlns:xro=\\\"http://x-road.eu/xsd/xroad.xsd\\\" \"\r\n                + \"xmlns:iden=\\\"http://x-road.eu/xsd/identifiers\\\" \"\r\n                + \"xmlns:ns=\\\"http://x-road.eu/xsd/connector/CITIZEN_BY_NPI_ANPS/v1\\\">\"\r\n                + \"<soapenv:Header>\"\r\n                + \"<xro:client iden:objectType=\\\"SUBSYSTEM\\\">\"\r\n                + \"<iden:xRoadInstance>BJ<\/iden:xRoadInstance>\"\r\n                + \"<iden:memberClass>GOV<\/iden:memberClass>\"\r\n                + \"<iden:memberCode>ANPS<\/iden:memberCode>\"\r\n                + \"<iden:subsystemCode>RSU<\/iden:subsystemCode>\"\r\n                + \"<\/xro:client>\"\r\n                + \"<xro:service iden:objectType=\\\"SERVICE\\\">\"\r\n                + \"<iden:xRoadInstance>BJ<\/iden:xRoadInstance>\"\r\n                + \"<iden:memberClass>GOV<\/iden:memberClass>\"\r\n                + \"<iden:memberCode>ANIP<\/iden:memberCode>\"\r\n                + \"<iden:subsystemCode>RNP<\/iden:subsystemCode>\"\r\n                + \"<iden:serviceCode>CITIZEN_BY_NPI_ANPS<\/iden:serviceCode>\"\r\n                + \"<iden:serviceVersion>v1<\/iden:serviceVersion>\"\r\n                + \"<\/xro:service>\"\r\n                + \"<xro:userId><\/xro:userId>\"\r\n                + \"<xro:id><\/xro:id>\"\r\n                + \"<xro:protocolVersion>4.0<\/xro:protocolVersion>\"\r\n                + \"<\/soapenv:Header>\"\r\n                + \"<soapenv:Body>\"\r\n                + \"<ns:CITIZEN_BY_NPI_ANPS>\"\r\n                // + \"<NPI>#variable.npi#<\/NPI>\"\r\n                + \"<NPI>\"+values[0]+\"<\/NPI>\"\r\n                + \"<\/ns:CITIZEN_BY_NPI_ANPS>\"\r\n                + \"<\/soapenv:Body>\"\r\n                + \"<\/soapenv:Envelope>\";\r\n\r\n            // Open HTTP connection\r\n            URL url = new URL(endpoint);\r\n            HttpURLConnection conn = (HttpURLConnection) url.openConnection();\r\n            conn.setRequestMethod(\"POST\");\r\n            conn.setDoOutput(true);\r\n            conn.setRequestProperty(\"Content-Type\", \"text/xml;charset=UTF-8\");\r\n            conn.setRequestProperty(\"SOAPAction\", soapAction);\r\n\r\n            // Send the SOAP request\r\n            OutputStream os = conn.getOutputStream();\r\n            os.write(soapRequestXML.getBytes(\"UTF-8\"));\r\n            os.flush();\r\n            os.close();\r\n\r\n            // Get the SOAP response\r\n            InputStream is = conn.getInputStream();\r\n            BufferedReader br = new BufferedReader(new InputStreamReader(is));\r\n            StringBuilder response = new StringBuilder();\r\n            String line;\r\n            while ((line = br.readLine()) != null) {\r\n                response.append(line);\r\n            }\r\n            br.close();\r\n            is.close();\r\n            String xmlResponse = response.toString();\r\n\r\n            if (xmlResponse.isEmpty()) {\r\n                LogUtil.info(\"SOAP Response\", \"Response is empty\");\r\n            } else {\r\n                LogUtil.info(\"SOAP Response\", xmlResponse);\r\n\r\n                // Parse XML response\r\n                DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();\r\n                factory.setNamespaceAware(true);\r\n                DocumentBuilder builder = factory.newDocumentBuilder();\r\n                Document doc = builder.parse(new java.io.ByteArrayInputStream(xmlResponse.getBytes(\"UTF-8\")));\r\n                XPathFactory xPathFactory = XPathFactory.newInstance();\r\n                XPath xpath = xPathFactory.newXPath();\r\n\r\n                // Extract relevant fields\r\n                npi = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='NPI']\", doc);\r\n                String formNumber = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='FORM_NUMBER']\", doc);\r\n                String lastName = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='LASTNAME']\", doc);\r\n                String firstName = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='FIRSTNAME']\", doc);\r\n                String birthDate = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='BIRTHDATE']\", doc);\r\n                String phoneNumber = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='PHONE_NUMBER']\", doc);\r\n                String birthPlace = xpath.evaluate(\"//*[local-name()='CITIZEN_BY_NPI_ANPSResponse']/*[local-name()='BIRTH_PLACE']\", doc);\r\n\r\n                LogUtil.info(\"NPI\", npi);\r\n                LogUtil.info(\"Form Number\", formNumber);\r\n                LogUtil.info(\"Last Name\", lastName);\r\n                LogUtil.info(\"First Name\", firstName);\r\n                LogUtil.info(\"Birth Date\", birthDate);\r\n                LogUtil.info(\"Phone Number\", phoneNumber);\r\n                \r\n                 DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd'T'HH:mm:ss\");\r\n\r\n                // Parse the input date\r\n                LocalDateTime dateTime = LocalDateTime.parse(birthDate, inputFormatter);\r\n        \r\n                // Define output format\r\n                DateTimeFormatter outputFormatter = DateTimeFormatter.ofPattern(\"MM/dd/yyyy\");\r\n        \r\n                // Format and print the date\r\n                String formattedDate = dateTime.format(outputFormatter);\r\n                 \r\n \r\n                WorkflowManager wm = (WorkflowManager) pluginManager.getBean(\"workflowManager\");\r\n                wm.activityVariable(workflowAssignment.getActivityId(),\"name\", lastName);\r\n                wm.activityVariable(workflowAssignment.getActivityId(),\"prenom\", firstName);\r\n                wm.activityVariable(workflowAssignment.getActivityId(),\"place\", birthPlace);\r\n                wm.activityVariable(workflowAssignment.getActivityId(),\"birthday\", formattedDate);\r\n            }\r\n\r\n            // Log the response\r\n            LogUtil.info(\"SOAP Response\", response.toString());\r\n\r\n        } catch (Exception e) {\r\n            LogUtil.error(\"SOAP Post Processing Tool\", e, \"Error occurred while making SOAP request\");\r\n        }\r\n\r\n    if (values[0].equals(npi) && !npi.isEmpty()){ \r\n        return true;\r\n    }else{\r\n        String id = FormUtil.getElementParameterName(element);\r\n        formData.addFormError(id, \"NPI inexistant, merci de vous adresser à l'ANIP pour obtenir un NPI valide\");\r\n        return false;\r\n    }\r\n"
+                                    }
+                                },
+                                "firstValidator": {
+                                    "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                                    "properties": {
+                                        "regex": "",
+                                        "formDefId": "demande_preinscription",
+                                        "errorDuplicateMsg": "NPI déjà existant !",
+                                        "mandatory": "true",
+                                        "errorFormatMsg": "",
+                                        "fieldId": "npi"
+                                    }
+                                },
+                                "secondValidator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "custom-regex-casesensitive": "",
+                                        "custom-regex": "^\\d{10}$",
+                                        "type": "custom",
+                                        "message": "Le NPI doit être exactement composé de 10 chiffres.",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "fifthValidator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "fourthValidator": {
+                                    "className": "",
+                                    "properties": {}
+                                }
+                            }
+                        },
+                        "label": "NPI",
+                        "size": "",
+                        "readonly": "",
+                        "workflowVariable": "npi",
+                        "style": "",
+                        "id": "npi",
+                        "placeholder": "",
+                        "value": "",
+                        "readonlyLabel": "",
+                        "storeNumeric": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field2",
+                        "value": "<!-- Include SweetAlert2 Library -->\r\n<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"><\/script>\r\n\r\n<script>\r\n    $(document).ready(function () {\r\n        let formErrors = $(\"input[name='_FORM_ERRORS']\").val();\r\n\r\n        if (formErrors) {\r\n            try {\r\n                // Parse the error messages from the JSON string\r\n                let errors = JSON.parse(formErrors);\r\n\r\n                if (errors.errors) {\r\n                    // Collect all error messages\r\n                    let errorMessages = Object.values(errors.errors);\r\n\r\n                    // Show SweetAlert popup with validation messages\r\n                    if (errorMessages.length > 0) {\r\n                        Swal.fire({\r\n                            title: 'Erreur lors de l\\'enregistrement de la demande de pré-inscription',\r\n                            html: errorMessages.join('<br>'), // Format messages as HTML\r\n                            icon: 'error',\r\n                            confirmButtonText: 'OK'\r\n                        }).then((result) => {\r\n                            if (result.isConfirmed) {\r\n                                // Check specific error messages\r\n                                const specificError1 = \"Vous devez être au moins préinscrit au RSU pour pouvoir passer une demande de réclamation\";\r\n                                const specificError2 = \"il y'a déja une demande de réclamation de même type et même NPI\";\r\n\r\n                                if (errorMessages.some(msg => msg.includes(specificError1) || msg.includes(specificError2))) {\r\n                                    // Redirect to a specific URL\r\n                                    // window.location.href = '/jw/web/userview/rsu/rsu_userview/_/welcome'; // Change to your desired URL\r\n                                } else {\r\n                                    // Close the SweetAlert popup (default action)\r\n                                    Swal.close();\r\n                                }\r\n                            }\r\n                        });\r\n                    }\r\n                }\r\n            } catch (err) {\r\n                console.error(\"Error parsing _FORM_ERRORS:\", err);\r\n            }\r\n        }\r\n    });\r\n<\/script>\r\n"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Entrer votre numéro personnel d'identification",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Entrer NPI",
+        "description": "",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "entrer_fid",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "d_preinscription"
+    }
+}

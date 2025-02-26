@@ -1,0 +1,46 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [{
+        "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+        "id": "rowAction_0",
+        "properties": {
+            "hrefColumn": "id",
+            "hrefParam": "id",
+            "rules": [],
+            "label": "voir",
+            "href": "form_enquete_inter",
+            "confirmation": "",
+            "link-css-display-type": "btn btn-sm btn-primary",
+            "datalist_type": "row_action",
+            "target": "_blank",
+            "header_label": ""
+        }
+    }],
+    "columns": [{
+        "filterable": true,
+        "hidden": "false",
+        "name": "id",
+        "id": "column_0",
+        "label": "ID",
+        "sortable": "false"
+    }],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "enquete_inter",
+    "id": "enquete_inter",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "enquete_pmt_id_inter",
+            "extraCondition": ""
+        }
+    },
+    "actions": [],
+    "order": ""
+}

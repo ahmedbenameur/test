@@ -1,0 +1,274 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "rowAction_1",
+            "properties": {
+                "hrefColumn": "",
+                "link-style-background-color": "#F3922D",
+                "hrefParam": "",
+                "rules": [],
+                "label": "<i class=\"zmdi zmdi-border-color\"><\/i> ",
+                "href": "",
+                "confirmation": "",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "target": "_self",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "rowAction_0",
+            "properties": {
+                "hrefColumn": "",
+                "link-style-background-color": "#2B4DD6",
+                "hrefParam": "",
+                "rules": [],
+                "label": "<i class=\"far fa-eye\" aria-hidden=\"true\"><\/i> ",
+                "href": "",
+                "confirmation": "",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "target": "_self",
+                "header_label": ""
+            }
+        }
+    ],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "num_reclamation",
+            "id": "column_2",
+            "label": "N° de réclamation",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi",
+            "id": "column_0",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "type_reclamation",
+            "id": "column_1",
+            "label": "Type de réclamation",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "agent_reclamation",
+            "id": "column_3",
+            "label": "Agent de réclamation",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "gravite_reclamation",
+            "id": "column_7",
+            "label": "Gravité de la réclamation",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "delai",
+            "id": "column_8",
+            "label": "Délai",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "decision_finale",
+            "id": "column_10",
+            "label": "Décision finale",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "statut",
+            "id": "column_9",
+            "label": "statut",
+            "sortable": "false"
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [
+        {
+            "hidden": "",
+            "name": "num_reclamation",
+            "id": "filter_4",
+            "label": "N° de réclamation",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "validation_reclamation",
+                            "labelColumn": "num_reclamation",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "num_reclamation"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "true",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-6055252-fn_num_reclamation"
+        },
+        {
+            "hidden": "",
+            "name": "npi",
+            "id": "filter_0",
+            "label": "NPI",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "true",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-6055252-fn_npi"
+        },
+        {
+            "hidden": "",
+            "name": "type_reclamation",
+            "id": "filter_1",
+            "label": "Type de réclamation",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "true",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-6055252-fn_type_reclamation"
+        },
+        {
+            "hidden": "",
+            "name": "statut",
+            "id": "filter_7",
+            "label": "statut",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "validation_reclamation",
+                            "labelColumn": "statut",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "statut"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-6055252-fn_statut"
+        }
+    ],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "true",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "Liste des réclamations",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "liste_reclamations",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "validation_reclamation",
+            "extraCondition": "createdby='#currentUser.username#'"
+        }
+    },
+    "actions": [{
+        "className": "org.joget.marketplace.DownloadCsvOrExcelDatalistAction",
+        "id": "action_0",
+        "properties": {
+            "downloadBackgroud": "false",
+            "includeCustomHeader": "false",
+            "footerHeader": "false",
+            "encryptZip": "false",
+            "label": "Download Excel",
+            "downloadAllWhenNoneSelected": "true",
+            "confirmation": "",
+            "datalist_type": "action",
+            "includeCustomFooter": "false",
+            "encryptionMethod": "256",
+            "downloadAs": "excel",
+            "filename": "Liste des réclamations",
+            "delimiter": ";",
+            "renameFile": "true",
+            "downloadAsZip": "false"
+        }
+    }],
+    "order": ""
+}

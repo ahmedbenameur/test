@@ -1,0 +1,39 @@
+{
+    "elements": [
+        {"className": "menu-component"},
+        {
+            "className": "org.joget.apps.userview.lib.FormMenu",
+            "properties": {
+                "loadDataWithKey": "",
+                "redirectUrlOnCancel": "",
+                "actionOnCancel": "",
+                "redirectTargetOnCancel": "top",
+                "customFooter": "",
+                "paramName": "",
+                "enableOffline": "",
+                "afterSavedReloadTarget": "true",
+                "customId": "",
+                "showInPopupDialog": "",
+                "readonly": "",
+                "cancelButtonLabel": "",
+                "actionAfterSaved": "",
+                "id": "F107197B676247A7C7C003CDD19ED229",
+                "redirectUrlAfterComplete": "",
+                "fieldPassover": "",
+                "formId": "planif_enquete",
+                "customHeader": "",
+                "fieldPassoverMethod": "append",
+                "redirectTargetOnComplete": "",
+                "keyName": "",
+                "label": "Form",
+                "userviewCacheDuration": "20",
+                "messageShowAfterComplete": "",
+                "submitButtonLabel": "",
+                "userviewCacheScope": "",
+                "readonlyLabel": "true"
+            }
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-E1F954D53D2446559862446C6FCEE341"}
+}

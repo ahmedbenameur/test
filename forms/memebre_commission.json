@@ -1,0 +1,246 @@
+{
+    "elements": [{
+        "elements": [
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                        "properties": {
+                                            "decoration": "",
+                                            "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.service.WorkflowManager;\r\nimport org.joget.commons.util.LogUtil;\r\n\r\nimport java.util.Arrays;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.service.FormUtil;\r\nint countPerson=0;\r\nString prenom = formData.getRequestParameter(\"prenom\");\r\nString nom = formData.getRequestParameter(\"nom\");\r\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if(!con.isClosed()) {\r\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select count(*) AS countRecords from app_fd_membre_commission where c_id_commission=? and c_nom=? and c_prenom=?\");\r\n        stmtSelectFolders.setString(1,\"#requestParam.id_commission#\");\r\n        stmtSelectFolders.setString(2,nom);\r\n        stmtSelectFolders.setString(3,prenom);\r\n         LogUtil.warn(\"values counting person \", \"#requestParam.id_commission#\"+\" \"+nom+\" \"+prenom);\r\n\r\n        ResultSet rs1 = stmtSelectFolders.executeQuery();\r\n        while (rs1.next()) {\r\n            countPerson=rs1.getInt(\"countRecords\"); \r\n        }\r\n    }\r\n} catch(Exception e) {\r\n    LogUtil.error(\"adding person to commissiont \", e, \"error\");\r\n} finally {\r\n    try {\r\n        if(con != null) {\r\n            con.close();\r\n        }\r\n    } catch(SQLException e) {/* ignored */}\r\n}\r\nif (countPerson!=0 ) {\r\n    String id = FormUtil.getElementParameterName(element);\r\n    formData.addFormError(id, \"VOUS NE POUVEZ PAS ETRE DANS LA MEME COMMISSION DEUX FOIS\");\r\n    return false;\r\n}else{\r\n      return true;\r\n}\r\n"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "Nom",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nom",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Numéro de téléphone",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "num_tel",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Email",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "mail",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            },
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Prénom",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "prenom",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Le Maire",
+                                    "value": "Le Maire",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Représentant du maire",
+                                    "value": "Représentant du maire",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Chef du GUPS",
+                                    "value": "Chef du GUPS",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Représentant 1 des ménages",
+                                    "value": "Représentant 1 des ménages",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Représentant 2 des ménages",
+                                    "value": "Représentant 2 des ménages",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Représentant 3 des ménages",
+                                    "value": "Représentant 3 des ménages",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "Autre",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Fonction",
+                            "id": "fonction",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "valueOnly",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_commission",
+                            "value": "#requestParam.id_commission#"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "Presence",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            }
+        ],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "membre de la commission",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "membre_de_la_commission",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "membre de la commission",
+        "description": "",
+        "id": "memebre_commission",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "membre_commission"
+    }
+}

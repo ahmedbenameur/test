@@ -1,0 +1,53 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.CustomHTML",
+                "properties": {
+                    "requiredSanitize": "",
+                    "autoPopulate": "",
+                    "label": "",
+                    "id": "field1",
+                    "value": "<iframe src=\"/jw/web/userview/rsu/rsu_userview/_/vis_liste_demandes?embed=true&performer=#performer.runProcess.username#\" title=\"\" width=\"1200vw\" height=\"1000vh\" style=\"border: 1px solid black;\">\n<\/iframe>\n"
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Vis Liste Demandes",
+        "description": "",
+        "id": "vis_liste_demande_soumises",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "d_preinscription"
+    }
+}

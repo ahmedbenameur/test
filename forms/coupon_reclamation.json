@@ -1,0 +1,70 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.FileUpload",
+                "properties": {
+                    "resizeMethod": "",
+                    "permissionType": "",
+                    "padding": "",
+                    "permissionHidden": "",
+                    "maxSizeMsg": "Limite de taille de fichier dépassée",
+                    "resizeWidth": "",
+                    "multiple": "",
+                    "validator": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "maxSize": "",
+                    "label": "Coupon de la réclamation",
+                    "resizeQuality": "0.8",
+                    "removeFile": "",
+                    "readonly": "true",
+                    "attachment": "true",
+                    "size": "",
+                    "fileTypeMsg": "type de fichier invalide",
+                    "id": "quittance_reclamation",
+                    "resizeHeight": "",
+                    "fileType": ""
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Coupon de la réclamation",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "coupon_de_la_reclamation",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "coupon reclamation",
+        "description": "",
+        "id": "coupon_reclamation",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "demande_reclamation"
+    }
+}

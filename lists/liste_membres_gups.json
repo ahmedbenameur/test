@@ -1,0 +1,197 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "rowAction_0",
+            "properties": {
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "rules": [],
+                "label": "Modifier",
+                "href": "param_membre_rsu?embed=true",
+                "confirmation": "",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "target": "popup",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_1",
+            "properties": {
+                "rules": [{
+                    "field": "is_active",
+                    "join": "AND",
+                    "value": "Inactive",
+                    "operator": "="
+                }],
+                "label": "Set Active",
+                "link-css-display-type": "btn btn-sm btn-success",
+                "datalist_type": "row_action",
+                "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;    \r\nimport org.joget.apps.app.service.*;\r\nimport org.joget.apps.form.model.*;\r\nimport org.joget.apps.form.service.*;\r\nimport org.joget.apps.form.model.FormData;\r\nimport java.sql.*;\r\nimport java.util.*;\r\nimport org.joget.commons.util.LogUtil;\r\nfor (String key : rowKeys) {\r\n//---------------------------------- Update DB ----------------------------------------\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if (con != null && !con.isClosed()) {\r\n        LogUtil.warn(\"------------------------------>Connection Open\",\"<--------------------\");\r\n        String updateQuery = \"UPDATE app_fd_param_membre_rsu SET c_is_active = ? WHERE id = ?\";\r\n        PreparedStatement updateStatement = con.prepareStatement(updateQuery);\r\n        updateStatement.setString(1, \"Active\");\r\n        updateStatement.setString(2, key);\r\n        updateStatement.executeUpdate();\r\n        LogUtil.warn(\"------------------------------>Record updated successfully\",\"<-------------\");\r\n    }\r\n} catch (Exception ex) {\r\n    LogUtil.error(\"Error: \", ex,\"------\");\r\n} finally {\r\n    try {\r\n        if (con != null)\r\n            con.close();\r\n        LogUtil.warn(\"------------------------------>Connection Closed\",\"<---\");\r\n    } catch (SQLException e) {\r\n        LogUtil.error(\"Error closing connection: \", e,\"----\");\r\n    }\r\n}\r\n}",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_2",
+            "properties": {
+                "rules": [{
+                    "field": "is_active",
+                    "join": "AND",
+                    "value": "Active",
+                    "operator": "="
+                }],
+                "label": "Set Inactive",
+                "link-css-display-type": "btn btn-sm btn-warning",
+                "datalist_type": "row_action",
+                "script": ";import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;    \r\nimport org.joget.apps.app.service.*;\r\nimport org.joget.apps.form.model.*;\r\nimport org.joget.apps.form.service.*;\r\nimport org.joget.apps.form.model.FormData;\r\nimport java.sql.*;\r\nimport java.util.*;\r\nimport org.joget.commons.util.LogUtil;\r\nfor (String key : rowKeys) {\r\n//---------------------------------- Update DB ----------------------------------------\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if (con != null && !con.isClosed()) {\r\n        LogUtil.warn(\"------------------------------>Connection Open\",\"<--------------------\");\r\n        String updateQuery = \"UPDATE app_fd_param_membre_rsu SET c_is_active = ? WHERE id = ?\";\r\n        PreparedStatement updateStatement = con.prepareStatement(updateQuery);\r\n        updateStatement.setString(1, \"Inactive\");\r\n        updateStatement.setString(2, key);\r\n        updateStatement.executeUpdate();\r\n        LogUtil.warn(\"------------------------------>Record updated successfully\",\"<-------------\");\r\n    }\r\n} catch (Exception ex) {\r\n    LogUtil.error(\"Error: \", ex,\"------\");\r\n} finally {\r\n    try {\r\n        if (con != null)\r\n            con.close();\r\n        LogUtil.warn(\"------------------------------>Connection Closed\",\"<---\");\r\n    } catch (SQLException e) {\r\n        LogUtil.error(\"Error closing connection: \", e,\"----\");\r\n    }\r\n}\r\n}",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        }
+    ],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom",
+            "id": "column_3",
+            "label": "Nom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "prenom",
+            "id": "column_4",
+            "label": "Prénom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "email",
+            "id": "column_6",
+            "label": "Email",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "numero_tel",
+            "id": "column_8",
+            "label": "Numéro de Téléphone",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "department",
+            "id": "column_5",
+            "label": "Département",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "sous_departement",
+            "id": "column_0",
+            "label": "Sous département",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "grade",
+            "id": "column_2",
+            "label": "Grade",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Active/Inactive",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "is_active",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_7",
+            "alignment": ""
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "Liste des Membres RSU",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "liste_membres_gups",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "param_membre_gups",
+            "extraCondition": ""
+        }
+    },
+    "actions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "action_0",
+            "properties": {
+                "visible": "true",
+                "hrefColumn": "",
+                "hrefParam": "",
+                "label": "Ajouter un nouveau membre",
+                "href": "param_membre_rsu?embed=true",
+                "confirmation": "",
+                "datalist_type": "action",
+                "target": "popup"
+            }
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.FormRowDeleteDataListAction",
+            "id": "action_1",
+            "properties": {
+                "deleteFiles": "",
+                "deleteGridData": "",
+                "formDefId": "param_membre_gups",
+                "deleteSubformData": "",
+                "label": "Supprimer",
+                "confirmation": "",
+                "datalist_type": "action",
+                "abortRelatedRunningProcesses": ""
+            }
+        }
+    ],
+    "order": ""
+}

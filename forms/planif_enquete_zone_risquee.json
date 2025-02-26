@@ -1,0 +1,237 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "type_enquete",
+                            "value": "Ménage vulnérable au chocs"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field8",
+                            "value": "<iframe id='iframe_zar'  src=\"\" width=\"100%\" height=\"600px\" >\r\n\r\n<\/iframe>\r\n \r\n<script>\r\n$(document).ready(function() {\r\n\r\n    record_id=\"#variable.processID#\";\r\n    console.log(\"record_id : \",record_id);\r\n\r\n    const iframe_1=document.getElementById('iframe_zar');\r\n    iframe_1.src = \"/jw/web/userview/rsu/rsu_userview/_/l_champ_zar?embed=true&id_to_get=#variable.processID#\";\r\n\r\n \r\n});  \r\n<\/script>\r\n \r\n<style>\r\n#iframe_zar {\r\n    border: none;\r\n    background: white !important;\r\n}\r\n<\/style>\r\n"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Informations Sur la zone à risques",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section1",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.IdGeneratorField",
+                        "properties": {
+                            "hidden": "true",
+                            "format": "CE-??????",
+                            "workflowVariable": "",
+                            "envVariable": "counter",
+                            "isDistributedGeneration": "",
+                            "label": "Compagne enquete",
+                            "id": "compagne_enquete"
+                        }
+                    },
+                    {
+                        "className": "org.joget.marketplace.AjaxSelectbox",
+                        "properties": {
+                            "minTermLength": "1",
+                            "idField": "email",
+                            "afterTypeDelay": "100",
+                            "defaultOptions": "50",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "requestParams": [],
+                            "label": "Chef d'équipe",
+                            "listId": "equipe_enquete",
+                            "allowEmpty": "true",
+                            "readonly": "",
+                            "keepTypingMsg": "Continue typing to search",
+                            "width": "70%",
+                            "lookingForMsg": "Retrieving results",
+                            "displayField": "nom_complet",
+                            "workflowVariable": "",
+                            "id": "chef_equipe",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.marketplace.AjaxSelectbox",
+                        "properties": {
+                            "minTermLength": "1",
+                            "idField": "email",
+                            "afterTypeDelay": "300",
+                            "defaultOptions": "50",
+                            "multiple": "true",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "requestParams": [],
+                            "label": "Equipe d'enquête",
+                            "listId": "liste_utilisateurs_gups",
+                            "allowEmpty": "true",
+                            "readonly": "",
+                            "keepTypingMsg": "Continue typing to search",
+                            "width": "70%",
+                            "lookingForMsg": "Retrieving results",
+                            "displayField": "nom_complet",
+                            "workflowVariable": "",
+                            "id": "equipe_enquete",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field6",
+                            "value": "<script>\r\n    $(\"body\").on(\"page_loaded\", function() {\r\n     console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n    });\r\n$(document).ready(function() {\r\n         console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n   \r\n    $(\"#assignmentComplete\").on(\"click\", function(event) {\r\n        event.preventDefault(); // Prevent default behavior to ensure our logic works\r\n        var msgFlash = document.getElementById('msg_flash').value;\r\n        var typeFlash = document.getElementById('type_flash').value;\r\n        // Construct the redirect URL with the parameters\r\n        var redirectUrl = '/jw/web/userview/rsu/rsu_userview/_/welcome?type=' + encodeURIComponent(typeFlash) + '&flash=' + encodeURIComponent(msgFlash);\r\n        // Wait for 2 seconds before checking the error message\r\n        // setTimeout(function() {\r\n        //     var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n        //     // If the error message element does not exist after 2 seconds, proceed with redirection\r\n        //     if (!errorMessageElement) {\r\n        //         // Redirect to the constructed URL\r\n        //         window.location.href = redirectUrl;\r\n        //     }\r\n        // }, 1000); // 2-second delay\r\n        sessionStorage.setItem('redirectURL',redirectUrl);\r\n        $(\"#assignmentComplete, #submit\").off(\"click\").trigger(\"click\");\r\n    });\r\n});\r\n<\/script>\r\n"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "type_flash",
+                            "value": "success"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "msg_flash",
+                            "value": "Enquête planifiée avec succès"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Désigner une équipe d'enquête PMT",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Planification enquête zone risquée",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "planif_enquete_zone_risquee",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "planif_enquete"
+    }
+}

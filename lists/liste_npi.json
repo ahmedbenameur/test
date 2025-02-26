@@ -1,0 +1,82 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [{
+        "className": "org.joget.apps.datalist.lib.FormRowDeleteDataListAction",
+        "id": "rowAction_0",
+        "properties": {
+            "deleteFiles": "",
+            "deleteGridData": "",
+            "formDefId": "entrer_fid",
+            "deleteSubformData": "",
+            "rules": [],
+            "label": "Delete",
+            "confirmation": "",
+            "link-css-display-type": "btn btn-sm btn-danger",
+            "datalist_type": "row_action",
+            "abortRelatedRunningProcesses": "",
+            "header_label": ""
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "fid",
+            "id": "column_0",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "validator",
+            "id": "column_1",
+            "label": "validator",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Liste NPI",
+    "id": "liste_npi",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "entrer_fid",
+            "extraCondition": ""
+        }
+    },
+    "actions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "action_0",
+            "properties": {
+                "visible": "",
+                "hrefColumn": "",
+                "hrefParam": "",
+                "label": "Entrer NPI",
+                "href": "entrer_npi",
+                "confirmation": "",
+                "datalist_type": "action",
+                "target": "popup"
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "action_2",
+            "properties": {
+                "label": "Bean Shell Action",
+                "datalist_type": "action",
+                "script": "import org.joget.commons.util.LogUtil;\nLogUtil.info(\"\",\"****\");",
+                "confirmationMessage": ""
+            }
+        }
+    ],
+    "order": ""
+}

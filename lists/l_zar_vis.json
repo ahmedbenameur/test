@@ -1,0 +1,46 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [{
+        "filterable": true,
+        "hidden": "false",
+        "name": "zar",
+        "id": "column_0",
+        "label": "Zone à risque",
+        "sortable": "false"
+    }],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [{
+        "hidden": "true",
+        "name": "id_master",
+        "id": "filter_0",
+        "label": "id_master",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {
+                "defaultValue": "#requestParam.id#",
+                "filterSelection": "",
+                "searchFields": ""
+            }
+        },
+        "datalist_type": "filter",
+        "filterParamName": "d-3636659-fn_id_master"
+    }],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Vis Liste Zar",
+    "id": "l_zar_vis",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "form_champ_zar",
+            "extraCondition": ""
+        }
+    },
+    "actions": [],
+    "order": ""
+}

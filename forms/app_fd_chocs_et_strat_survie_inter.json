@@ -1,0 +1,851 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS1. <\/strong>Au cours de ces 12 derniers mois,  les moyens d\u2019existence de votre  ménage ont-ils été négativement  affectés par des chocs biophysiques ?",
+                            "id": "cs1",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "fieldInput-style-display": "none",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>CS2. <\/strong>Quels sont ces chocs qui ont  négativement impacté les moyens  d\u2019existence de votre ménage ?",
+                            "fieldLabel-style-width": "100%",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [],
+                            "workflowVariable": "",
+                            "id": "cs2",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "a",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2A.Pluies tardives/secheresse",
+                            "id": "cs2a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "b",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2B.Pluies diluviennes/inondations",
+                            "id": "cs2b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "c",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2C.Erosion/glissement de terrain",
+                            "id": "cs2c",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "d",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2D.Criquets pelerins / infestation/insectes",
+                            "id": "cs2d",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "e",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2E.Maladies des cultures",
+                            "id": "cs2e",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "f",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2F.Feu/feu de brousse/incendie",
+                            "id": "cs2f",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "g",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "CS2G.Maison endommagée,détruite(termites,pluies intenses)",
+                            "id": "cs2g",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "x",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Autre",
+                            "id": "cs2x",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [{
+                                "label": "Pas de réponse",
+                                "value": "?",
+                                "grouping": ""
+                            }],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "",
+                            "id": "cs2nr",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Consommer les semences de la prochaine  campagne agricole",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Réduire les dépenses au niveau  de la santé et/ou de l\u2019éducation",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Dépenser les économies",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre des équipements ménagers",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Emprunter de l'argent",
+                                    "value": "5",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre les outils agricoles",
+                                    "value": "6",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre les intrants agricoles (Semences,  Engrais, etc.)",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre les stocks d'aliments",
+                                    "value": "8",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre le bétail non reproducteur",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre le bétail reproducteur",
+                                    "value": "10",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Louer ses terres",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vendre ses terres",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Travailler en échange de nourriture",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Envoyer les enfants travailler pour de l'argent/de la nourriture",
+                                    "value": "14",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Envoyer les enfants vivre avec des parents",
+                                    "value": "15",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Réduire les dépenses d\u2019éducation",
+                                    "value": "16",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS3. <\/strong> Quelle est la principale initiative  prise par votre ménage pour résoudre  ces problèmes ?",
+                            "id": "cs3",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas du tout",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui, partiellement",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui, totalement",
+                                    "value": "3",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS4. <\/strong>Est-ce que votre ménage a pu se  relever face aux effets négatifs (perte  de revenu ou de biens à cause de ces  chocs) ?",
+                            "id": "cs4",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS5. <\/strong>Depuis l\u2019année 2017, un membre  de votre de ménage a-t-il déménagé  son poste de vente ou commerce, son  atelier, etc. ?",
+                            "id": "cs5",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Déménagement voulu par lui-même",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Accroissement du loyer par le propriétaire",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Déguerpissement des espaces publics",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "COVID",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "6",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS6. <\/strong> Pour quelle raison principale ce changement a-t-il été opéré ?",
+                            "id": "cs6",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas du tout",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui, partiellement",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui, totalement",
+                                    "value": "3",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>CS7. <\/strong> Est-ce que ce changement a  impacté négativement l\u2019activité de ce  membre du ménage",
+                            "id": "cs7",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_parent",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "CHOCS ET STRATEGIES DE SURVIE",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_enquete",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "valide_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "cree_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_creaction",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_modification",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "num_version",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "note",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "QE-Chocs et stratégies de survie_inter",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "app_fd_chocs_et_strat_survie_inter",
+        "postProcessor": {
+            "className": "org.joget.service.data_service.DataUtil",
+            "properties": {"tableList": [{
+                "table_source": "public.app_fd_chocs_strat_survie",
+                "uniqueColumn": "id",
+                "table_destination": "rsu.app_fd_chocs_strat_survie"
+            }]}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "chocs_st_su_inter"
+    }
+}

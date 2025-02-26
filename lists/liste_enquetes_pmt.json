@@ -1,0 +1,304 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [{
+        "className": "org.joget.BshAction",
+        "id": "rowAction_1",
+        "properties": {
+            "rules": [{
+                "field": "statut_enquete",
+                "join": "AND",
+                "value": "Vers validation communautaire",
+                "operator": "="
+            }],
+            "label": "Valider",
+            "link-css-display-type": "btn btn-sm btn-primary",
+            "datalist_type": "row_action",
+            "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;    \r\nimport org.joget.apps.app.service.*;\r\nimport org.joget.apps.form.model.*;\r\nimport org.joget.apps.form.service.*;\r\nimport org.joget.apps.form.model.FormData;\r\nimport java.sql.*;\r\nimport java.util.*;\r\nimport org.joget.commons.util.LogUtil;\r\nfor (String key : rowKeys) {\r\n//---------------------------------- Update DB ----------------------------------------\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if (con != null && !con.isClosed()) {\r\n        LogUtil.warn(\"------------------------------>Connection Open\",\"<--------------------\");\r\n        String updateQuery = \"UPDATE app_fd_pmt SET c_statut_enquete = ? WHERE id = ?\";\r\n        PreparedStatement updateStatement = con.prepareStatement(updateQuery);\r\n        updateStatement.setString(1, \"A valider\");\r\n        updateStatement.setString(2, key);\r\n        updateStatement.executeUpdate();\r\n        LogUtil.warn(\"------------------------------>Record updated successfully\",\"<-------------\");\r\n    }\r\n} catch (Exception ex) {\r\n    LogUtil.error(\"Error: \", ex,\"------\");\r\n} finally {\r\n    try {\r\n        if (con != null)\r\n            con.close();\r\n        LogUtil.warn(\"------------------------------>Connection Closed\",\"<---\");\r\n    } catch (SQLException e) {\r\n        LogUtil.error(\"Error closing connection: \", e,\"----\");\r\n    }\r\n}\r\n}",
+            "confirmationMessage": "",
+            "header_label": ""
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "compagne_enquete",
+            "id": "column_3",
+            "label": "Compagne d'enquêtes",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "id_enquete",
+            "id": "column_2",
+            "label": "ID enquete",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Date de l'enquête",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "date_enquete",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "menage_existe",
+            "id": "column_4",
+            "label": "Ménage existe",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "statut_enquete",
+            "id": "column_5",
+            "label": "statut_enquete",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "score",
+            "id": "column_0",
+            "label": "score",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "categorie",
+            "id": "column_6",
+            "label": "categorie",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "departement",
+            "id": "column_7",
+            "label": "departement",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "commune",
+            "id": "column_8",
+            "label": "commune",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "arrondissement",
+            "id": "column_9",
+            "label": "arrondissement",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Npi Existant",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "npi_preinscription",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_10",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi_inexistant",
+            "id": "column_11",
+            "label": "NPI inexistant",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [
+        {
+            "name": "compagne_enquete",
+            "id": "filter_1",
+            "label": "Compagne d'enquêtes",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4632872-fn_compagne_enquete"
+        },
+        {
+            "hidden": "",
+            "name": "date_enquete",
+            "id": "filter_2",
+            "label": "date enquete",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": ""
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4632872-fn_date_enquete"
+        },
+        {
+            "name": "categorie",
+            "id": "filter_3",
+            "label": "categorie",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4632872-fn_categorie"
+        },
+        {
+            "name": "arrondissement",
+            "id": "filter_4",
+            "label": "arrondissement",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4632872-fn_arrondissement"
+        },
+        {
+            "name": "commune",
+            "id": "filter_5",
+            "label": "commune",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4632872-fn_commune"
+        },
+        {
+            "name": "departement",
+            "id": "filter_6",
+            "label": "departement",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4632872-fn_departement"
+        },
+        {
+            "hidden": "",
+            "name": "statut_enquete",
+            "id": "filter_0",
+            "label": "statut_enquete",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "enquete_pmt_id",
+                            "labelColumn": "statut_enquete",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "statut_enquete"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "true",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4632872-fn_statut_enquete"
+        }
+    ],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Liste des enquêtes PMT",
+    "id": "liste_enquetes_pmt",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "enquete_pmt_id",
+            "extraCondition": ""
+        }
+    },
+    "actions": [
+        {
+            "className": "org.joget.BshAction",
+            "id": "action_0",
+            "properties": {
+                "label": "Sélectionner pour la validation communautaire",
+                "datalist_type": "action",
+                "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;    \r\nimport org.joget.apps.app.service.*;\r\nimport org.joget.apps.form.model.*;\r\nimport org.joget.apps.form.service.*;\r\nimport org.joget.apps.form.model.FormData;\r\nimport java.sql.*;\r\nimport java.util.*;\r\nimport org.joget.commons.util.LogUtil;\r\nfor (String key : rowKeys) {\r\n//---------------------------------- Update DB ----------------------------------------\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if (con != null && !con.isClosed()) {\r\n        LogUtil.warn(\"------------------------------>Connection Open\",\"<--------------------\");\r\n        String updateQuery = \"UPDATE app_fd_pmt SET c_statut_enquete = ? WHERE id = ?\";\r\n        PreparedStatement updateStatement = con.prepareStatement(updateQuery);\r\n        updateStatement.setString(1, \"A valider\");\r\n        updateStatement.setString(2, key);\r\n        updateStatement.executeUpdate();\r\n        LogUtil.warn(\"------------------------------>Record updated successfully\",\"<-------------\");\r\n    }\r\n} catch (Exception ex) {\r\n    LogUtil.error(\"Error: \", ex,\"------\");\r\n} finally {\r\n    try {\r\n        if (con != null)\r\n            con.close();\r\n        LogUtil.warn(\"------------------------------>Connection Closed\",\"<---\");\r\n    } catch (SQLException e) {\r\n        LogUtil.error(\"Error closing connection: \", e,\"----\");\r\n    }\r\n}\r\n}",
+                "confirmationMessage": ""
+            }
+        },
+        {
+            "className": "org.joget.marketplace.DownloadCsvOrExcelDatalistAction",
+            "id": "action_1",
+            "properties": {
+                "downloadBackgroud": "false",
+                "includeCustomHeader": "false",
+                "footerHeader": "false",
+                "encryptZip": "false",
+                "label": "Download Excel",
+                "downloadAllWhenNoneSelected": "true",
+                "confirmation": "",
+                "datalist_type": "action",
+                "includeCustomFooter": "false",
+                "encryptionMethod": "256",
+                "downloadAs": "excel",
+                "filename": "Liste des enquêtes PMT",
+                "delimiter": ";",
+                "renameFile": "true",
+                "downloadAsZip": "false"
+            }
+        }
+    ],
+    "order": ""
+}

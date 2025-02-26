@@ -1,0 +1,77 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "compagne_enquete",
+            "id": "column_0",
+            "label": "Compagne enquete",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "chef_equipe",
+            "id": "column_3",
+            "label": "Chef d'équipe",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "equipe_enquete",
+            "id": "column_2",
+            "label": "Equipe d'enquête",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "type_menace",
+            "id": "column_1",
+            "label": "Type de menace",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Liste enquêtes zones risqués",
+    "id": "liste_enquetes_zones_risques",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "planif_enquete_zone_risquee",
+            "extraCondition": ""
+        }
+    },
+    "actions": [{
+        "className": "org.joget.marketplace.DownloadCsvOrExcelDatalistAction",
+        "id": "action_0",
+        "properties": {
+            "downloadBackgroud": "false",
+            "includeCustomHeader": "false",
+            "footerHeader": "false",
+            "encryptZip": "false",
+            "label": "Download Excel",
+            "downloadAllWhenNoneSelected": "true",
+            "confirmation": "",
+            "datalist_type": "action",
+            "includeCustomFooter": "false",
+            "encryptionMethod": "256",
+            "downloadAs": "excel",
+            "filename": "Liste enquêtes zones risqués",
+            "delimiter": ";",
+            "renameFile": "true",
+            "downloadAsZip": "false"
+        }
+    }],
+    "order": ""
+}

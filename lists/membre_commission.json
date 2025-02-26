@@ -1,0 +1,106 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "responsiveMode": "parent",
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom",
+            "id": "column_9",
+            "label": "Nom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "prenom",
+            "id": "column_8",
+            "label": "Prénom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "num_tel",
+            "id": "column_7",
+            "label": "Numéro de téléphone",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "mail",
+            "id": "column_5",
+            "label": "Email",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "fonction",
+            "id": "column_6",
+            "label": "Fonction",
+            "sortable": "false"
+        }
+    ],
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "showDataWhenFilterSet": "",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "id": "membre_commission",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "memebre_commission",
+            "extraCondition": "c_id_commission='#requestParam.id_commission#'"
+        }
+    },
+    "order": "",
+    "rowActionsDropdownLabel": "",
+    "useSession": "",
+    "draggabletable": "true",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "true",
+    "name": "membre commission",
+    "rowActionsMode": "dropdown",
+    "showhidecolumns": "",
+    "actions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "action_0",
+            "properties": {
+                "visible": "true",
+                "hrefColumn": "",
+                "hrefParam": "",
+                "label": "Ajouter",
+                "href": "ajouter_membre_commission?id_commission=#requestParam.id_commission#&embed=true",
+                "confirmation": "",
+                "datalist_type": "action",
+                "target": "popup"
+            }
+        },
+        {
+            "className": "org.joget.apps.datalist.lib.FormRowDeleteDataListAction",
+            "id": "action_1",
+            "properties": {
+                "deleteFiles": "",
+                "deleteGridData": "",
+                "formDefId": "memebre_commission",
+                "deleteSubformData": "",
+                "label": "<i class=\"far fa-trash-alt\"><\/i> supprimer",
+                "confirmation": "confirmez-vous la suppression de cette ligne ?",
+                "datalist_type": "action",
+                "abortRelatedRunningProcesses": ""
+            }
+        }
+    ]
+}

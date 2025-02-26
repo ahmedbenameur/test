@@ -1,0 +1,62 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "email",
+            "id": "column_1",
+            "label": "Email",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom_complet",
+            "id": "column_0",
+            "label": "Nom Complet",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "department",
+            "id": "column_2",
+            "label": "Département",
+            "sortable": "false",
+            "datalist_type": "column"
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "Equipe enquete",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "equipe_enquete",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "param_membre_gups",
+            "extraCondition": "c_department='gups' or 'c_department'='enqueteurs'"
+        }
+    },
+    "actions": [],
+    "order": ""
+}

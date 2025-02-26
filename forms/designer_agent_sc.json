@@ -1,0 +1,66 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.SelectBox",
+                "properties": {
+                    "controlField": "",
+                    "readonly": "",
+                    "size": "",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "multiple": "",
+                    "options": [],
+                    "validator": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "workflowVariable": "",
+                    "label": "Agent traitant",
+                    "id": "agent_traitant",
+                    "value": "",
+                    "readonlyLabel": ""
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Désigner un agent du service contentieux",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Désigner agent sc",
+        "description": "",
+        "id": "designer_agent_sc",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "service_contentieux"
+    }
+}

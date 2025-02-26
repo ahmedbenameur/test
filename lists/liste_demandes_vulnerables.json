@@ -1,0 +1,155 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi",
+            "id": "column_2",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom",
+            "id": "column_3",
+            "label": "Nom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "prenom",
+            "id": "column_1",
+            "label": "Prénom",
+            "sortable": "false",
+            "datalist_type": "column"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Statut demande",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "statut_demande",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "departement",
+            "id": "column_5",
+            "label": "Département",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "commune",
+            "id": "column_6",
+            "label": "Commune",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "arrondissement",
+            "id": "column_7",
+            "label": "Arrondissement",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "statut_vulnerabilite",
+            "sortable": "false",
+            "datalist_type": "column",
+            "name": "statut_vulnerabilite",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_4",
+            "alignment": ""
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [{
+        "hidden": "true",
+        "name": "statut_vulnerabilite",
+        "id": "filter_0",
+        "label": "statut_vulnerabilite",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {
+                "defaultValue": "Vulnérable au choc",
+                "filterSelection": "",
+                "searchFields": ""
+            }
+        },
+        "datalist_type": "filter",
+        "filterParamName": "d-3920087-fn_statut_vulnerabilite"
+    }],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Listes des demandes vulnérables",
+    "id": "liste_demandes_vulnerables",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "d_preins_zar",
+            "extraCondition": ""
+        }
+    },
+    "actions": [{
+        "className": "org.joget.marketplace.DownloadCsvOrExcelDatalistAction",
+        "id": "action_0",
+        "properties": {
+            "downloadBackgroud": "false",
+            "includeCustomHeader": "false",
+            "footerHeader": "false",
+            "encryptZip": "false",
+            "label": "Download Excel",
+            "downloadAllWhenNoneSelected": "true",
+            "confirmation": "",
+            "datalist_type": "action",
+            "includeCustomFooter": "false",
+            "encryptionMethod": "256",
+            "downloadAs": "excel",
+            "filename": "Listes des demandes vulnérables",
+            "delimiter": ";",
+            "renameFile": "true",
+            "downloadAsZip": "false"
+        }
+    }],
+    "order": ""
+}

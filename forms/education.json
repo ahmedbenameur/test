@@ -1,0 +1,960 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>ED1. <\/strong> Num de ligne",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "ed1",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED3. <\/strong>Est-il/ elle déjà allé(e) à l\u2019école ou l\u2019école maternelle ?",
+                            "id": "ed3",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Maternelle ou aucun",
+                                    "value": "0",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CI",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CP",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CE1",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CE2",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CM1",
+                                    "value": "5",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "CM2",
+                                    "value": "6",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Sixième",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Cinquième",
+                                    "value": "8",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Quatreième",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Troisième",
+                                    "value": "10",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Seconde",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Première",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Terminale",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Première année d'université",
+                                    "value": "14",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Deuxième année d'université",
+                                    "value": "15",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Troisième année d'université",
+                                    "value": "16",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Quatreième année d'université",
+                                    "value": "17",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Cinquième année d'université",
+                                    "value": "18",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Sixième année d'université",
+                                    "value": "19",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Septième année d'université ou plus",
+                                    "value": "20",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Huitième année d'université",
+                                    "value": "21",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<p><strong>ED4. <\/strong>Quels sont les plus hauts niveau d\u2019etudes et  classe ou (nom) à fréquenté l\u2019ecole ?<\/p>",
+                            "id": "ed4",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Maternelle",
+                                    "value": "0",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Primaire",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Secondaire1",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Secondaire2",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Supérieur",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "NSP",
+                                    "value": "8",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Niveau",
+                            "id": "ed4a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Classe",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "ed4b",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CheckBox",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "fieldInput-style-display": "none",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>ED5. <\/strong>Sait-il lire, écrire et comprendre les langues suivantes ?",
+                            "fieldLabel-style-width": "100%",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [],
+                            "workflowVariable": "",
+                            "id": "ed5",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "a",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "ED5A.Français",
+                            "id": "ed5a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "b",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "ED5B.Langue Nationale",
+                            "id": "ed5b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "c",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "ED5C.Autre Langue",
+                            "id": "ed5c",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "y",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "?",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "ED5Y.Aucune Langue",
+                            "id": "ed5y",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [{
+                                "label": "Pas de réponse",
+                                "value": "?",
+                                "grouping": ""
+                            }],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "",
+                            "id": "ed5nr",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Education",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section1",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED6. <\/strong>Durant l\u2019année scolaire 2020-2021, (nom) est-il/elle allé(e) a n\u2019importe quel moment a l\u2019école /à l\u2019école maternelle ?",
+                            "id": "ed6",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED7. <\/strong> Est-ce que (nom) a eu à fréquenter une école coranique ou fréquente-t-il une actuellement ? ?",
+                            "id": "ed7",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED8. <\/strong>Est-il une fille?",
+                            "id": "ed8",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED8A. <\/strong>Est-elle allée a l\u2019école durant l\u2019année scolaire 2020-2021 ?",
+                            "id": "ed8a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED9A. <\/strong>Est-ce que (nom) fait ou a fait de l\u2019apprentissage ?",
+                            "id": "ed9a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED9B. <\/strong>Est-ce que (nom) à finis  l\u2019apprentissage ?",
+                            "id": "ed9b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>ED10. <\/strong>A-t-elle déjà obtenu son diplôme de fin d'apprentissage?",
+                            "id": "ed10",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_parent",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "identind",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "valide_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "cree_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_creaction",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_modification",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "num_version",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "note",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_enquete",
+                            "value": "#requestParam.id_enquete#"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section4",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "QE-Education",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "education",
+        "postProcessor": {
+            "className": "org.joget.service.data_service.DataUtil",
+            "properties": {"tableList": [{
+                "table_source": "public.app_fd_education",
+                "uniqueColumn": "id",
+                "table_destination": "rsu.app_fd_education"
+            }]}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "education"
+    }
+}

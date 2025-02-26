@@ -1,0 +1,59 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [{
+        "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+        "id": "rowAction_0",
+        "properties": {
+            "hrefColumn": "activityid",
+            "hrefParam": "activityId",
+            "rules": [],
+            "label": "<i class=\"fas fa-pen\"><\/i> Voir",
+            "href": "_ja_inbox?_mode=assignment",
+            "confirmation": "",
+            "link-css-display-type": "btn btn-sm btn-primary",
+            "datalist_type": "row_action",
+            "target": "_parent",
+            "header_label": ""
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "createdby",
+            "id": "column_1",
+            "label": "createdby",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "statut",
+            "id": "column_0",
+            "label": "statut",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "liste des tâches",
+    "id": "tasks_list",
+    "binder": {
+        "className": "org.melkart.plugin.JdbcDatalistBinder",
+        "properties": {
+            "querySource": "sql",
+            "pagination": "",
+            "debug": "",
+            "sql": "SELECT \n    com.c_activityprocessid AS processID, \n    com.createdByName AS CreatedBy, \n    com.c_statut AS statut, \n    shk.ActivityId\nFROM \n    app_fd_demande_reclamation com  \nJOIN \n    shkassignmentstable shk ON (com.c_activityprocessid = shk.ActivityProcessId)\n    where shk.ResourceId='#currentUser.username#'\n-- Union\n-- SELECT \n--     com.c_activityprocessid AS processID, \n--     com.createdByName AS CreatedBy, \n--     com.c_statut AS statut, \n--     shk.ActivityId\n-- FROM \n--     app_fd_radiation com  \n-- JOIN \n--     shkassignmentstable shk ON (com.c_activityprocessid = shk.ActivityProcessId)\n",
+            "primaryKey": "id"
+        }
+    },
+    "actions": [],
+    "order": ""
+}

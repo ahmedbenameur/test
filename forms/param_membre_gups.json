@@ -1,0 +1,455 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "is_active",
+                            "value": "Active"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Nom",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nom",
+                            "placeholder": "Veuillez entrer votre nom",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Prénom",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "prenom",
+                            "placeholder": "Veuillez entrer votre prénom",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                                        "properties": {
+                                            "regex": "",
+                                            "formDefId": "param_membre_gups",
+                                            "errorDuplicateMsg": "",
+                                            "mandatory": "true",
+                                            "errorFormatMsg": "",
+                                            "fieldId": "nom_complet"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "Nom Complet",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nom_complet",
+                            "placeholder": "Veuillez entrer votre nom complet",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.DuplicateValueValidator",
+                                        "properties": {
+                                            "regex": "",
+                                            "formDefId": "param_membre_gups",
+                                            "errorDuplicateMsg": "Utilisateur avec le même email déjà existant",
+                                            "mandatory": "true",
+                                            "errorFormatMsg": "",
+                                            "fieldId": "email"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "org.joget.apps.form.lib.DefaultValidator",
+                                        "properties": {
+                                            "type": "email",
+                                            "message": "Email non valide",
+                                            "mandatory": "true"
+                                        }
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "Email",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "email",
+                            "placeholder": "Veuillez entrer votre email",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "numeric",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Numéro de Téléphone",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "numero_tel",
+                            "placeholder": "Veuillez entrer votre numéro de téléphone",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.PasswordField",
+                        "properties": {
+                            "strengthChecker": "",
+                            "readonly": "",
+                            "size": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Mot de passe",
+                            "id": "mdp",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "GUPS",
+                                    "value": "gups",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "ANPS",
+                                    "value": "anps",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Enquêteurs",
+                                    "value": "enqueteurs",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "workflowVariable": "",
+                            "label": "Département",
+                            "id": "department",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Création de compte-Membre GUPS",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "multiple": "",
+                        "options": [
+                            {
+                                "label": "Responsable",
+                                "value": "responsable",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Agent",
+                                "value": "agent",
+                                "grouping": ""
+                            }
+                        ],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "",
+                        "label": "Grade",
+                        "id": "grade",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "department;department",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": ";",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "gups;anps",
+                "regex": ";",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section4",
+                "join": ";or",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                            "properties": {
+                                "addEmptyOption": "",
+                                "groupingColumn": "",
+                                "formDefId": "param_gups",
+                                "labelColumn": "subDeptName",
+                                "extraCondition": "",
+                                "cacheInterval": "",
+                                "emptyLabel": "",
+                                "idColumn": "subDeptId"
+                            }
+                        },
+                        "multiple": "",
+                        "options": [],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "",
+                        "label": "Sous département",
+                        "id": "sous_departement",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "department",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "gups",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Paramétrage Membre RSU",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "param_membre_gups",
+        "postProcessor": {
+            "className": "org.joget.apps.app.lib.BeanShellTool",
+            "properties": {"script": "import java.util.HashSet;\r\nimport java.util.Set;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.StringUtil;\r\nimport org.joget.directory.model.Role;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.model.Department;\r\nimport org.joget.directory.model.Employment;\r\nimport org.joget.directory.model.Grade;\r\nimport org.joget.directory.dao.RoleDao;\r\nimport org.joget.directory.dao.UserDao;\r\nimport org.joget.directory.dao.DepartmentDao;\r\nimport org.joget.directory.dao.EmploymentDao;\r\nimport org.joget.directory.dao.GradeDao;\r\nimport org.joget.directory.model.service.DirectoryUtil;\r\nimport org.joget.directory.model.service.UserSecurity;\r\nimport java.util.Map;\r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppPluginUtil;\r\nimport org.joget.plugin.base.ApplicationPlugin;\r\nimport org.joget.plugin.base.Plugin;\r\nimport org.joget.plugin.base.PluginManager;\r\nimport org.joget.plugin.property.model.PropertyEditable;\r\nimport org.joget.workflow.util.WorkflowUtil;\r\nimport org.joget.commons.util.UuidGenerator;\r\nimport java.lang.String;\r\nString firstName = \"#form.param_membre_rsu.nom#\";\r\nString lastName = \"#form.param_membre_rsu.prenom#\";\r\nString email = \"#form.param_membre_rsu.email#\";\r\nString password = \"#form.param_membre_rsu.mdp#\" ;\r\nString deptId =\"#form.param_membre_rsu.department#\" ;\r\nString subDeptId= \"#form.param_membre_rsu.sous_departement#\";\r\nString gradeId=\"#form.param_membre_rsu.grade#\";\r\npublic void addToDept(String userID,String deptId,String gradeId){\r\n    EmploymentDao employmentDao =(EmploymentDao) AppUtil.getApplicationContext().getBean(\"employmentDao\");\r\n    UuidGenerator uuid = UuidGenerator.getInstance();\r\n    String pId = uuid.getUuid();\r\n    Employment emp = new Employment();\r\n    emp.setId(pId);\r\n    emp.setUserId(userID);\r\n    emp.setOrganizationId(\"rsu\");\r\n    emp.setDepartmentId(deptId);\r\n    emp.setGradeId(gradeId);\r\n    LogUtil.warn(\"----- User \"+userID+\" assigned to departement --->\"+deptId,String.valueOf(employmentDao.addEmployment(emp)));\r\n    LogUtil.info(\"--------------- Affect to departement ---------->\", String.valueOf(employmentDao.assignUserToDepartment(userID, deptId)));\r\n}\r\ntry {\r\n    UserSecurity us = DirectoryUtil.getUserSecurity();\r\n    UserDao userDao = (UserDao) AppUtil.getApplicationContext().getBean(\"userDao\");\r\n    RoleDao roleDao = (RoleDao) AppUtil.getApplicationContext().getBean(\"roleDao\");\r\n    DepartmentDao departmentDao = (DepartmentDao) AppUtil.getApplicationContext().getBean(\"departmentDao\");\r\n    Department department = departmentDao.getDepartment(deptId);\r\n    Department subDepartment = departmentDao.getDepartment(subDeptId);\r\n    User user = new User();\r\n    user.setId(email);\r\n    user.setUsername(email);\r\n    user.setTimeZone(\"0\");\r\n    user.setActive(1);\r\n    user.setFirstName(firstName);\r\n    user.setLastName(lastName);\r\n    user.setEmail(email);\r\n    \r\n    //Check if there is user security implementation, using it to encrypt password\r\n    if (us != null) {\r\n        user.setPassword(us.encryptPassword(email, password));\r\n    } else {\r\n        user.setPassword(StringUtil.md5Base16(password));\r\n    }\r\n    user.setConfirmPassword(password);\r\n    Set roleSet = new HashSet();\r\n    Role role = roleDao.getRoleByName(\"User\");\r\n    roleSet.add(role);\r\n    user.setRoles(roleSet);\r\n    userDao.addUser(user);\r\n    if (us != null) {\r\n        us.insertUserPostProcessing(user);\r\n    }\r\n    \r\n    if ( department != null ){\r\n        LogUtil.info(\"departement non nul\",department.toString());\r\n        if(deptId.equals(\"enqueteurs\")){\r\n            LogUtil.info(\"departement =enqueteur\",department.toString());\r\n            addToDept(email,deptId,\"enqueteur\");\r\n        }else if( subDepartment != null ){\r\n            LogUtil.info(\"sub-departement non nul\",subDepartment.toString());\r\n            addToDept(email,subDeptId,gradeId);            \r\n            LogUtil.warn(\"departement=GUPS-\",subDeptId);\r\n        }else{\r\n            LogUtil.warn(\"departement=\",deptId);\r\n            addToDept(email,deptId,gradeId);\r\n        }\r\n    }\r\n} catch (Exception e) {\r\nLogUtil.error(\"Sample app -  Create User form\", e, \"user error!!\");\r\n}\r\nString mailSubject=\"RSU : Votre compte a été créé avec succès.\";\r\nString mailContent = \"Bonjour, \\n\\n\" +\r\n    \"Nous sommes ravis de vous informer que votre compte a été créé avec succès : \\n\" +\r\n    \"Nom d'utilisateur : \" + email + \" \\n\" +\r\n    \"Mot de passe : \" + password + \" \\n\\n\" +\r\n    \"Pour vous connecter, veuillez utiliser le lien suivant :<a href=\\\"#envVariable.url#/jw\\\">Cliquez ici<\/a> <br>  \\n\\n\" +\r\n    \"Important : Pour des raisons de sécurité, nous vous recommandons vivement de changer votre mot de passe dès votre première connexion. \\n\\n\" +\r\n    \"N'hésitez pas à nous contacter si vous avez besoin d'une assistance supplémentaire. \\n\\n\" +\r\n    \"Cordialement,\";\r\n//Email Tool to send email;\r\nPlugin plugin = pluginManager.getPlugin(\"org.joget.apps.app.lib.EmailTool\");\r\nMap propertiesMap = AppPluginUtil.getDefaultProperties(plugin, null, appDef, null);\r\npropertiesMap.put(\"pluginManager\", pluginManager);\r\npropertiesMap.put(\"appDef\", appDef);\r\npropertiesMap.put(\"request\", request);\r\nApplicationPlugin emailTool = (ApplicationPlugin) plugin;\r\npropertiesMap.put(\"toSpecific\", email);\r\npropertiesMap.put(\"subject\", mailSubject);\r\npropertiesMap.put(\"message\", mailContent);\r\n((PropertyEditable) emailTool).setProperties(propertiesMap);\r\nemailTool.execute(propertiesMap);\r\nLogUtil.info(\"end\",\"-----------------\");"}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "param_membre_rsu"
+    }
+}

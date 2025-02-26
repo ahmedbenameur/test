@@ -1,0 +1,72 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "id_enquete",
+            "id": "column_0",
+            "label": "ID enquete",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "categorie",
+            "id": "column_1",
+            "label": "categorie",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "score",
+            "id": "column_2",
+            "label": "score",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "statut_enquete",
+            "id": "column_3",
+            "label": "statut_enquete",
+            "sortable": "false"
+        }
+    ],
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [{
+        "hidden": "true",
+        "name": "statut_enquete",
+        "id": "filter_0",
+        "label": "statut_enquete",
+        "type": {
+            "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+            "properties": {
+                "defaultValue": "A valider",
+                "filterSelection": "String",
+                "searchFields": ""
+            }
+        },
+        "datalist_type": "filter",
+        "filterParamName": "d-5052168-fn_statut_enquete"
+    }],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "name": "Listes des enquêtes à valider",
+    "id": "liste_enquetes_a_valider",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "enquete_pmt_id",
+            "extraCondition": ""
+        }
+    },
+    "actions": [],
+    "order": ""
+}

@@ -1,0 +1,267 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.DefaultValidator",
+                                        "properties": {
+                                            "type": "",
+                                            "message": "",
+                                            "mandatory": "true"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                        "properties": {
+                                            "decoration": "",
+                                            "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.service.WorkflowManager;\r\nimport org.joget.commons.util.LogUtil;\r\n\r\nimport java.util.Arrays;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.service.FormUtil;\r\n\r\nint npi=0;\r\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if(!con.isClosed()) {\r\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select count(*) as countRecords from app_fd_d_preinscription where c_npi=?\");\r\n            stmtSelectFolders.setString(1,values[0]);\r\n        ResultSet rs1 = stmtSelectFolders.executeQuery();\r\n        while (rs1.next()) {\r\n            npi=rs1.getInt(\"countRecords\"); \r\n        }\r\n    }\r\n} catch(Exception e) {\r\n    LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\r\n} finally {\r\n    try {\r\n        if(con != null) {\r\n            con.close();\r\n        }\r\n    } catch(SQLException e) {/* ignored */}\r\n}\r\nif (npi==0) {\r\n    String id = FormUtil.getElementParameterName(element);\r\n    formData.addFormError(id, \"Le NPI que vous venez de saisir n'existe pas dans le RSU. Veuillez vérifier le NPI et réessayer.\");\r\n    return false;\r\n}else{\r\n      return true;\r\n}\r\n"
+                                        }
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "NPI à radier",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "npi",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "activityprocessid",
+                            "value": "#assignment.processId#"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Entrer le NPI de la personne à radier",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "npi_a_radier",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field5",
+                        "value": "<h4>Cette section affichera les données de préinscription de la personne à radier si le demandeur est un agent GUPS ou ANPS<\/h4>"
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Données de la personne concernée",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "donnees",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Motif de la demande",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "motif",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Description",
+                            "id": "description",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.FileUpload",
+                        "properties": {
+                            "resizeMethod": "",
+                            "permissionType": "",
+                            "padding": "",
+                            "maxSizeMsg": "File size limit exceeded",
+                            "resizeWidth": "",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "maxSize": "",
+                            "label": "Justificatifs",
+                            "resizeQuality": "0.8",
+                            "removeFile": "",
+                            "readonly": "",
+                            "attachment": "true",
+                            "size": "",
+                            "fileTypeMsg": "Invalid file type",
+                            "id": "justificatifs",
+                            "resizeHeight": "",
+                            "fileType": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Détails de la demande",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "details_demande",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Demande de radiation",
+        "description": "",
+        "postProcessorRunOn": "create",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "demande_radiation",
+        "postProcessor": {
+            "className": "",
+            "properties": {}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "radiation"
+    }
+}

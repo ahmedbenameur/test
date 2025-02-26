@@ -1,0 +1,2452 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_parent",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "A la recherche du 1er emploi",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Chômeur",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Apprenti non payé",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Elève/Etudiant",
+                                    "value": "14",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Retraité",
+                                    "value": "15",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre inactif",
+                                    "value": "16",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Employeur",
+                                    "value": "21",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Travailleur à son propre compte",
+                                    "value": "22",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Salarié permanent",
+                                    "value": "23",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Salarié temporaire",
+                                    "value": "24",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Membre d\u2019une coopérative",
+                                    "value": "25",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Aide familial",
+                                    "value": "26",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Apprenti payé",
+                                    "value": "27",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC1D. <\/strong>Quelle est la situation du chef de ce ménage dans l'emploi qu'il exerce actuellement (Situation professionnelle)?",
+                            "id": "hc1d",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Agriculture, Elevage, Pêche et Forêt",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Mines et carrières",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Industrie",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Eau, Electricité, Gaz",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "BTP",
+                                    "value": "5",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Commerce",
+                                    "value": "6",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Transports",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Tourisme",
+                                    "value": "8",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Communications",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Banques et assurances",
+                                    "value": "10",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Artisanat",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Arts et spectacles",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Hôtel et restauration",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autres services",
+                                    "value": "96",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC1E. <\/strong>Que fait principalement l'entreprise dans laquelle le chef de ce ménage travaille?",
+                            "id": "hc1e",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>HC2. <\/strong>Dans ce ménage, combien de pièces utilisez-vous pour dormir?",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "hc2",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Terre/sable",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bouse",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Planche en bois",
+                                    "value": "21",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Palmes/bambou",
+                                    "value": "22",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Parquet ou bois ciré",
+                                    "value": "31",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Vinyle ou asphalte",
+                                    "value": "32",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Carrelage",
+                                    "value": "33",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Ciment",
+                                    "value": "34",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Moquette",
+                                    "value": "35",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC3. <\/strong>Principal matériau du sol",
+                            "id": "hc3",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de toit",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Chaume/feuille de palmier/pailleBouse",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Herbes",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Natte",
+                                    "value": "21",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Palmes / Bambou",
+                                    "value": "22",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Planches en bois",
+                                    "value": "23",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Carton",
+                                    "value": "24",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Metal",
+                                    "value": "31",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bois",
+                                    "value": "32",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Zinc / Fibre de ciment",
+                                    "value": "33",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Tuiles",
+                                    "value": "34",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Ciment",
+                                    "value": "35",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Shingles",
+                                    "value": "36",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Tôles",
+                                    "value": "37",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC4. <\/strong>Principal matériau du toit",
+                            "id": "hc4",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de murs",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Canne / Palmes / troncs",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Mottes de terre",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pierre",
+                                    "value": "14",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bouse",
+                                    "value": "15",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bambou avec boue",
+                                    "value": "21",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pierre avec boue",
+                                    "value": "22",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Adobe non recouvert",
+                                    "value": "23",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Contre-plaqué",
+                                    "value": "24",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Carton",
+                                    "value": "25",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bois de récupération",
+                                    "value": "26",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Ciment",
+                                    "value": "31",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pierre avec chaux/ciment",
+                                    "value": "32",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Briques",
+                                    "value": "33",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Blocs de ciment",
+                                    "value": "34",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Adobe recouvert",
+                                    "value": "35",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Planches de bois/shingles",
+                                    "value": "36",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC5. <\/strong>Principal matériau des murs extérieurs",
+                            "id": "hc5",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "99",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Électricité",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Gaz propane liquéfié (GPL)",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Gaz naturel",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Biogaz",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Kérosène",
+                                    "value": "5",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Charbon / Lignite",
+                                    "value": "6",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Charbon de bois",
+                                    "value": "7",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bois (ramassé ou acheté)",
+                                    "value": "8",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Paille/branchages/herbes",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Bouse",
+                                    "value": "10",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Résidus agricoles / Sciure / Copeaux",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de repas préparé dans le ménage",
+                                    "value": "95",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC6. <\/strong>Dans votre ménage, quel type de combustible utilisez-vous pour la cuisine?",
+                            "id": "hc6",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Dans une pièce séparée utilisée comme cuisine",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Ailleurs dans la maison.",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Dans un bâtiment séparé",
+                                    "value": "3",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "À l\u2019extérieur, dans la cour",
+                                    "value": "4",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "6",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC7A. <\/strong>La cuisine est-elle habituellement faite dans la maison, dans un bâtiment séparé ou à l'extérieur?",
+                            "id": "hc7a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Dans une pièce séparée utilisée comme cuisine",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Ailleurs dans la maison.",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC7B. <\/strong>Position de la cuisine dans la maison?",
+                            "id": "hc7b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "fonctionnement_elements",
+                            "value": " <P><strong>HC8. Dans votre ménage avez-vous, en état de fonctionnement les élements suivants:<\/strong>"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8A.L'Electricité",
+                            "id": "hc8a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8B.La Radio",
+                            "id": "hc8b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8C.La Télévision",
+                            "id": "hc8c",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8D.Un Téléphone fixe",
+                            "id": "hc8d",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8E.Un Réfrigérateur",
+                            "id": "hc8e",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8F.Un Réchaud à gaz.",
+                            "id": "hc8f",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8G.Une Cuisinière",
+                            "id": "hc8g",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8H.Un Ventilateur",
+                            "id": "hc8h",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8I.Un Foyer amélioré",
+                            "id": "hc8i",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8J.Un Fer à repasser électrique",
+                            "id": "hc8j",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8K.Un Fauteuil",
+                            "id": "hc8k",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8L.Un Matelas en mousse",
+                            "id": "hc8l",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8M.Un Lit",
+                            "id": "hc8m",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8N.Un Ordinateur",
+                            "id": "hc8n",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8O.Une Connexion internet",
+                            "id": "hc8o",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC8P.Un Groupe électrogène",
+                            "id": "hc8p",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "membre_menage_possesion",
+                            "value": "<p><strong>HC9. Est-ce qu'un membre de votre ménage possède en état de fonctionnement les élements suivants:<\/p><\/strong>\r\n"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9A.Une Montre",
+                            "id": "hc9a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9B.Un Téléphone mobile",
+                            "id": "hc9b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9C.Une Bicyclette",
+                            "id": "hc9c",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9D.Une Moto ou un Scooter",
+                            "id": "hc9d",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9E.Une Charrette tirée par un animal",
+                            "id": "hc9e",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9FUne Voiture ou un Camion",
+                            "id": "hc9f",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9G.Un Bateau à moteur",
+                            "id": "hc9g",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9H.Une pirogue barque",
+                            "id": "hc9h",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9I.Un Lecteur DVD",
+                            "id": "hc9i",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9J.Un Magnétoscope",
+                            "id": "hc9j",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9K.Une Machine à laver",
+                            "id": "hc9k",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "oui",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "non",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "HC9L.Une Chaîne Hi-Fi",
+                            "id": "hc9l",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "type_toilettes",
+                            "value": "<p><strong>HC9AA. Quel type de toilettes les membres de votre ménage utilisent-ils habituellement?<\/p><\/strong>"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "multiple": "",
+                            "options": [
+                                {
+                                    "label": "À un système d'égout",
+                                    "value": "11",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "À une fosse septique",
+                                    "value": "12",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "À des latrines",
+                                    "value": "13",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "À quelque chose d'autre",
+                                    "value": "16",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "À ne sait pas où",
+                                    "value": "18",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Fosse/latrines fosses/latrines ventilées  améliorées",
+                                    "value": "21",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Latrines avec dalle",
+                                    "value": "22",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Latrines sans dalle/trou ouvert",
+                                    "value": "23",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Toilettes à compostage",
+                                    "value": "31",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Seau/tinette",
+                                    "value": "41",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Toilettes/latrines suspendues",
+                                    "value": "51",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de toilettes/nature",
+                                    "value": "61",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "96",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Chasse d'eau connectée",
+                            "id": "hc9aa",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "si_oui_si_non",
+                            "value": "<p><strong>Si \u201cNon\u201d, demander :\r\nLOUEZ-VOUS CE LOGEMENT DE QUELQU\u2019UN QUI \r\nNE VIT PAS DANS CE MENAGE ?<br>\r\nSi \u201cLoué de quelqu\u2019un d\u2019autre\u201d, selectionner \"locataire\". \r\nPour les autres réponse selectionner \"autres\"<\/strong><\/p>"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field65",
+                            "value": "<strong>HC10. <\/strong>Est-ce que vous ou quelqu'un d'autre vivant dans ce ménage est propriétaire de ce ménage ?"
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "style-padding-right": "200px",
+                            "controlField": "",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>HC10A. <\/strong>Est-ce que vous ou quelqu'un d'autre vivant dans ce ménage est propriétaire de ce ménage ?",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "workflowVariable": "",
+                            "id": "hc10a",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "style-padding-right": "200px",
+                            "controlField": "",
+                            "multiple": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>HC10B. <\/strong>Louez vous ce logement de quelqu'un qui n'est pas locataire de ce ménage?",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Locataire",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Autre",
+                                    "value": "6",
+                                    "grouping": ""
+                                }
+                            ],
+                            "workflowVariable": "",
+                            "id": "hc10b",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC11. <\/strong>Est-ce qu'un membre de ce ménage possède de la terre qui peut être utilisée pour l'agriculture?",
+                            "id": "hc11",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "<strong>HC12. <\/strong>Combien d'hectares de terres agricoles les membres de ce ménage possèdent-ils?",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "hc12",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC13. <\/strong>Est-ce que ce ménage possède du bétail, des troupeaux, d'autres animaux de ferme ou de la volaille ?",
+                            "id": "hc13",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "nbre_animaux",
+                            "value": "<p><strong>HC14. Parmi les animaux suivants, Combien votre ménage possède-t-il de :<\/p><\/strong>"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "CARACTERISTIQUES DES MENAGES",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14A.Têtes de bétail, vaches laitières ou taureaux",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14a",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14C.Chèvres",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14c",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14E.Poulets",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14e",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14G.Porcs",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14g",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14B.Chevaux, ânes ou mules",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14b",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14D.Moutons",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14d",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "HC14F.Autres volailles",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "hc14f",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pas de réponse",
+                                    "value": "9",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC15. <\/strong>Est-ce qu'un membre de ce ménage a un compte en banque?",
+                            "id": "hc15",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Oui",
+                                    "value": "1",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non",
+                                    "value": "2",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "<strong>HC16. <\/strong> Est-ce qu'un membre de ce ménage a un compte dans une institution de microfinance?",
+                            "id": "hc16",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section4",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "valide_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "id_enquete",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "cree_par",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_creaction",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "date_modification",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "num_version",
+                            "value": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.HiddenField",
+                        "properties": {
+                            "useDefaultWhenEmpty": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "id": "note",
+                            "value": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section5",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "QE-Caractéristiques ménage",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "caract_menages",
+        "postProcessor": {
+            "className": "org.joget.service.data_service.DataUtil",
+            "properties": {"tableList": [{
+                "table_source": "public.app_fd_caract_menages",
+                "uniqueColumn": "id",
+                "table_destination": "rsu.app_fd_caract_menages"
+            }]}
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "caract_menages"
+    }
+}

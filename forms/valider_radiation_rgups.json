@@ -1,0 +1,129 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.SubForm",
+                    "properties": {
+                        "parentSubFormId": "",
+                        "permissionHidden": "",
+                        "readonly": "true",
+                        "loadBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "noframe": "true",
+                        "formDefId": "demande_radiation",
+                        "subFormParentId": "",
+                        "id": "field3",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.Radio",
+                    "properties": {
+                        "fullWidth": "",
+                        "controlField": "",
+                        "readonly": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "options": [
+                            {
+                                "label": "Valider",
+                                "value": "valider",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Refuser",
+                                "value": "refuser",
+                                "grouping": ""
+                            }
+                        ],
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "status",
+                        "label": "Décision",
+                        "id": "decision",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.TextArea",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "readonly": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "",
+                        "label": "Commentaire",
+                        "id": "comment_gups",
+                        "placeholder": "",
+                        "rows": "5",
+                        "cols": "20",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field5",
+                        "value": "<script>\r\n    $(\"body\").on(\"page_loaded\", function() {\r\n     console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n    });\r\n$(document).ready(function() {\r\n         console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n   \r\n    $(\"#assignmentComplete\").on(\"click\", function(event) {\r\n      \r\n        event.preventDefault(); // Prevent default behavior to ensure our logic works\r\n        var typeFlash  = \"success\";\r\n        var msgFlash = \"Votre intervention a été enregistrée avec succès\";\r\n        // Construct the redirect URL with the parameters\r\n        var redirectUrl = '/jw/web/userview/rsu/rsu_userview/_/welcome?type=' + encodeURIComponent(typeFlash) + '&flash=' + encodeURIComponent(msgFlash);\r\n        sessionStorage.setItem('redirectURL',redirectUrl);\r\n        $(\"#assignmentComplete, #submit\").off(\"click\").trigger(\"click\");\r\n        \r\n      \r\n    });\r\n});\r\n<\/script>\r\n"
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Validation du responsable GUPS",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section4",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Validation radiation RGUPS",
+        "description": "",
+        "id": "valider_radiation_rgups",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "radiation"
+    }
+}

@@ -1,0 +1,1127 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "NPI",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "npi",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Numéro de téléphone à contacter",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "num_contacter",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "",
+                        "width": "50%",
+                        "label": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Prénom du plaignant",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "prenom_plaignant",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Nom du plaignant",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "nom_plaignant",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "autoPopulate": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "label": "",
+                                "id": "field15",
+                                "value": "<script>\n   $(document).ready(function(){\n    \n\n           console.log(\"checking departements----------------\",\"#variable.evaluation_users#\");\n        //   #user.username.department.id#\n          \n        if(('#currentUser.username#').includes('#variable.evaluation_users#')){\n        \n        document.getElementById('section-actions').style.display='none';\n    }\n   })\n<\/script>"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Demande de réclamation",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section6",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Type de réclamation",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "---",
+                                        "value": "",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Demande de reclassement",
+                                        "value": "demande_reclassement",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Demande d'enquête urgente",
+                                        "value": "demande_enquete_urgente",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Demande de mise à jour",
+                                        "value": "demande _maj",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Plainte sur la qualité de service",
+                                        "value": "plainte_qualite_service",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Réclamation sur une anomalie de la plateforme",
+                                        "value": "reclamation_anomalie_plateforme",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Demande de revue sur une décision de radiation",
+                                        "value": "demande_revue_decision_radiation",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Autres plaintes (la mentionner)",
+                                        "value": "autres_plaintes",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "type_reclamation",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "readonly": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Description",
+                                "id": "description",
+                                "placeholder": "",
+                                "rows": "5",
+                                "cols": "20",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Numéro de téléphone du déposant",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "num_deposant",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.FileUpload",
+                            "properties": {
+                                "resizeMethod": "",
+                                "permissionType": "",
+                                "padding": "",
+                                "maxSizeMsg": "Limite de taille de fichier dépassée",
+                                "resizeWidth": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "maxSize": "",
+                                "label": "Justificatifs",
+                                "resizeQuality": "0.8",
+                                "removeFile": "",
+                                "readonly": "",
+                                "attachment": "true",
+                                "size": "",
+                                "fileTypeMsg": "type de fichier invalide",
+                                "id": "justificatifs",
+                                "resizeHeight": "",
+                                "fileType": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "hidden": "true",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "format": "REC-??????",
+                                "workflowVariable": "",
+                                "envVariable": "counter",
+                                "isDistributedGeneration": "",
+                                "label": "N° de réclamation",
+                                "id": "num_reclamation"
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "autoPopulate": "",
+                                "label": "",
+                                "id": "field23",
+                                "value": "<script>\r\n    $(\"body\").on(\"page_loaded\", function() {\r\n     console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n    });\r\n$(document).ready(function() {\r\n         console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n   \r\n    $(\"#assignmentComplete\").on(\"click\", function(event) {\r\n      \r\n        event.preventDefault(); // Prevent default behavior to ensure our logic works\r\n        var typeFlash  = \"success\";\r\n        var msgFlash = \"La demande de réclamation à été valider\";\r\n        // Construct the redirect URL with the parameters\r\n        var redirectUrl = '/jw/web/userview/rsu/rsu_userview/_/welcome?type=' + encodeURIComponent(typeFlash) + '&flash=' + encodeURIComponent(msgFlash);\r\n        sessionStorage.setItem('redirectURL',redirectUrl);\r\n        $(\"#assignmentComplete, #submit\").off(\"click\").trigger(\"click\");\r\n        \r\n      \r\n    });\r\n});\r\n<\/script>\r\n"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section8",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [{
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "permission_rules": {
+                                "10f00666-4e3d-1eba-8d5a-badefdc65d68": {},
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "f8e06a0c-1704-72a2-0844-929aa5109318": {},
+                                "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                                "5bf04386-ef4a-f6b2-9866-1723f64e4387": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "multiple": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Catégorie actuelle",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "---",
+                                    "value": "",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pauve",
+                                    "value": "Pauve",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pauvre extrême",
+                                    "value": "Pauvre extrême",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non pauvre",
+                                    "value": "Non pauvre",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non reconnu",
+                                    "value": "Non reconnu",
+                                    "grouping": ""
+                                }
+                            ],
+                            "workflowVariable": "",
+                            "id": "categorie_actuelle",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [{
+                        "className": "org.joget.apps.form.lib.SelectBox",
+                        "properties": {
+                            "controlField": "",
+                            "permission_rules": {
+                                "10f00666-4e3d-1eba-8d5a-badefdc65d68": {},
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "f8e06a0c-1704-72a2-0844-929aa5109318": {},
+                                "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                                "5bf04386-ef4a-f6b2-9866-1723f64e4387": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "multiple": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "label": "Catégorie souhaitée",
+                            "readonly": "",
+                            "size": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "---",
+                                    "value": "",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pauve",
+                                    "value": "Pauve",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Pauvre extrême",
+                                    "value": "Pauvre extrême",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Non pauvre",
+                                    "value": "Non pauvre",
+                                    "grouping": ""
+                                }
+                            ],
+                            "workflowVariable": "",
+                            "id": "categorie_souhaitee",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "type_reclamation",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "10f00666-4e3d-1eba-8d5a-badefdc65d68": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "f8e06a0c-1704-72a2-0844-929aa5109318": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "5bf04386-ef4a-f6b2-9866-1723f64e4387": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Informations supplémentaires",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "demande_reclassement",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section9",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Gravité de la réclamation",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "---",
+                                        "value": "",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Elevée",
+                                        "value": "Elevée",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Moyenne",
+                                        "value": "Moyenne",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Faible",
+                                        "value": "Faible",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "workflowVariable": "",
+                                "id": "gravite_reclamation",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Agent de réclamation",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "agent_reclamation",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Délai",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "delai",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "useDefaultWhenEmpty": "",
+                                "permission_rules": {
+                                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                                },
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "statut",
+                                "value": "Demande validée"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Evaluation de la gravité",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "eval_gravite",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "permission_rules": {
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "f8e06a0c-1704-72a2-0844-929aa5109318": {},
+                                "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Passer à une enquête classique",
+                                    "value": "Passer à une enquête classique",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Passer à une enquête urgente",
+                                    "value": "Passer à une enquête urgente",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Passer à une validation communautaire",
+                                    "value": "Passer à une validation communautaire",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Mettre à jour le dossier",
+                                    "value": "Mettre à jour le dossier",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "workflowVariable": "",
+                            "label": "Décision",
+                            "id": "accepter",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "permission_rules": {
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "f8e06a0c-1704-72a2-0844-929aa5109318": {},
+                                "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Description",
+                            "id": "desc_agent",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.FileUpload",
+                        "properties": {
+                            "resizeMethod": "",
+                            "permissionType": "",
+                            "padding": "",
+                            "maxSizeMsg": "Limite de taille de fichier dépassée",
+                            "resizeWidth": "",
+                            "permission_rules": {
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "f8e06a0c-1704-72a2-0844-929aa5109318": {},
+                                "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "multiple": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "maxSize": "",
+                            "label": "Justificatifs",
+                            "resizeQuality": "0.8",
+                            "removeFile": "",
+                            "readonly": "",
+                            "attachment": "true",
+                            "size": "",
+                            "fileTypeMsg": "type de fichier invalide",
+                            "id": "justifs",
+                            "resizeHeight": "",
+                            "fileType": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionHidden": "",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "f8e06a0c-1704-72a2-0844-929aa5109318": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    },
+                    "e7abaf27-4957-9ff2-6fd8-d54e485398c4": {},
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Traitement de la réclamation",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "true",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section10",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.Radio",
+                    "properties": {
+                        "fullWidth": "",
+                        "controlField": "",
+                        "readonly": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "permission_rules": {
+                            "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                            "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                        },
+                        "options": [
+                            {
+                                "label": "Oui",
+                                "value": "oui",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Non",
+                                "value": "non",
+                                "grouping": "http://10.210.1.4:8088/jw/web/console/app/rsu/5/form/builder/traitement_reclamtion#"
+                            }
+                        ],
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "validation_chef_agent",
+                        "label": "Valider",
+                        "id": "valider",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Valider la solution proposée",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "validee_solution_proposee",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "permission_rules": {
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Passer à une enquête classique",
+                                    "value": "Passer à une enquête classique",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Passer à une enquête urgente",
+                                    "value": "Passer à une enquête urgente",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Passer à une validation communautaire",
+                                    "value": "Passer à une validation communautaire",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Mettre à jour le dossier",
+                                    "value": "Mettre à jour le dossier",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "decision_finale",
+                            "label": "Décision finale",
+                            "id": "decision_finale",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "permission_rules": {
+                                "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                                "a2757d6a-5f00-b1af-36a9-97967056ad9e": {}
+                            },
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Commentaire",
+                            "id": "commentaire",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "valider",
+                "permissionReadonly": "",
+                "permission_rules": {
+                    "57d11581-184d-9406-af0b-2495b9c7f040": {},
+                    "a2757d6a-5f00-b1af-36a9-97967056ad9e": {
+                        "permissionHidden": "",
+                        "readonly": "true"
+                    }
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "non",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section7",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "permission_rules": [
+            {
+                "permission_key": "a2757d6a-5f00-b1af-36a9-97967056ad9e",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "orgId": "rsu",
+                        "allowedDeptIds": "anps"
+                    }
+                },
+                "permission_name": "anps"
+            },
+            {
+                "permission_key": "57d11581-184d-9406-af0b-2495b9c7f040",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.DepartmentPermission",
+                    "properties": {
+                        "orgId": "rsu",
+                        "allowedDeptIds": "cellule"
+                    }
+                },
+                "permission_name": "cellule"
+            }
+        ],
+        "name": "Validation de la réclamation",
+        "description": "",
+        "id": "validation_reclamation",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "demande_reclamation"
+    }
+}

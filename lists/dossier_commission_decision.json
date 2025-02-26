@@ -1,0 +1,231 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "responsiveMode": "",
+    "rowActions": [
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_1",
+            "properties": {
+                "rules": [],
+                "label": "Pauvre",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "script": "import java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.io.OutputStream;\r\nimport java.net.HttpURLConnection;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport org.json.JSONObject;\r\nimport org.json.JSONArray;\r\nimport org.joget.commons.util.UuidGenerator;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.WorkflowProcessResult;\r\nimport org.joget.workflow.model.service.*;\r\nimport org.joget.directory.model.Department;\r\nimport java.util.Collection;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.model.service.ExtDirectoryManager;\r\nimport org.joget.workflow.shark.model.dao.WorkflowAssignmentDao;\r\nimport java.util.Map;\r\nimport org.joget.commons.util.LogUtil;\r\nimport java.lang.StringBuilder;\r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppService;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport javax.sql.DataSource;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport java.util.Calendar;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.StringUtil;\r\nimport org.joget.directory.model.Role;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.dao.RoleDao;\r\nimport org.joget.directory.dao.UserDao;\r\nimport org.joget.directory.dao.EmploymentDao;\r\nimport org.joget.directory.model.service.DirectoryUtil;\r\nimport org.joget.directory.model.service.UserSecurity;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.UuidGenerator;\r\n\r\n\r\n\r\n\r\nLogUtil.info(\"IN Script add decision pauvre  : \", \"\");\r\n\r\n\r\nfor (String key: rowKeys) {\r\n    String uuid = UuidGenerator.getInstance().getUuid();\r\n    LogUtil.info(\"<+++++ key value form +++++++++++>\", key);\r\n    LogUtil.info(\"<+++++ uuid form +++++++++++>\", uuid);\r\n    PreparedStatement updateStmt = null;\r\n    Connection con = null;\r\n    try {\r\n        LogUtil.info(\"<+++++ 1 +++++++++++>\", \"\");\r\n        DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n        con = ds.getConnection();\r\n        String selectQuery =\"update app_fd_pmt set c_categorie_commission = 'Pauvre' where id = ?;\";\r\n        LogUtil.info(\"<+++++ querry +++++++++++>\", selectQuery);\r\n        PreparedStatement stmt = con.prepareStatement(selectQuery);\r\n        stmt.setString(1, key);\r\n        stmt.executeUpdate();\r\n} catch (Exception ex) {\r\n    LogUtil.warn(\"error occured \",ex.getMessage());\r\n} finally {\r\n       con.close();\r\n}\r\n}\r\n",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_2",
+            "properties": {
+                "rules": [],
+                "label": "Extrément pauvre",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "script": "import java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.io.OutputStream;\r\nimport java.net.HttpURLConnection;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport org.json.JSONObject;\r\nimport org.json.JSONArray;\r\nimport org.joget.commons.util.UuidGenerator;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.WorkflowProcessResult;\r\nimport org.joget.workflow.model.service.*;\r\nimport org.joget.directory.model.Department;\r\nimport java.util.Collection;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.model.service.ExtDirectoryManager;\r\nimport org.joget.workflow.shark.model.dao.WorkflowAssignmentDao;\r\nimport java.util.Map;\r\nimport org.joget.commons.util.LogUtil;\r\nimport java.lang.StringBuilder;\r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppService;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport javax.sql.DataSource;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport java.util.Calendar;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.StringUtil;\r\nimport org.joget.directory.model.Role;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.dao.RoleDao;\r\nimport org.joget.directory.dao.UserDao;\r\nimport org.joget.directory.dao.EmploymentDao;\r\nimport org.joget.directory.model.service.DirectoryUtil;\r\nimport org.joget.directory.model.service.UserSecurity;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.UuidGenerator;\r\n\r\n\r\n\r\n\r\nLogUtil.info(\"IN Script add decision pauvre  : \", \"\");\r\n\r\n\r\nfor (String key: rowKeys) {\r\n    String uuid = UuidGenerator.getInstance().getUuid();\r\n    LogUtil.info(\"<+++++ key value form +++++++++++>\", key);\r\n    LogUtil.info(\"<+++++ uuid form +++++++++++>\", uuid);\r\n    PreparedStatement updateStmt = null;\r\n    Connection con = null;\r\n    try {\r\n        LogUtil.info(\"<+++++ 1 +++++++++++>\", \"\");\r\n        DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n        con = ds.getConnection();\r\n        String selectQuery =\"update app_fd_pmt set c_categorie_commission = 'Extrément pauvre' where id = ?;\";\r\n        LogUtil.info(\"<+++++ querry +++++++++++>\", selectQuery);\r\n        PreparedStatement stmt = con.prepareStatement(selectQuery);\r\n        stmt.setString(1, key);\r\n        stmt.executeUpdate();\r\n} catch (Exception ex) {\r\n    LogUtil.warn(\"error occured \",ex.getMessage());\r\n} finally {\r\n       con.close();\r\n}\r\n}\r\n",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_0",
+            "properties": {
+                "rules": [],
+                "label": "Non pauvre",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "script": "import java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.io.OutputStream;\r\nimport java.net.HttpURLConnection;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport org.json.JSONObject;\r\nimport org.json.JSONArray;\r\nimport org.joget.commons.util.UuidGenerator;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.WorkflowProcessResult;\r\nimport org.joget.workflow.model.service.*;\r\nimport org.joget.directory.model.Department;\r\nimport java.util.Collection;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.model.service.ExtDirectoryManager;\r\nimport org.joget.workflow.shark.model.dao.WorkflowAssignmentDao;\r\nimport java.util.Map;\r\nimport org.joget.commons.util.LogUtil;\r\nimport java.lang.StringBuilder;\r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppService;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport javax.sql.DataSource;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport java.util.Calendar;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.StringUtil;\r\nimport org.joget.directory.model.Role;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.dao.RoleDao;\r\nimport org.joget.directory.dao.UserDao;\r\nimport org.joget.directory.dao.EmploymentDao;\r\nimport org.joget.directory.model.service.DirectoryUtil;\r\nimport org.joget.directory.model.service.UserSecurity;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.UuidGenerator;\r\n\r\n\r\n\r\n\r\nLogUtil.info(\"IN Script add decision pauvre  : \", \"\");\r\n\r\n\r\nfor (String key: rowKeys) {\r\n    String uuid = UuidGenerator.getInstance().getUuid();\r\n    LogUtil.info(\"<+++++ key value form +++++++++++>\", key);\r\n    LogUtil.info(\"<+++++ uuid form +++++++++++>\", uuid);\r\n    PreparedStatement updateStmt = null;\r\n    Connection con = null;\r\n    try {\r\n        LogUtil.info(\"<+++++ 1 +++++++++++>\", \"\");\r\n        DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n        con = ds.getConnection();\r\n        String selectQuery =\"update app_fd_pmt set c_categorie_commission = 'Non pauvre' where id = ?;\";\r\n        LogUtil.info(\"<+++++ querry +++++++++++>\", selectQuery);\r\n        PreparedStatement stmt = con.prepareStatement(selectQuery);\r\n        stmt.setString(1, key);\r\n        stmt.executeUpdate();\r\n} catch (Exception ex) {\r\n    LogUtil.warn(\"error occured \",ex.getMessage());\r\n} finally {\r\n       con.close();\r\n}\r\n}\r\n",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "rowAction_3",
+            "properties": {
+                "rules": [],
+                "label": "Non reconnu",
+                "link-css-display-type": "btn btn-sm btn-primary",
+                "datalist_type": "row_action",
+                "script": "import java.io.BufferedReader;\r\nimport java.io.IOException;\r\nimport java.io.InputStreamReader;\r\nimport java.io.OutputStream;\r\nimport java.net.HttpURLConnection;\r\nimport java.net.MalformedURLException;\r\nimport java.net.URL;\r\nimport org.json.JSONObject;\r\nimport org.json.JSONArray;\r\nimport org.joget.commons.util.UuidGenerator;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.WorkflowProcessResult;\r\nimport org.joget.workflow.model.service.*;\r\nimport org.joget.directory.model.Department;\r\nimport java.util.Collection;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.model.service.ExtDirectoryManager;\r\nimport org.joget.workflow.shark.model.dao.WorkflowAssignmentDao;\r\nimport java.util.Map;\r\nimport org.joget.commons.util.LogUtil;\r\nimport java.lang.StringBuilder;\r\nimport org.joget.apps.app.model.AppDefinition;\r\nimport org.joget.apps.app.service.AppService;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport javax.sql.DataSource;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport java.util.Calendar;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.StringUtil;\r\nimport org.joget.directory.model.Role;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.directory.dao.RoleDao;\r\nimport org.joget.directory.dao.UserDao;\r\nimport org.joget.directory.dao.EmploymentDao;\r\nimport org.joget.directory.model.service.DirectoryUtil;\r\nimport org.joget.directory.model.service.UserSecurity;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.commons.util.UuidGenerator;\r\n\r\n\r\n\r\n\r\nLogUtil.info(\"IN Script add decision pauvre  : \", \"\");\r\n\r\n\r\nfor (String key: rowKeys) {\r\n    String uuid = UuidGenerator.getInstance().getUuid();\r\n    LogUtil.info(\"<+++++ key value form +++++++++++>\", key);\r\n    LogUtil.info(\"<+++++ uuid form +++++++++++>\", uuid);\r\n    PreparedStatement updateStmt = null;\r\n    Connection con = null;\r\n    try {\r\n        LogUtil.info(\"<+++++ 1 +++++++++++>\", \"\");\r\n        DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n        con = ds.getConnection();\r\n        String selectQuery =\"update app_fd_pmt set c_categorie_commission = 'Non reconnu' where id = ?;\";\r\n        LogUtil.info(\"<+++++ querry +++++++++++>\", selectQuery);\r\n        PreparedStatement stmt = con.prepareStatement(selectQuery);\r\n        stmt.setString(1, key);\r\n        stmt.executeUpdate();\r\n} catch (Exception ex) {\r\n    LogUtil.warn(\"error occured \",ex.getMessage());\r\n} finally {\r\n       con.close();\r\n}\r\n}\r\n",
+                "confirmationMessage": "",
+                "header_label": ""
+            }
+        }
+    ],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "true",
+            "include_export": "",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "id",
+            "sortable": "false",
+            "datalist_type": "column",
+            "name": "id",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "ID Enquête",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "c_id_enquete",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_5",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Date enquête",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "c_date_enquete",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Commune",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "c_commune",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_1",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Catégorie",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "c_categorie",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_3",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Catégorie commission",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "c_categorie_commission",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_4",
+            "alignment": ""
+        }
+    ],
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "showDataWhenFilterSet": "",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "id": "dossier_commission_decision",
+    "binder": {
+        "className": "org.melkart.plugin.JdbcDatalistBinder",
+        "properties": {
+            "querySource": "sql",
+            "pagination": "",
+            "debug": "",
+            "sql": "select p.* from app_fd_dossier_commission dc\njoin\napp_fd_pmt p on (p.id=dc.c_id_dossier)\nwhere dc.c_id_commission = '#requestParam.id_commission#'",
+            "primaryKey": "id"
+        }
+    },
+    "order": "",
+    "rowActionsDropdownLabel": "Décision",
+    "useSession": "",
+    "draggabletable": "",
+    "filters": [],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "true",
+    "name": "dossier commission decision",
+    "rowActionsMode": "dropdown",
+    "showhidecolumns": "",
+    "actions": []
+}

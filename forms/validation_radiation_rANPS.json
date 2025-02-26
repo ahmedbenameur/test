@@ -1,0 +1,229 @@
+{
+    "elements": [
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SubForm",
+                    "properties": {
+                        "parentSubFormId": "",
+                        "readonly": "",
+                        "loadBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "noframe": "",
+                        "formDefId": "valider_radiation_rgups",
+                        "subFormParentId": "",
+                        "id": "field1",
+                        "label": "",
+                        "storeBinder": {
+                            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                            "properties": {}
+                        },
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionHidden": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "true",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Valider",
+                                    "value": "valider",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Refuser",
+                                    "value": "refuser",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.DefaultValidator",
+                                "properties": {
+                                    "type": "",
+                                    "message": "",
+                                    "mandatory": "true"
+                                }
+                            },
+                            "workflowVariable": "status",
+                            "label": "Décision",
+                            "id": "decision_anps",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Commentaire",
+                            "id": "comment_anps",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field5",
+                            "value": "<script>\r\n    $(\"body\").on(\"page_loaded\", function() {\r\n     console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n    });\r\n$(document).ready(function() {\r\n         console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n   \r\n    $(\"#assignmentComplete\").on(\"click\", function(event) {\r\n      \r\n        event.preventDefault(); // Prevent default behavior to ensure our logic works\r\n        var typeFlash  = \"success\";\r\n        var msgFlash = \"Votre intervention a été enregistrée avec succès\";\r\n        // Construct the redirect URL with the parameters\r\n        var redirectUrl = '/jw/web/userview/rsu/rsu_userview/_/welcome?type=' + encodeURIComponent(typeFlash) + '&flash=' + encodeURIComponent(msgFlash);\r\n        sessionStorage.setItem('redirectURL',redirectUrl);\r\n        $(\"#assignmentComplete, #submit\").off(\"click\").trigger(\"click\");\r\n        \r\n      \r\n    });\r\n});\r\n<\/script>\r\n"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Validation Responsable ANPS",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "validation_responsable_anps",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.SelectBox",
+                    "properties": {
+                        "controlField": "",
+                        "readonly": "",
+                        "size": "",
+                        "optionsBinder": {
+                            "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                            "properties": {
+                                "cacheInterval": "",
+                                "script": "import org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.service.FormUtil;\r\nimport java.util.Arrays;\r\n\r\nimport org.joget.directory.model.service.DirectoryManager;\r\nimport org.joget.directory.model.User;\r\nimport org.joget.commons.util.LogUtil;\r\nimport java.util.*;\r\nimport org.joget.apps.app.service.AppUtil;\r\n\r\n\r\n\r\npublic FormRowSet load(Element element, String primaryKey, FormData formData) {\r\nString departmentId = \"cellule\"; // Replace with your department ID\r\nString gradeId = \"agent\";  // Replace with your role ID\r\n\r\n    FormRowSet rows = new FormRowSet();\r\n\r\n    // Add default value \"--\"\r\n    FormRow defaultOption = new FormRow();\r\n    defaultOption.setProperty(FormUtil.PROPERTY_VALUE, \"\");\r\n    defaultOption.setProperty(FormUtil.PROPERTY_LABEL, \"\");\r\n    rows.add(defaultOption);\r\n\r\n    // Array of countries in French\r\n    // Collection matchedUsers = new ArrayList();\r\n\r\n    try {\r\n        // Get the DirectoryManager instance\r\n        DirectoryManager directoryManager = (DirectoryManager) AppUtil.getApplicationContext().getBean(\"directoryManager\");\r\n    \r\n        // Retrieve users based on filters\r\n        Collection users = directoryManager.getUsers(null, \"rsu\", departmentId, gradeId, null, null, \"1\", null, false, null, null);\r\n        // Iterate through users and collect usernames\r\n        for (Object obj : users) {\r\n            User user = (User) obj;\r\n            LogUtil.info(\"user ---> \" , user.toString());\r\n            FormRow option = new FormRow();\r\n            option.setProperty(FormUtil.PROPERTY_VALUE, user.getUsername());\r\n            option.setProperty(FormUtil.PROPERTY_LABEL, user.getFirstName()+user.getLastName());\r\n            rows.add(option);\r\n            // matchedUsers.add(user.getUsername());\r\n        }\r\n    \r\n        // return matchedUsers;\r\n        // Log the matched users\r\n        LogUtil.info(\"ProcessMapping\", \"Matched Users: \" + rows.toString());\r\n    \r\n    } catch (Exception e) {\r\n        LogUtil.error(\"ProcessMapping\", e, e.getMessage());\r\n    }\r\n \r\n\r\n    // Add sorted countries to the rows\r\n\r\n\r\n    return rows;\r\n}\r\n\r\n// Call load method with injected variables\r\nreturn load(element, primaryKey, formData);\r\n"
+                            }
+                        },
+                        "multiple": "",
+                        "options": [],
+                        "validator": {
+                            "className": "org.joget.apps.form.lib.DefaultValidator",
+                            "properties": {
+                                "type": "",
+                                "message": "",
+                                "mandatory": "true"
+                            }
+                        },
+                        "workflowVariable": "agent_traitant",
+                        "label": "Agent traitant",
+                        "id": "agent_traitant",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "decision_anps",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Affectation agent",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "valider",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "validation de radiation Responsable Anps",
+        "description": "",
+        "id": "validation_radiation_rANPS",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "radiation"
+    }
+}

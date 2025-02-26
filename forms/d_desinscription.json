@@ -1,0 +1,191 @@
+{
+    "elements": [{
+        "elements": [
+            {
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                        "properties": {
+                                            "decoration": "",
+                                            "script": "import org.joget.workflow.model.service.WorkflowManager;\r\nimport org.joget.commons.util.LogUtil;\r\nimport javax.sql.DataSource;\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\n\r\nString chef=\"\";\r\nboolean checkFamilyStatus=false;\r\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\r\n\r\n    try (\r\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\r\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select c_hl3 from app_fd_table_individus where c_numero_npi=?;\")\r\n    ) {\r\n        if (!con.isClosed()) {\r\n            stmtSelectFolders.setString(1,values[0]);\r\n            try (ResultSet rs1 = stmtSelectFolders.executeQuery()) {\r\n                while (rs1.next()) {\r\n                    chef = rs1.getString(\"c_hl3\");\r\n                    if(chef.equals(\"1\")){\r\n                       checkFamilyStatus=checkFamily(values[0]);\r\n                    }\r\n            }\r\n        }\r\n    }\r\n    } catch (Exception e) {\r\n        LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\r\n    }\r\n\r\n    public boolean checkFamily(String npi) {\r\n        try (\r\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\r\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select ind.c_numero_npi as pmtInd,pmt.c_npi_preinscription,ind.id as indId,ind.c_hl3 as seniorite,men.id as menId,pmt.id as pmtID from\"\r\n        +\"app_fd_table_individus ind join app_fd_menage men on (ind.c_id_parent=men.id) join\"\r\n        +\"app_fd_pmt pmt on (pmt.id=men.c_id_master) where pmt.c_npi_preinscription=? and ind.c_numero_npi !=?\"\r\n        +\"and ind.c_numero_npi in (select c_npi from app_fd_d_preinscription where c_npi=ind.c_numero_npi);\")\r\n    ) {\r\n        if (!con.isClosed()) {\r\n            stmtSelectFolders.setString(1,npi);\r\n            stmtSelectFolders.setString(2,npi);\r\n\r\n            try (ResultSet rs1 = stmtSelectFolders.executeQuery()) {\r\n                while (rs1.next()) {\r\n                    return true;\r\n                }\r\n                return false;\r\n            }\r\n        }\r\n    } catch (Exception e) {\r\n        LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\r\n        return false;\r\n    }\r\n    \r\n    }\r\n\r\nif (checkFamilyStatus == false) {\r\n    String id = FormUtil.getElementParameterName(element);\r\n    formData.addFormError(id, \"L'un de votre famille doit étre préinscrit pour passer une demande de désinscription\");\r\n    return false;\r\n} else {\r\n    return true;\r\n}"
+                                        }
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.DefaultValidator",
+                                        "properties": {
+                                            "type": "numeric",
+                                            "message": "",
+                                            "mandatory": "true"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                        "properties": {
+                                            "decoration": "",
+                                            "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.commons.util.LogUtil;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.workflow.model.service.WorkflowManager;\r\nimport org.joget.commons.util.LogUtil;\r\n\r\nimport java.util.Arrays;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.service.FormUtil;\r\n\r\nint npi=0;\r\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if(!con.isClosed()) {\r\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select count(*) AS countRecords from app_fd_pmt pmt join app_fd_d_preinscription p on (pmt.c_compagne_enquete=p.c_compagne_enquete) join app_fd_dossier_commission dc on (dc.c_id_dossier=pmt.id) where c_npi=?;\");\r\n            stmtSelectFolders.setString(1,values[0]);\r\n        ResultSet rs1 = stmtSelectFolders.executeQuery();\r\n        while (rs1.next()) {\r\n            npi=rs1.getInt(\"countRecords\"); \r\n        }\r\n    }\r\n} catch(Exception e) {\r\n    LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\r\n} finally {\r\n    try {\r\n        if(con != null) {\r\n            con.close();\r\n        }\r\n    } catch(SQLException e) {/* ignored */}\r\n}\r\nif (npi==0) {\r\n    String id = FormUtil.getElementParameterName(element);\r\n    formData.addFormError(id, \"vous devrez etre inscrit au RSU  pour faire une demande de désinscription\");\r\n    return false;\r\n}else{\r\n      return true;\r\n}\r\n"
+                                        }
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "NPI",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "npi",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.marketplace.MultiFormValidator",
+                                "properties": {
+                                    "thirdValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "firstValidator": {
+                                        "className": "org.joget.apps.form.lib.DefaultValidator",
+                                        "properties": {
+                                            "type": "numeric",
+                                            "message": "",
+                                            "mandatory": "true"
+                                        }
+                                    },
+                                    "secondValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fifthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "fourthValidator": {
+                                        "className": "",
+                                        "properties": {}
+                                    }
+                                }
+                            },
+                            "label": "Numéro de demande de préinscription",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "id_demande",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            },
+            {
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field3",
+                        "value": "<!-- Include SweetAlert2 Library -->\r\n<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"><\/script>\r\n\r\n<script>\r\n    $(document).ready(function () {\r\n        // Handle form errors\r\n        let formErrors = $(\"input[name='_FORM_ERRORS']\").val();\r\n\r\n        if (formErrors) {\r\n            try {\r\n                // Parse the error messages from the JSON string\r\n                let errors = JSON.parse(formErrors);\r\n\r\n                if (errors.errors) {\r\n                    // Collect all error messages\r\n                    let errorMessages = Object.values(errors.errors);\r\n\r\n                    if (errorMessages.length > 0) {\r\n                        // Show SweetAlert popup with validation messages\r\n                        Swal.fire({\r\n                            title: 'Erreur lors de l\\'enregistrement de la demande de la réclamation',\r\n                            html: errorMessages.join('<br>'), // Format messages as HTML\r\n                            icon: 'error',\r\n                            confirmButtonText: 'OK'\r\n                        }).then((result) => {\r\n                            if (result.isConfirmed) {\r\n                                const specificError1 = \"Vous devez être au moins préinscrit au RSU pour pouvoir passer une demande de réclamation\";\r\n                                const specificError2 = \"il y'a déja une demande de réclamation de même type et même NPI\";\r\n\r\n                                if (errorMessages.some(msg => msg.includes(specificError1) || msg.includes(specificError2))) {\r\n                                    // Redirect to a specific URL\r\n                                    window.location.href = '/jw/web/userview/rsu/rsu_userview/_/welcome';\r\n                                }\r\n                            }\r\n                        });\r\n                    } else {\r\n                        console.log('No error messages found');\r\n                    }\r\n                }\r\n            } catch (err) {\r\n                console.error(\"Error parsing _FORM_ERRORS:\", err);\r\n            }\r\n        }\r\n\r\n        // Handle confirmation dialog for the submit button\r\n        document.getElementById('submit')?.addEventListener(\"click\", function (e) {\r\n            e.preventDefault();\r\n\r\n            Swal.fire({\r\n                title: 'Êtes-vous sûr de vouloir vous désinscrire du registre social unique? Si vous confirmez, vous serez systématiquement déconnecté.',\r\n                icon: 'warning',\r\n                showCancelButton: true,\r\n                confirmButtonText: 'Oui, confirmer',\r\n                cancelButtonText: 'Annuler'\r\n            }).then((result) => {\r\n                if (result.isConfirmed) {\r\n                    // Programmatically submit the form\r\n                    document.querySelector(\"form\").submit();\r\n                }\r\n            });\r\n        });\r\n    });\r\n<\/script>\r\n"
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "50%"}
+            }
+        ],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Demande de désinscription",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Demande de désinscription",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "d_desinscription",
+        "postProcessor": {
+            "className": "org.joget.apps.app.lib.MultiTools",
+            "properties": {
+                "runInMultiThread": "",
+                "comment": "",
+                "tools": [
+                    {
+                        "className": "org.joget.apps.app.lib.BeanShellTool",
+                        "properties": {"script": "// test\nimport org.joget.workflow.model.service.WorkflowManager;\nimport org.joget.commons.util.LogUtil;\nimport javax.sql.DataSource;\nimport java.sql.Connection;\nimport java.sql.PreparedStatement;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\n\nString chef=\"\";\nString checkFamilyStatus=\"\";\nString npiToCheck=\"#form.desincription.npi#\";\n\nWorkflowManager workflowManager = (WorkflowManager) AppUtil.getApplicationContext().getBean(\"workflowManager\");\n\n    try (\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select c_hl3 from app_fd_table_individus where c_numero_npi=?;\")\n    ) {\n        if (!con.isClosed()) {\n            stmtSelectFolders.setString(1,npiToCheck);\n            try (ResultSet rs1 = stmtSelectFolders.executeQuery()) {\n                while (rs1.next()) {\n                    chef = rs1.getString(\"c_hl3\");\n                    if(chef.equals(\"1\")){\n                       checkFamilyStatus=checkFamily(npiToCheck);\n                       if(!checkFamilyStatus.equals(\"\")){\n                            updateTableIndividus(checkFamilyStatus);  \n                            DeleteFromTableIndividus(npiToCheck);  \n                        }\n                    }else{\n                            DeleteFromTableIndividus(npiToCheck);\n                    }\n            }\n        }\n    }\n    } catch (Exception e) {\n        LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\n    }\n\n    public String checkFamily(String npi) {\n        String npiToReturn=\"\";\n        try (\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"select ind.c_numero_npi as pmtInd,pmt.c_npi_preinscription,ind.id as indId,ind.c_hl3 as seniorite,men.id as menId,pmt.id as pmtID from\"\n        +\"app_fd_table_individus ind join app_fd_menage men on (ind.c_id_parent=men.id) join\"\n        +\"app_fd_pmt pmt on (pmt.id=men.c_id_master) where pmt.c_npi_preinscription=? and ind.c_numero_npi !=?\"\n        +\"and ind.c_numero_npi in (select c_npi from app_fd_d_preinscription where c_npi=ind.c_numero_npi);\")\n    ) {\n        if (!con.isClosed()) {\n            stmtSelectFolders.setString(1,npi);\n            stmtSelectFolders.setString(2,npi);\n\n            try (ResultSet rs1 = stmtSelectFolders.executeQuery()) {\n                while (rs1.next()) {\n                    npiToReturn = rs1.getString(\"pmtInd\");\n                    updateStatusPmt(rs1.getString(\"pmtID\"));\n                    return npiToReturn;\n                }\n                return npiToReturn;\n            }\n        }\n    } catch (Exception e) {\n        LogUtil.error(\"verifying NPI and enquete for reclassement \", e, \"error\");\n        return npiToReturn;\n    }\n    \n    }\n\n\n    public void updateTableIndividus(String npi) {\n        try (\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"update app_fd_table_individus set c_hl3='1' where c_numero_npi=?;\")\n    ) {\n        if (!con.isClosed()) {\n            stmtSelectFolders.setString(1,npi);\n            stmtSelectFolders.executeUpdate();\n        }\n    } catch (Exception e) {\n        LogUtil.error(\"updating chef de menage for desinscription \", e, \"error\");\n    }\n    \n    }\n\n    public void DeleteFromTableIndividus(String npi) {\n        try (\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"delete from app_fd_table_individus where c_numero_npi=? and id!='';\")\n    ) {\n        if (!con.isClosed()) {\n            stmtSelectFolders.setString(1,npi);\n            stmtSelectFolders.executeUpdate();\n        }\n    } catch (Exception e) {\n        LogUtil.error(\"deleting from table individus for desinscription \", e, \"error\");\n    }\n    \n    }\n\n    public void updateStatusPmt(String pmtID) {\n        try (\n        Connection con = ((DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\")).getConnection();\n        PreparedStatement stmtSelectFolders = con.prepareStatement(\"update app_fd_pmt set c_status='A valider' where id=?;\")\n    ) {\n        if (!con.isClosed()) {\n            stmtSelectFolders.setString(1,pmtID);\n            stmtSelectFolders.executeUpdate();\n        }\n    } catch (Exception e) {\n        LogUtil.error(\"updating status pmt for desinscription \", e, \"error\");\n    }\n    \n    }\n\n"}
+                    },
+                    {
+                        "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+                        "properties": {
+                            "query": "update app_fd_d_preinscription set c_statut_profile='Inactif' where c_npi='#form.desincription.npi#'",
+                            "jdbcDatasource": "default"
+                        }
+                    }
+                ]
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "desincription"
+    }
+}

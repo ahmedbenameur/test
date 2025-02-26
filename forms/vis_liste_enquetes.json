@@ -1,0 +1,53 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.CustomHTML",
+                "properties": {
+                    "requiredSanitize": "",
+                    "autoPopulate": "",
+                    "label": "",
+                    "id": "field1",
+                    "value": "<iframe src=\"/jw/web/userview/rsu/rsu_userview/_/liste_vis_planif?embed=true\" title=\"\" width=\"100%\" height=\"700\" style=\"border: 1px solid black;\">\n<\/iframe>\n"
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "Visualaisation_enquetes_gups",
+        "description": "",
+        "id": "vis_liste_enquetes",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "pmt"
+    }
+}

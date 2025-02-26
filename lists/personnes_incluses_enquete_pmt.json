@@ -1,0 +1,335 @@
+{
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "considerFilterWhenGetTotal": "",
+    "useSession": "",
+    "responsiveMode": "",
+    "rowActions": [],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi",
+            "id": "column_3",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom",
+            "id": "column_4",
+            "label": "Nom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "prenom",
+            "id": "column_2",
+            "label": "Prénom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Statut demande",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "statut_demande",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_0",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "departement",
+            "id": "column_1",
+            "label": "Département",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "arrondissement",
+            "id": "column_6",
+            "label": "Arrondissement",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "commune",
+            "id": "column_5",
+            "label": "Commune",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Compagne d'enquête",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "compagne_enquete",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_7",
+            "alignment": ""
+        }
+    ],
+    "draggabletable": "",
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "filters": [
+        {
+            "name": "npi",
+            "id": "filter_1",
+            "label": "NPI",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_npi"
+        },
+        {
+            "name": "nom",
+            "id": "filter_2",
+            "label": "Nom",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_nom"
+        },
+        {
+            "name": "prenom",
+            "id": "filter_3",
+            "label": "Prénom",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {}
+            },
+            "filterParamName": "d-4948122-fn_prenom"
+        },
+        {
+            "hidden": "",
+            "name": "statut_demande",
+            "id": "filter_0",
+            "label": "Statut demande",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "statut_demande",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "statut_demande"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "true",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_statut_demande"
+        },
+        {
+            "hidden": "",
+            "name": "compagne_enquete",
+            "id": "filter_4",
+            "label": "Compagne d'enquête",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "compagne_enquete",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "compagne_enquete"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_compagne_enquete"
+        },
+        {
+            "hidden": "",
+            "name": "arrondissement",
+            "id": "filter_6",
+            "label": "Arrondissement",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "arrondissement",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "arrondissement"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_arrondissement"
+        },
+        {
+            "hidden": "",
+            "name": "commune",
+            "id": "filter_5",
+            "label": "Commune",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "true",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "commune",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "commune"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-4948122-fn_commune"
+        }
+    ],
+    "showDataWhenFilterSet": "",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "hidePageSize": "true",
+    "disableResponsive": "",
+    "cardCollapseByDefault": "",
+    "name": "Liste des demandes incluses à l'enquête PMT",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "id": "personnes_incluses_enquete_pmt",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "demande_preinscription",
+            "extraCondition": "c_inclusion_enquete='incluse' or c_statut_demande='A réenquêter'"
+        }
+    },
+    "actions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "action_0",
+            "properties": {
+                "visible": "",
+                "hrefColumn": "id",
+                "hrefParam": "id",
+                "label": "Designer une équipe d'enquête",
+                "href": "process_ui",
+                "confirmation": "",
+                "datalist_type": "action",
+                "target": "popup"
+            }
+        },
+        {
+            "className": "org.joget.marketplace.DownloadCsvOrExcelDatalistAction",
+            "id": "action_1",
+            "properties": {
+                "downloadBackgroud": "false",
+                "includeCustomHeader": "false",
+                "footerHeader": "false",
+                "encryptZip": "false",
+                "label": "Download Excel",
+                "downloadAllWhenNoneSelected": "true",
+                "confirmation": "",
+                "datalist_type": "action",
+                "includeCustomFooter": "false",
+                "encryptionMethod": "256",
+                "downloadAs": "excel",
+                "filename": "Liste des demandes incluses à l'enquête",
+                "delimiter": ";",
+                "renameFile": "true",
+                "downloadAsZip": "false"
+            }
+        }
+    ],
+    "order": ""
+}

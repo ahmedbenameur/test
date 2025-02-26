@@ -1,0 +1,12 @@
+{
+    "elements": [
+        {"className": "menu-component"},
+        {
+            "elements": [],
+            "className": "org.joget.apps.userview.lib.component.ContainerComponent",
+            "properties": {"id": "247B16DE86CB42E2078B9DFAD2978FE4"}
+        }
+    ],
+    "className": "org.joget.apps.userview.model.UserviewPage",
+    "properties": {"id": "up-0CA011DA980842C243E6F20C551228B9"}
+}

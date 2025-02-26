@@ -1,0 +1,351 @@
+{
+    "considerFilterWhenGetTotal": "",
+    "template": {
+        "className": "",
+        "properties": {}
+    },
+    "showPageSizeSelector": "true",
+    "responsiveMode": "",
+    "rowActions": [{
+        "name": "Data List Hyperlink Action",
+        "icon": "<i class=\"fas fa-link\"><\/i>",
+        "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+        "label": "Hyperlink",
+        "id": "rowAction_0",
+        "type": "text",
+        "properties": {
+            "hrefColumn": "id",
+            "hrefParam": "id",
+            "rules": [],
+            "href": "demande_preinscription",
+            "label": "Modifier",
+            "confirmation": "",
+            "datalist_type": "row_action",
+            "target": "_self",
+            "header_label": ""
+        }
+    }],
+    "columns": [
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "npi",
+            "id": "column_8",
+            "label": "NPI",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "nom",
+            "id": "column_1",
+            "label": "Nom",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Prénom",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "prenom",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_2",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "date_naissance",
+            "id": "column_4",
+            "label": "Date de naissance",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "type_demande",
+            "id": "column_3",
+            "label": "Type de demande",
+            "sortable": "false"
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Statut de la demande",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "statut_demande",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_5",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Identifiant d'enquête",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "id_enquete",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "",
+                "properties": {}
+            },
+            "style": "",
+            "id": "column_9",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "renderHtml": "",
+            "format": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "Recepissé",
+            "sortable": "false",
+            "datalist_type": "column",
+            "exclude_export": "",
+            "name": "recepisse",
+            "width": "",
+            "headerAlignment": "",
+            "action": {
+                "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+                "properties": {
+                    "hrefColumn": "id",
+                    "hrefParam": "id",
+                    "href": "form_vis_recepisse",
+                    "confirmation": "",
+                    "target": "_self"
+                }
+            },
+            "style": "",
+            "id": "column_6",
+            "alignment": ""
+        },
+        {
+            "filterable": true,
+            "hidden": "false",
+            "name": "inclusion_enquete",
+            "id": "column_0",
+            "label": "Inclusion à l'enquête",
+            "sortable": "false"
+        }
+    ],
+    "cardCollapsible": "",
+    "pageSize": "0",
+    "orderBy": "",
+    "description": "",
+    "showDataWhenFilterSet": "",
+    "disableResponsive": "",
+    "checkboxPosition": "left",
+    "cardCollapseByDefault": "",
+    "id": "liste_demandes_commission",
+    "binder": {
+        "className": "org.joget.apps.datalist.lib.FormRowDataListBinder",
+        "properties": {
+            "formDefId": "demande_preinscription",
+            "extraCondition": ""
+        }
+    },
+    "order": "",
+    "useSession": "",
+    "draggabletable": "",
+    "filters": [
+        {
+            "hidden": "",
+            "name": "id_enquete",
+            "id": "filter_4",
+            "label": "Identifiant d'enquête",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": ""
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_id_enquete"
+        },
+        {
+            "hidden": "",
+            "name": "npi",
+            "id": "filter_1",
+            "label": "NPI",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": "npi"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_npi"
+        },
+        {
+            "hidden": "",
+            "name": "nom",
+            "id": "filter_0",
+            "label": "Nom",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": ""
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_nom"
+        },
+        {
+            "hidden": "",
+            "name": "prenom",
+            "id": "filter_2",
+            "label": "Prénom",
+            "type": {
+                "className": "org.joget.apps.datalist.lib.TextFieldDataListFilterType",
+                "properties": {
+                    "defaultValue": "",
+                    "filterSelection": "",
+                    "searchFields": ""
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_prenom"
+        },
+        {
+            "hidden": "",
+            "name": "type_demande",
+            "id": "filter_3",
+            "label": "Type de demande",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "type_demande",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "id"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_type_demande"
+        },
+        {
+            "hidden": "",
+            "name": "statut_demande",
+            "id": "filter_5",
+            "label": "Statut de la demande",
+            "type": {
+                "className": "org.joget.SelectBoxOptionsFilter",
+                "properties": {
+                    "showCount": "",
+                    "isForeignKey": "",
+                    "optionsBinder": {
+                        "className": "org.joget.apps.form.lib.FormOptionsBinder",
+                        "properties": {
+                            "addEmptyOption": "",
+                            "groupingColumn": "",
+                            "formDefId": "demande_preinscription",
+                            "labelColumn": "statut_demande",
+                            "extraCondition": "",
+                            "cacheInterval": "",
+                            "emptyLabel": "",
+                            "idColumn": "id"
+                        }
+                    },
+                    "defaultValue": "",
+                    "options": [],
+                    "displayFull": "",
+                    "placeholder": "",
+                    "submitOnChange": "",
+                    "showLabel": "true"
+                }
+            },
+            "datalist_type": "filter",
+            "filterParamName": "d-1073449-fn_statut_demande"
+        }
+    ],
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bottomLeft",
+    "hidePageSize": "",
+    "name": "liste demandes commission",
+    "rowActionsMode": "",
+    "showhidecolumns": "",
+    "actions": [
+        {
+            "className": "org.joget.apps.datalist.lib.HyperlinkDataListAction",
+            "id": "action_0",
+            "properties": {
+                "visible": "true",
+                "hrefColumn": "",
+                "hrefParam": "",
+                "label": "Lancer une nouvelle demande de préinscription",
+                "href": "lancer_demande",
+                "confirmation": "",
+                "datalist_type": "action",
+                "target": "_self"
+            }
+        },
+        {
+            "className": "org.joget.BshAction",
+            "id": "action_1",
+            "properties": {
+                "label": "Attribuer à la liste des Vulnérables au choc",
+                "datalist_type": "action",
+                "script": "import java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;    \r\nimport org.joget.apps.app.service.*;\r\nimport org.joget.apps.form.model.*;\r\nimport org.joget.apps.form.service.*;\r\nimport org.joget.apps.form.model.FormData;\r\nimport java.sql.*;\r\nimport java.util.*;\r\nimport org.joget.commons.util.LogUtil;\r\nfor (String key : rowKeys) {\r\n//---------------------------------- Update DB ----------------------------------------\r\nConnection con = null;\r\ntry {\r\n    DataSource ds = (DataSource) AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    if (con != null && !con.isClosed()) {\r\n        LogUtil.warn(\"------------------------------>Connection Open\",\"<--------------------\");\r\n        String updateQuery = \"UPDATE app_fd_d_preinscription SET c_statut_demande = ? WHERE id = ?\";\r\n        PreparedStatement updateStatement = con.prepareStatement(updateQuery);\r\n        updateStatement.setString(1, \"Vulnérable au choc\");\r\n        updateStatement.setString(2, key);\r\n        updateStatement.executeUpdate();\r\n        LogUtil.warn(\"------------------------------>Record updated successfully\",\"<-------------\");\r\n    }\r\n} catch (Exception ex) {\r\n    LogUtil.error(\"Error: \", ex,\"------\");\r\n} finally {\r\n    try {\r\n        if (con != null)\r\n            con.close();\r\n        LogUtil.warn(\"------------------------------>Connection Closed\",\"<---\");\r\n    } catch (SQLException e) {\r\n        LogUtil.error(\"Error closing connection: \", e,\"----\");\r\n    }\r\n}\r\n}",
+                "confirmationMessage": ""
+            }
+        }
+    ]
+}

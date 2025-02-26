@@ -1,0 +1,1041 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "size": "",
+                                "readonly": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "nom",
+                                "label": "Nom",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "1920:c",
+                                "dataFormat": "dd-MM-yyyy",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Date de naissance",
+                                "datePickerType": "",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "",
+                                "allowManual": "",
+                                "workflowVariable": "",
+                                "id": "date_naissance",
+                                "placeholder": "",
+                                "value": "",
+                                "disableWeekends": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "49%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "size": "",
+                                "readonly": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "prenom",
+                                "label": "Prénom",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "size": "",
+                                "readonly": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "lieu_naissance",
+                                "label": "Lieu de naissance",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "49%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionHidden": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Données affichées automatiquement",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "oui",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section2",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "cacheInterval": "",
+                                        "script": "import org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.service.FormUtil;\r\n\r\nimport java.util.Arrays;\r\n\r\npublic FormRowSet load(Element element, String primaryKey, FormData formData) {\r\n    FormRowSet rows = new FormRowSet();\r\n\r\n    // Add default value \"--\"\r\n    FormRow defaultOption = new FormRow();\r\n    defaultOption.setProperty(FormUtil.PROPERTY_VALUE, \"Béninois\");\r\n    defaultOption.setProperty(FormUtil.PROPERTY_LABEL, \"Béninois\");\r\n    rows.add(defaultOption);\r\n\r\n    // Array of countries in French\r\nString[] countries = {\r\n    \"Afghan\", \"Albanais\", \"Algérien\", \"Andorran\", \"Angolais\",\r\n    \"Antiguayen\", \"Argentin\", \"Arménien\", \"Australien\", \"Autrichien\",\r\n    \"Azerbaïdjanais\", \"Bahaméen\", \"Bahreïnien\", \"Bangladais\", \"Barbadien\",\r\n    \"Biélorusse\", \"Belge\", \"Belizien\", \"Béninois\", \"Bhoutanais\",\r\n    \"Bolivien\", \"Bosniaque\", \"Botswanais\", \"Brésilien\", \"Brunéien\",\r\n    \"Bulgare\", \"Burkinabé\", \"Burundais\", \"Cap-Verdien\", \"Cambodgien\",\r\n    \"Camerounais\", \"Canadien\", \"Centrafricain\", \"Tchadien\", \"Chilien\",\r\n    \"Chinois\", \"Colombien\", \"Comorien\", \"Congolais\", \"Costaricien\",\r\n    \"Croate\", \"Cubain\", \"Chypriote\", \"Tchèque\", \"Congolais (RDC)\",\r\n    \"Danois\", \"Djiboutien\", \"Dominiquais\", \"Dominicain\", \"Est-Timorais\",\r\n    \"Équatorien\", \"Égyptien\", \"Salvadorien\", \"Équatoguinéen\", \"Érythréen\",\r\n    \"Estonien\", \"Swazi\", \"Éthiopien\", \"Fidjien\", \"Finlandais\",\r\n    \"Français\", \"Gabonnais\", \"Gambien\", \"Géorgien\", \"Allemand\",\r\n    \"Ghanéen\", \"Grec\", \"Grenadien\", \"Guatémaltèque\", \"Guinéen\",\r\n    \"Guinéen-Bissau\", \"Guyanien\", \"Haïtien\", \"Hondurien\", \"Hongrois\",\r\n    \"Islandais\", \"Indien\", \"Indonésien\", \"Iranien\", \"Irakien\",\r\n    \"Irlandais\", \"Italien\", \"Ivoirien\", \"Jamaïcain\",\r\n    \"Japonais\", \"Jordanien\", \"Kazakh\", \"Kényan\", \"Kiribatien\",\r\n    \"Koweïtien\", \"Kirghiz\", \"Laotien\", \"Letton\", \"Libanais\",\r\n    \"Lesothan\", \"Libérien\", \"Libyen\", \"Liechtensteinois\", \"Lituanien\",\r\n    \"Luxembourgeois\", \"Malagasy\", \"Malawite\", \"Malaisien\", \"Maldivien\",\r\n    \"Malien\", \"Maltais\", \"Marshallais\", \"Mauritanien\", \"Mauricien\",\r\n    \"Mexicain\", \"Micronésien\", \"Moldave\", \"Monégasque\", \"Mongol\",\r\n    \"Monténégrin\", \"Marocain\", \"Mozambicain\", \"Birman\", \"Namibien\",\r\n    \"Nauruan\", \"Népalais\", \"Néerlandais\", \"Néo-Zélandais\", \"Nicaraguayen\",\r\n    \"Nigerien\", \"Nigérian\", \"Nord-Coréen\", \"Macédonien\", \"Norvégien\",\r\n    \"Omanais\", \"Pakistanais\", \"Paluan\", \"Panaméen\", \"Papou\",\r\n    \"Paraguayen\", \"Péruvien\", \"Philippin\", \"Polonais\", \"Portugais\",\r\n    \"Qatari\", \"Roumain\", \"Russe\", \"Rwandais\", \"Saint-Kittien-et-Nevisien\",\r\n    \"Sainte-Lucien\", \"Saint-Vincentais\", \"Samoan\", \"Saint-Marinais\", \"Santoméen\",\r\n    \"Saoudien\", \"Sénégalais\", \"Serbe\", \"Seychellois\", \"Sierra-Léonais\",\r\n    \"Singapourien\", \"Slovaque\", \"Slovène\", \"Salomonais\", \"Somalien\",\r\n    \"Sud-Africain\", \"Sud-Coréen\", \"Sud-Soudanais\", \"Espagnol\", \"Sri-Lankais\",\r\n    \"Soudanais\", \"Surinamien\", \"Suédois\", \"Suisse\", \"Syrien\",\r\n    \"Taïwanais\", \"Tadjik\", \"Tanzanien\", \"Thaïlandais\", \"Togolais\",\r\n    \"Tongien\", \"Trinidadien\", \"Tunisien\", \"Turc\", \"Turkmène\",\r\n    \"Tuvaluan\", \"Ougandais\", \"Ukrainien\", \"Émirati\", \"Britannique\",\r\n    \"Américain\", \"Uruguayen\", \"Ouzbek\", \"Vanuatuan\", \"Vaticanais\",\r\n    \"Vénézuélien\", \"Vietnamien\", \"Yéménite\", \"Zambien\", \"Zimbabwéen\"\r\n};\r\n\r\n    // Replace \"É\" with \"E\" for countries that start with \"É\"\r\n    for (int i = 0; i < countries.length; i++) {\r\n        if (countries[i].startsWith(\"É\")) {\r\n            countries[i] = countries[i].replaceFirst(\"É\", \"E\");\r\n        }\r\n    }\r\n\r\n    // Sort countries alphabetically\r\n    Arrays.sort(countries);\r\n\r\n    // Add sorted countries to the rows\r\n    for (String country : countries) {\r\n        FormRow option = new FormRow();\r\n        option.setProperty(FormUtil.PROPERTY_VALUE, country);\r\n        option.setProperty(FormUtil.PROPERTY_LABEL, country);\r\n        rows.add(option);\r\n    }\r\n\r\n    return rows;\r\n}\r\n\r\n// Call load method with injected variables\r\nreturn load(element, primaryKey, formData);\r\n"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Nationalité du père",
+                                "id": "nationalite_pere",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "size": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "---",
+                                        "value": "",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Marié ou vivant ensemble monogame",
+                                        "value": "marié ou vivant ensemble monogame",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Marié ou vivant ensemble polygame",
+                                        "value": "marié ou vivant ensemble polygame",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Divorcé",
+                                        "value": "divorce",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Séparé",
+                                        "value": "séparé",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Veuf",
+                                        "value": "veuf",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Jamais marié",
+                                        "value": "jamais marié",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "multiple": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "situation_matrimoniale",
+                                "label": "Situation matrimoniale de la personne",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.apps.form.lib.BeanShellFormBinder",
+                                    "properties": {
+                                        "cacheInterval": "",
+                                        "script": "import org.joget.apps.app.service.AppUtil;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.model.FormRow;\r\nimport org.joget.apps.form.model.FormRowSet;\r\nimport org.joget.apps.form.service.FormUtil;\r\n\r\nimport java.util.Arrays;\r\n\r\npublic FormRowSet load(Element element, String primaryKey, FormData formData) {\r\n    FormRowSet rows = new FormRowSet();\r\n\r\n    // Add default value \"--\"\r\n    FormRow defaultOption = new FormRow();\r\n    defaultOption.setProperty(FormUtil.PROPERTY_VALUE, \"Béninois\");\r\n    defaultOption.setProperty(FormUtil.PROPERTY_LABEL, \"Béninois\");\r\n    rows.add(defaultOption);\r\n\r\n    // Array of countries in French\r\nString[] countries = {\r\n    \"Afghane\", \"Albanaise\", \"Algérienne\", \"Andorrane\", \"Angolaise\",\r\n    \"Antiguaise\", \"Argentine\", \"Arménienne\", \"Australienne\", \"Autrichienne\",\r\n    \"Azerbaïdjanaise\", \"Bahaméenne\", \"Bahreïnie\", \"Bangladaise\", \"Barbadienne\",\r\n    \"Biélorusse\", \"Belge\", \"Belizienne\", \"Béninoise\", \"Bhoutanaise\",\r\n    \"Bolivienne\", \"Bosniaque\", \"Botswanaise\", \"Brésilienne\", \"Brunéienne\",\r\n    \"Bulgare\", \"Burkinabé\", \"Burundaise\", \"Cap-Verdienne\", \"Cambodgienne\",\r\n    \"Camerounaise\", \"Canadienne\", \"Centrafricaine\", \"Tchadienne\", \"Chilienne\",\r\n    \"Chinoise\", \"Colombienne\", \"Comorienne\", \"Congolaise\", \"Costaricienne\",\r\n    \"Croate\", \"Cubaine\", \"Chypriote\", \"Tchèque\", \"Congolaise (RDC)\",\r\n    \"Danoise\", \"Djiboutienne\", \"Dominicaine\", \"Dominicaine\", \"Est-Timoraise\",\r\n    \"Équatorienne\", \"Égyptienne\", \"Salvadorienne\", \"Équatoguinéenne\", \"Érythréenne\",\r\n    \"Estonienne\", \"Swazie\", \"Éthiopienne\", \"Fidjienne\", \"Finlandaise\",\r\n    \"Française\", \"Gabonaise\", \"Gambienne\", \"Géorgienne\", \"Allemande\",\r\n    \"Ghanéenne\", \"Greque\", \"Grenadienne\", \"Guatémaltèque\", \"Guinéenne\",\r\n    \"Guinéenne-Bissau\", \"Guyanienne\", \"Haïtienne\", \"Hondurienne\", \"Hongroise\",\r\n    \"Islandaises\", \"Indienne\", \"Indonésienne\", \"Iranienne\", \"Irakienne\",\r\n    \"Irlandaise\", \"Italienne\", \"Ivoirienne\", \"Jamaïcaine\",\r\n    \"Japonaise\", \"Jordanienne\", \"Kazakh\", \"Kényane\", \"Kiribatienne\",\r\n    \"Koweïtienne\", \"Kirghize\", \"Laotienne\", \"Lettonne\", \"Libanaise\",\r\n    \"Lesothane\", \"Libérienne\", \"Libyenne\", \"Liechtensteinoise\", \"Lituanienne\",\r\n    \"Luxembourgeoise\", \"Malagasy\", \"Malawite\", \"Malaisienne\", \"Maldivienne\",\r\n    \"Malienne\", \"Maltaise\", \"Marshallaise\", \"Mauritanienne\", \"Mauricienne\",\r\n    \"Mexicaine\", \"Micronésienne\", \"Moldave\", \"Monégasque\", \"Mongole\",\r\n    \"Monténégrine\", \"Marocaine\", \"Mozambicaine\", \"Birmane\", \"Namibienne\",\r\n    \"Nauruane\", \"Népalaise\", \"Néerlandaise\", \"Néo-Zélandaise\", \"Nicaraguayenne\",\r\n    \"Nigerienne\", \"Nigériane\", \"Nord-Coréenne\", \"Macédonienne\", \"Norvégienne\",\r\n    \"Omanaise\", \"Pakistanaise\", \"Paluanne\", \"Panaméenne\", \"Papoue\",\r\n    \"Paraguayenne\", \"Péruvienne\", \"Philippine\", \"Polonaise\", \"Portugaise\",\r\n    \"Qatarie\", \"Roumaine\", \"Russe\", \"Rwandaise\", \"Saint-Kittienne-et-Nevisienne\",\r\n    \"Sainte-Lucienne\", \"Saint-Vincentaise\", \"Samoane\", \"Saint-Marinaise\", \"Santoméenne\",\r\n    \"Saoudienne\", \"Sénégalaise\", \"Serbe\", \"Seychelloise\", \"Sierra-Léonaise\",\r\n    \"Singapourienne\", \"Slovaque\", \"Slovène\", \"Salomonaise\", \"Somalienne\",\r\n    \"Sud-Africaine\", \"Sud-Coréenne\", \"Sud-Soudanaise\", \"Espagnole\", \"Sri-Lankaise\",\r\n    \"Soudanaise\", \"Surinamienne\", \"Suédoise\", \"Suisse\", \"Syrienne\",\r\n    \"Taïwanaise\", \"Tadjike\", \"Tanzanienne\", \"Thaïlandaise\", \"Togolaise\",\r\n    \"Tongienne\", \"Trinidadienne\", \"Tunisienne\", \"Turque\", \"Turkmène\",\r\n    \"Tuvaluane\", \"Ougandaise\", \"Ukrainienne\", \"Émiratie\", \"Britannique\",\r\n    \"Américaine\", \"Uruguayenne\", \"Ouzbek\", \"Vanuataise\", \"Vaticanaise\",\r\n    \"Vénézuélienne\", \"Vietnamienne\", \"Yéménite\", \"Zambienne\", \"Zimbabwéenne\"\r\n};\r\n\r\n    // Replace \"É\" with \"E\" for countries that start with \"É\"\r\n    for (int i = 0; i < countries.length; i++) {\r\n        if (countries[i].startsWith(\"É\")) {\r\n            countries[i] = countries[i].replaceFirst(\"É\", \"E\");\r\n        }\r\n    }\r\n\r\n    // Sort countries alphabetically\r\n    Arrays.sort(countries);\r\n\r\n    // Add sorted countries to the rows\r\n    for (String country : countries) {\r\n        FormRow option = new FormRow();\r\n        option.setProperty(FormUtil.PROPERTY_VALUE, country);\r\n        option.setProperty(FormUtil.PROPERTY_LABEL, country);\r\n        rows.add(option);\r\n    }\r\n\r\n    return rows;\r\n}\r\n\r\n// Call load method with injected variables\r\nreturn load(element, primaryKey, formData);\r\n"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Nationalité de la mère",
+                                "id": "nationalite_mere",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.Radio",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "options": [
+                                    {
+                                        "label": "Chef",
+                                        "value": "chef",
+                                        "grouping": ""
+                                    },
+                                    {
+                                        "label": "Membre",
+                                        "value": "membre",
+                                        "grouping": ""
+                                    }
+                                ],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "id": "role_menage",
+                                "label": "Rôle dans le ménage",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Données à saisir manuellement",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "oui",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section5",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [{
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Nom du chef de ménage",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "nom_cm",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [{
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "label": "Prénom du chef de ménage",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "",
+                            "style": "",
+                            "id": "prenom_cm",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "role_menage;consentement",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": ";",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "membre;oui",
+                "regex": ";",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section6",
+                "join": ";",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "numeric",
+                                        "message": "Ce champ n'accepte que les chiffres",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Numéro de téléphone principal",
+                                "size": "",
+                                "readonly": "",
+                                "css-label-position": "label-top",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "numero_tel_principal",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "email",
+                                        "message": "",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Adresse email",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "email",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "numeric",
+                                        "message": "Ce champ n'accepte que les chiffres",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Nombre de personnes dans le ménage",
+                                "size": "",
+                                "readonly": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "nombre_personnes_menage",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "50%",
+                        "width": "50%",
+                        "label": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "numeric",
+                                        "message": "Ce champ n'accepte que les chiffres",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Numéro de téléphone secondaire",
+                                "size": "",
+                                "readonly": "",
+                                "css-label-position": "label-top",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "numero_tel_secondaire",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "numeric",
+                                        "message": "Ce champ n'accepte que les chiffres",
+                                        "mandatory": ""
+                                    }
+                                },
+                                "label": "Nombre de personnes handicapées dans le ménage",
+                                "size": "",
+                                "readonly": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "nombre_personnes_handicapees_menage",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "50%",
+                        "width": "50%",
+                        "label": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionHidden": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "oui",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section3",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Adresse complète",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "adresse",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "departement",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id , c_libelle ,c_departement_id\n\tFROM app_fd_commune\n"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Commune",
+                                "id": "commune",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Village ou quartier de ville",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "village_quartier_ville",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "50%",
+                        "width": "50%",
+                        "label": ""
+                    }
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id , c_libelle\n\tFROM app_fd_department"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Département",
+                                "id": "departement",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "commune",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id, c_libelle , c_commune_id\n\tFROM app_fd_arrondissement"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "",
+                                "label": "Arrondissement",
+                                "id": "arrondissement",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Hameau/Ilot/Concession",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "",
+                                "style": "",
+                                "id": "concession",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "horizontal": "",
+                        "customWidth": "50%",
+                        "width": "50%",
+                        "label": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "oui",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section7",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [{
+                    "className": "org.joget.apps.form.lib.Radio",
+                    "properties": {
+                        "fullWidth": "",
+                        "controlField": "",
+                        "readonly": "",
+                        "optionsBinder": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "options": [
+                            {
+                                "label": "Incluse",
+                                "value": "incluse",
+                                "grouping": ""
+                            },
+                            {
+                                "label": "Excluse",
+                                "value": "excluse",
+                                "grouping": ""
+                            }
+                        ],
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "workflowVariable": "",
+                        "label": "Inclusion à l'enquête",
+                        "id": "inclusion_enquete",
+                        "value": "",
+                        "readonlyLabel": ""
+                    }
+                }],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "oui",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section4",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Valider",
+                                    "value": "valider",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Refuser",
+                                    "value": "refuser",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Décision",
+                            "id": "decision_gups",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Commentaire",
+                            "id": "commentaire",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "consentement",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Validation GUPS",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "non",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section9",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.Radio",
+                        "properties": {
+                            "fullWidth": "",
+                            "controlField": "",
+                            "readonly": "",
+                            "optionsBinder": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "options": [
+                                {
+                                    "label": "Valider",
+                                    "value": "valider",
+                                    "grouping": ""
+                                },
+                                {
+                                    "label": "Refuser",
+                                    "value": "refuser",
+                                    "grouping": ""
+                                }
+                            ],
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Décision finale",
+                            "id": "decision_finale",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.TextArea",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "readonly": "",
+                            "validator": {
+                                "className": "",
+                                "properties": {}
+                            },
+                            "workflowVariable": "",
+                            "label": "Commentaire",
+                            "id": "commentaire2",
+                            "placeholder": "",
+                            "rows": "5",
+                            "cols": "20",
+                            "value": "",
+                            "readonlyLabel": ""
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Validation finale du service contentieux",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section8",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "noPermissionMessage": "",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "name": "Décision finale réinscription",
+        "description": "",
+        "postProcessorRunOn": "both",
+        "permission": {
+            "className": "",
+            "properties": {}
+        },
+        "id": "decision_finale_reinscription",
+        "postProcessor": {
+            "className": "org.joget.apps.app.lib.DatabaseUpdateTool",
+            "properties": {
+                "query": "UPDATE app_fd_d_preinscription\nSET c_statut_demande = 'A enquêter'\nWHERE id = '#form.d_preinscription.id#'\nAND '#form.d_preinscription.inclusion_enquete#' = 'incluse'",
+                "jdbcDatasource": "default"
+            }
+        },
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+            "properties": {}
+        },
+        "tableName": "reinscription"
+    }
+}

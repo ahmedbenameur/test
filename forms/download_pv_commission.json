@@ -1,0 +1,108 @@
+{
+    "elements": [{
+        "elements": [{
+            "elements": [
+                {
+                    "className": "org.joget.apps.form.lib.FileUpload",
+                    "properties": {
+                        "resizeMethod": "",
+                        "permissionType": "",
+                        "padding": "",
+                        "permissionHidden": "",
+                        "maxSizeMsg": "File size limit exceeded",
+                        "resizeWidth": "",
+                        "multiple": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "maxSize": "",
+                        "label": "PV commission",
+                        "resizeQuality": "0.8",
+                        "removeFile": "",
+                        "readonly": "true",
+                        "attachment": "true",
+                        "size": "",
+                        "fileTypeMsg": "Invalid file type",
+                        "id": "pv_commission",
+                        "resizeHeight": "",
+                        "fileType": ""
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.CustomHTML",
+                    "properties": {
+                        "requiredSanitize": "",
+                        "autoPopulate": "",
+                        "label": "",
+                        "id": "field3",
+                        "value": "<script>\r\n    $(\"body\").on(\"page_loaded\", function() {\r\n     console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n    });\r\n$(document).ready(function() {\r\n         console.log(\"page loaded;--------------------------------------------------new trigger\");\r\n          var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n            // If the error message element does not exist after 2 seconds, proceed with redirection\r\n            if (!errorMessageElement) {\r\n                    console.log(\"-----------------no error  \");\r\n                // Redirect to the constructed URL\r\n                 var URL=sessionStorage.getItem('redirectURL');\r\n                  console.log(\"-----------------no error  and url is \",URL);\r\n                 if(URL!=null){\r\n                    //  sessionStorage.removeItem('redirectURL');\r\n                     window.location.href = URL;\r\n                 }\r\n        \r\n            }\r\n   \r\n    $(\"#assignmentComplete\").on(\"click\", function(event) {\r\n        event.preventDefault(); // Prevent default behavior to ensure our logic works\r\n        var msgFlash = \"Commission cloturée avec succées\";\r\n        var typeFlash = \"Commission cloturée avec succées\";\r\n        // Construct the redirect URL with the parameters\r\n        var redirectUrl = '/jw/web/userview/rsu/rsu_userview/_/welcome?type=' + encodeURIComponent(typeFlash) + '&flash=' + encodeURIComponent(msgFlash);\r\n        // Wait for 2 seconds before checking the error message\r\n        // setTimeout(function() {\r\n        //     var errorMessageElement = document.querySelector(\".form-message.form-errors\");\r\n        //     // If the error message element does not exist after 2 seconds, proceed with redirection\r\n        //     if (!errorMessageElement) {\r\n        //         // Redirect to the constructed URL\r\n        //         window.location.href = redirectUrl;\r\n        //     }\r\n        // }, 1000); // 2-second delay\r\n        sessionStorage.setItem('redirectURL',redirectUrl);\r\n        $(\"#assignmentComplete, #submit\").off(\"click\").trigger(\"click\");\r\n    });\r\n});\r\n<\/script>\r\n"
+                    }
+                },
+                {
+                    "className": "org.joget.apps.form.lib.FileUpload",
+                    "properties": {
+                        "resizeMethod": "",
+                        "permissionType": "",
+                        "padding": "",
+                        "maxSizeMsg": "File size limit exceeded",
+                        "resizeWidth": "",
+                        "multiple": "",
+                        "validator": {
+                            "className": "",
+                            "properties": {}
+                        },
+                        "maxSize": "",
+                        "label": "PV commission signée",
+                        "resizeQuality": "0.8",
+                        "removeFile": "",
+                        "readonly": "",
+                        "attachment": "true",
+                        "size": "",
+                        "fileTypeMsg": "Invalid file type",
+                        "id": "pv_commission_signee",
+                        "resizeHeight": "",
+                        "fileType": ""
+                    }
+                }
+            ],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {"width": "100%"}
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "visibilityControl": "",
+            "permissionReadonly": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "reverse": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityValue": "",
+            "regex": "",
+            "readonly": "",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "comment": "",
+            "id": "section1",
+            "join": "",
+            "readonlyLabel": ""
+        }
+    }],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "download pv commission",
+        "description": "",
+        "id": "download_pv_commission",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "commission"
+    }
+}

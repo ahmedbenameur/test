@@ -1,0 +1,330 @@
+{
+    "elements": [
+        {
+            "elements": [
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.IdGeneratorField",
+                            "properties": {
+                                "hidden": "",
+                                "format": "Commission-??????",
+                                "workflowVariable": "",
+                                "envVariable": "counter_commission",
+                                "isDistributedGeneration": "",
+                                "label": "ID commission",
+                                "id": "id_commission"
+                            }
+                        },
+                        {
+                            "className": "org.joget.marketplace.AjaxSelectbox",
+                            "properties": {
+                                "minTermLength": "1",
+                                "idField": "email",
+                                "afterTypeDelay": "300",
+                                "defaultOptions": "",
+                                "multiple": "true",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "type": "",
+                                        "message": "",
+                                        "mandatory": "true"
+                                    }
+                                },
+                                "requestParams": [],
+                                "label": "Président de la commission",
+                                "listId": "liste_utilisateurs_gups",
+                                "allowEmpty": "true",
+                                "readonly": "",
+                                "keepTypingMsg": "Continue typing to search",
+                                "width": "40%",
+                                "lookingForMsg": "Retrieving results",
+                                "displayField": "nom_complet",
+                                "workflowVariable": "president",
+                                "id": "president_de_la_commission",
+                                "placeholder": "",
+                                "value": "email",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id , c_libelle\n\tFROM app_fd_department"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "departement",
+                                "label": "Département",
+                                "id": "departement",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "commune",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id, c_libelle , c_commune_id\n\tFROM app_fd_arrondissement"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "arrondissement",
+                                "label": "Arrondissement",
+                                "id": "arrondissement",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "autoPopulate": "",
+                                "label": "",
+                                "id": "field11",
+                                "value": "<!-- Include SweetAlert2 Library -->\r\n<script src=\"https://cdn.jsdelivr.net/npm/sweetalert2@11\"><\/script>\r\n\r\n<script>\r\n    $(document).ready(function () {\r\n       \r\n\r\n        if (\"#variable.quorum#\"==\"false\") {\r\n            console.log(\"----------------->\",\"#variable.quorum#\");\r\n            try {\r\n                // Parse the error messages from the JSON string\r\n      \r\n                  \r\n                        Swal.fire({\r\n                            title: 'Erreur lors de la validation communautaire',\r\n                            html: 'Il faut qu\\'au moins trois personnes soient présentes pour continuer la validation communautaire', // Format messages as HTML\r\n                            icon: 'error',\r\n                            showCancelButton: true,  // Enables the \"Annuler\" button\r\n                            confirmButtonText: 'Reporter la commission',\r\n                            cancelButtonText: 'Annuler' // Custom text for cancel button\r\n                        }).then((result) => {\r\n                            if (result.isConfirmed) {\r\n                            \r\n                             \r\n                                document.getElementById(\"validator_members\").value='true';\r\n                              setTimeout(() => {\r\n                            document.getElementById(\"assignmentComplete\").click();\r\n                        }, 1000);\r\n\r\n                            \r\n                            }else{\r\n                                Swal.close();\r\n\r\n                            }\r\n                        });\r\n                    \r\n                \r\n            } catch (err) {\r\n                console.error(\"Error parsing _FORM_ERRORS:\", err);\r\n            }\r\n        }\r\n    });\r\n<\/script>\r\n<style>\r\n    #validator_members{\r\n        display:none;\r\n    }\r\n<\/style>\r\n"
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                },
+                {
+                    "elements": [
+                        {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "yearRange": "c-10:c+10",
+                                "dataFormat": "yyyy-MM-dd",
+                                "startDateFieldId": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "format": "",
+                                "label": "Date commission",
+                                "datePickerType": "dateTime",
+                                "currentDateAs": "",
+                                "endDateFieldId": "",
+                                "readonly": "",
+                                "allowManual": "",
+                                "workflowVariable": "date_com",
+                                "id": "date_commission",
+                                "placeholder": "",
+                                "disableWeekends": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "format24hr": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Salle de commune ou de l\u2019arrondissement",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "adresse",
+                                "style": "",
+                                "id": "adresse",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "controlField": "departement",
+                                "readonly": "",
+                                "size": "",
+                                "optionsBinder": {
+                                    "className": "org.joget.tutorial.JdbcOptionsBinder",
+                                    "properties": {
+                                        "useAjax": "",
+                                        "addEmpty": "",
+                                        "jdbcDatasource": "default",
+                                        "sql": "SELECT id , c_libelle ,c_departement_id\n\tFROM app_fd_commune\n"
+                                    }
+                                },
+                                "multiple": "",
+                                "options": [],
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "workflowVariable": "commune",
+                                "label": "Commune",
+                                "id": "commune",
+                                "value": "",
+                                "readonlyLabel": ""
+                            }
+                        },
+                        {
+                            "className": "org.joget.apps.form.lib.TextField",
+                            "properties": {
+                                "requiredSanitize": "",
+                                "maxlength": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "label": "Village",
+                                "readonly": "",
+                                "size": "",
+                                "workflowVariable": "village",
+                                "style": "",
+                                "id": "village",
+                                "placeholder": "",
+                                "value": "",
+                                "readonlyLabel": "",
+                                "storeNumeric": ""
+                            }
+                        }
+                    ],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {"width": "50%"}
+                }
+            ],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionHidden": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Information générale",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "true",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "section5",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        },
+        {
+            "elements": [{
+                "elements": [
+                    {
+                        "className": "org.joget.apps.form.lib.TextField",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "maxlength": "",
+                            "validator": {
+                                "className": "org.joget.apps.form.lib.BeanShellValidator",
+                                "properties": {
+                                    "decoration": "",
+                                    "script": "\r\n\r\n\r\n\r\nimport java.sql.Connection;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport javax.sql.DataSource;\r\nimport org.joget.apps.app.service.AppUtil;\r\nimport org.joget.commons.util.LogUtil;\r\n \r\nimport java.util.Arrays;\r\nimport org.joget.apps.form.model.Element;\r\nimport org.joget.apps.form.model.FormData;\r\nimport org.joget.apps.form.service.FormUtil;\r\nimport org.joget.apps.form.model.Form;\r\nimport javax.servlet.http.HttpServletRequest;\r\nimport org.joget.apps.app.service.AppUtil;\r\n\r\nString nullValue = \"\";\r\nString defaultId = \"validator_members\";\r\nForm form = FormUtil.findRootForm(element);\r\nElement currentElement = FormUtil.findElement(defaultId, form, formData);\r\nString currentElementId = currentElement.getCustomParameterName();\r\nif (currentElementId==null){\r\n    currentElementId = defaultId;\r\n}\r\n\r\nConnection con = null;\r\ntry {\r\n    // retrieve connection from the default datasource\r\n    DataSource ds = (DataSource)AppUtil.getApplicationContext().getBean(\"setupDataSource\");\r\n    con = ds.getConnection();\r\n    // execute SQL query\r\n    if(!con.isClosed()) {\r\n        PreparedStatement stmtSelectMembres = con.prepareStatement(\"select c_Presence from app_fd_membre_commission where c_id_commission=?;\");\r\n        stmtSelectMembres.setString(1,\"#variable.processID#\");\r\n        \r\n        ResultSet rs1 = stmtSelectMembres.executeQuery();\r\n        while (rs1.next()) {\r\n            try {\r\n                if(rs1.getString(1)==null || rs1.getString(1).isEmpty()){\r\n                    nullValue = \"absent\";\r\n                }\r\n            }catch(Exception e){\r\n                Logutil.error(\"-------- Error parsing count membres -------->\",e,\"Error parsing\");\r\n            }\r\n        }\r\n    }\r\n \r\n} catch(Exception e) {\r\n    LogUtil.error(\"error getting members commission \", e, \"error SQL validator\");\r\n} finally {\r\n    try {\r\n        if(con != null) {\r\n            con.close();\r\n        }\r\n    } catch(SQLException e) {/* ignored */}\r\n}\r\n \r\n\r\n    if(nullValue.equals(\"absent\")){\r\n    formData.addFormError(currentElementId,\"vous devez renseigné le présence de tous les membres de la commission\");\r\n    return false;\r\n}else{\r\n    return true ;\r\n}\r\n// }\r\n"
+                                }
+                            },
+                            "label": "\u200e",
+                            "readonly": "",
+                            "size": "",
+                            "workflowVariable": "validated_report",
+                            "style": "",
+                            "id": "validator_members",
+                            "placeholder": "",
+                            "value": "",
+                            "readonlyLabel": "",
+                            "storeNumeric": ""
+                        }
+                    },
+                    {
+                        "className": "org.joget.apps.form.lib.CustomHTML",
+                        "properties": {
+                            "requiredSanitize": "",
+                            "autoPopulate": "",
+                            "label": "",
+                            "id": "field4",
+                            "value": "<script type=\"text/javascript\">\r\n\r\n    function resizeIframe(obj) {\r\n        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';    \r\n    }\r\n    $(document).ready(function(){\r\n       const frameEvals = document.getElementById(\"frame\");\r\n        frameEvals.src=\"/jw/web/userview/rsu/rsu_userview/_/liste_des_membres_commission_presence?id_commission=#variable.processID#&embed=true\";\r\n    });\r\n    <\/script>\r\n    <iframe id=\"frame\" width=\"100%\" height=\"400px\" frameborder=\"0\" scrolling=\"no\" onload=\"resizeIframe(this)\" ><\/iframe>"
+                        }
+                    }
+                ],
+                "className": "org.joget.apps.form.model.Column",
+                "properties": {"width": "100%"}
+            }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "visibilityControl": "",
+                "permissionReadonly": "",
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "Membres de la commission",
+                "reverse": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityValue": "",
+                "regex": "",
+                "readonly": "",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "comment": "",
+                "id": "membres_de_la_commission",
+                "join": "",
+                "readonlyLabel": ""
+            }
+        }
+    ],
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "loadBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "name": "presence commission",
+        "description": "",
+        "id": "presence_commission",
+        "storeBinder": {"className": "org.joget.apps.form.lib.WorkflowFormBinder"},
+        "tableName": "commission"
+    }
+}

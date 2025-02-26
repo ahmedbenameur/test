@@ -1,0 +1,210 @@
+{
+    "datas": {
+        "process": {
+            "planif_enquete_zar": [
+                "t1730214570292",
+                "t1728634746203"
+            ],
+            "designer_equip_enquete": ["t1728634746203"],
+            "demande_preinscription": ["t05"],
+            "demade_de_radiation": ["t04"],
+            "verif_enquete_zar": [
+                "t1730214570292",
+                "t1728634746203"
+            ],
+            "verif_enquete": ["t1728634746203"],
+            "demande_reclamation": ["t07"],
+            "validation_communitaire": ["t01"]
+        },
+        "form": {
+            "form_champ_zar": ["t1730214570292"],
+            "validation_reclamation": ["t07"],
+            "agent": ["t1728634746203"],
+            "demande_radiation": ["t04"],
+            "education": ["t1728634746203"],
+            "moustiquaires_impregnees": ["t1728634746203"],
+            "visualisation_liste_enquetes": ["t1728634921545"],
+            "menage_existe": ["t1728634746203"],
+            "decision_reclamation": ["t07"],
+            "enquete_pmt_id": ["t1728634746203"],
+            "enquete": ["t1728634746203"],
+            "table_menages_inter": ["t03"],
+            "dedoublonnage_menages": ["t1728634746203"],
+            "enquete_pmt_zar": ["t1730214570292"],
+            "vis_liste_demande_soumises": ["t1728634921545"],
+            "contact": ["t1728634746203"],
+            "identite_individu_inter": ["t03"],
+            "param_gups": ["t02"],
+            "enquete_pmt_id_inter": ["t03"],
+            "traitement_reclamtion": ["t07"],
+            "planif_enquete_zone_risquee": ["t1730214570292"],
+            "rectifier_enquete_zar": ["t1730214570292"],
+            "test": ["t09"],
+            "handicap": ["t1728634746203"],
+            "entrer_fid": ["t05"],
+            "menage": [
+                "t1728634746203",
+                "t1728634921545"
+            ],
+            "verification_enquete_zar": ["t1730214570292"],
+            "memebre_commission": ["t01"],
+            "caract_menages_inter": [
+                "t03",
+                "t03"
+            ],
+            "handicap_inter": ["t03"],
+            "pulverisation_intra_domiciliaire_inter": ["t03"],
+            "vis_enquetes_zones_risques": ["t1728634921545"],
+            "scoring_pmt": ["t1728634746203"],
+            "visualistaion_recepisse": ["t1728634921545"],
+            "verifier_coherence": ["t1728634746203"],
+            "protection_sociale_inter": ["t03"],
+            "planification_commission": ["t01"],
+            "table_individus": ["t1728634746203"],
+            "eau_et_assainissemen": ["t1728634746203"],
+            "commune": ["t02"],
+            "liste_menages_a_enqueter": [
+                "t1728634921545",
+                "t1728634746203"
+            ],
+            "eau_et_assainissemen_inter": ["t03"],
+            "d_preins_zar": ["t1730214570292"],
+            "app_fd_chocs_et_strat_survie": ["t1728634746203"],
+            "valider_radiation_rgups": ["t04"],
+            "identite_individu": ["t1728634746203"],
+            "vis_liste_enquetes": ["t1728634921545"],
+            "pulverisation_intra_domiciliaire": ["t1728634746203"],
+            "contact_inter": ["t03"],
+            "protection_sociale": ["t1728634746203"],
+            "dedoublonnage_menages_inter": ["t03"],
+            "lancement_commission": ["t01"],
+            "table_menages": ["t1728634746203"],
+            "planif_enquete": ["t1728634746203"],
+            "validation_finale_rad": ["t04"],
+            "moustiquaires_impregnees_inter": ["t03"],
+            "table_individus_inter": ["t03"],
+            "menage_inter": ["t03"],
+            "caract_menages": ["t1728634746203"],
+            "app_fd_chocs_et_strat_survie_inter": ["t03"],
+            "demande_preinscription": ["t05"],
+            "demande_de_reclamation": ["t07"],
+            "education_inter": ["t03"],
+            "scoring_pmt_inter": ["t03"],
+            "demande_reclamation_evaluation": ["t07"],
+            "traiter_radiation": ["t04"],
+            "param_membre_gups": ["t02"],
+            "enquete_inter": ["t03"],
+            "coupon_reclamation": ["t07"],
+            "agent_inter": ["t03"]
+        },
+        "list": {
+            "liste_demandes_commission": ["t01"],
+            "liste_utilisateurs_gups": ["t02"],
+            "list_enquete_vis_recap": ["t1728634921545"],
+            "liste_reclamation_chef_cellule": ["t07"],
+            "liste_reclamations": ["t07"],
+            "liste_demandes_radiation": ["t04"],
+            "liste_enquetes_a_valider": [
+                "t1728634746203",
+                "t01"
+            ],
+            "liste_demandes_preinscription": ["t05"],
+            "liste_enquetes_planifiees": ["t1728634746203"],
+            "liste_reclamation_agent_cellule": ["t07"],
+            "personnes_incluses_enquete_pmt": ["t05"],
+            "dossier_commission": ["t01"],
+            "membre_commission_presence": ["t01"],
+            "liste_champ_zar": ["t1728634921545"],
+            "membre_commission": ["t01"],
+            "liste_demandes_vulnerables": [
+                "t1730214570292",
+                "t05"
+            ],
+            "vis_listes_enquetes": ["t1728634921545"],
+            "l_zar_vis": ["t1728634921545"],
+            "Liste_menages": ["t1728634921545"],
+            "liste_arrondissements": ["t02"],
+            "equipe_enquete": ["t1728634746203"],
+            "liste_enquetes_pmt": ["t1728634746203"],
+            "Liste_menages_inter": ["t03"],
+            "liste_gups": ["t02"],
+            "liste_departements": ["t02"],
+            "list_demandes_zar": [
+                "t05",
+                "t1730214570292"
+            ],
+            "liste_enquetes_zones_risques": [
+                "t1728634746203",
+                "t1730214570292"
+            ],
+            "tasks_list": ["t07"],
+            "dossier_commission_decision": ["t01"],
+            "liste_communes": ["t02"],
+            "liste_membres_gups": ["t02"],
+            "liste_demandes_par_equipe": [
+                "t1728634921545",
+                "t1728634746203"
+            ],
+            "enquete_inter": ["t03"],
+            "liste_npi": ["t05"],
+            "affectation_dossier_commission": ["t01"],
+            "vis_liste_demandes": ["t1728634921545"]
+        },
+        "userview": {"rsu_userview": [
+            "t01",
+            "t02",
+            "t05",
+            "t1728634746203",
+            "t1730214570292"
+        ]}
+    },
+    "labels": {
+        "t1730214570292": {
+            "color": "orange",
+            "label": "ZAR"
+        },
+        "t1728634746203": {
+            "color": "sky",
+            "label": "enquete"
+        },
+        "t1728634921545": {
+            "color": "blue",
+            "label": "iframe"
+        },
+        "t1730215152311": {
+            "color": "red",
+            "label": ""
+        },
+        "t10": {"color": "black"},
+        "t01": {
+            "color": "red",
+            "label": "commission"
+        },
+        "t03": {
+            "color": "orange",
+            "label": "enquete inter"
+        },
+        "t02": {
+            "color": "pink",
+            "label": "parametrage"
+        },
+        "t05": {
+            "color": "green",
+            "label": "preins"
+        },
+        "t04": {
+            "color": "yellow",
+            "label": "radiation"
+        },
+        "t07": {
+            "color": "blue",
+            "label": "réclamations"
+        },
+        "t06": {"color": "lime"},
+        "t09": {
+            "color": "purple",
+            "label": "test"
+        },
+        "t08": {"color": "sky"}
+    }
+}
