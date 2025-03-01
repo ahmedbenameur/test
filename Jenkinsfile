@@ -13,40 +13,8 @@ pipeline {
                git branch: 'rsu_1',
                url: 'https://github.com/ahmedbenameur/test.git'
            }
-       }      /*  stage('Export & Upload JWA to Nexus (joget-repo)') {
-           steps {
-               script {
-                   echo ":package: Fetching application details from Joget..."
-               }
-               sh '''
-               # Installer jq si absent
-               if ! command -v jq &> /dev/null; then
-                   echo ":wrench: Installing jq..."
-                   apt-get update && apt-get install -y jq
-               fi                # :one: Définition statique du nom et ID de l’application
-               APP_NAME="rsu"
-               APP_ID="5"                # :two: Générer un timestamp actuel (YYYYMMDDHHMMSS)
-               TIMESTAMP=$(date +"%Y%m%d%H%M%S")                # :three: Construire le nom du fichier JWA avec le bon format
-               JWA_FILE="APP_${APP_NAME}-${APP_ID}_${TIMESTAMP}.jwa"                echo ":package: Exporting application: Name=$APP_NAME, ID=$APP_ID, File=$JWA_FILE"                # :four: Créer le dossier d'export dans Joget et fixer les permissions
-               docker exec -u root jogetapp bash -c "mkdir -p /opt/joget/export && chmod -R 777 /opt/joget/export"                # :five: Exporter l'application Joget en .jwa
-               EXPORT_URL="http://192.168.193.128:8080/jw/web/json/apps/export?appId=${APP_ID}"
-               echo ":outbox_tray: Exporting from: $EXPORT_URL"
-               docker exec jogetapp bash -c "curl -u admin:admin -o /opt/joget/export/${JWA_FILE} '${EXPORT_URL}'"                # :six: Vérifier la taille du fichier exporté
-               FILE_SIZE=$(docker exec jogetapp bash -c "stat -c %s /opt/joget/export/${JWA_FILE}")                if [ "$FILE_SIZE" -lt 1024 ]; then
-                   echo ":x: ERREUR: Le fichier JWA exporté semble vide (taille: $FILE_SIZE octets)."
-                   exit 1
-               fi                echo ":straight_ruler: Taille du fichier exporté: $FILE_SIZE octets"                # :seven: Copier le fichier .jwa depuis Joget vers Jenkins
-               docker cp jogetapp:/opt/joget/export/${JWA_FILE} .                # :eight: Vérifier que le fichier existe et a une taille correcte avant de l’uploader
-               if [ ! -f "${JWA_FILE}" ]; then
-                   echo ":x: ERREUR: Le fichier JWA n'a pas été exporté correctement."
-                   exit 1
-               fi                # :nine: Uploader le fichier sur Nexus (dans le repository joget-repo)
-               echo ":outbox_tray: Uploading ${JWA_FILE} to Nexus (joget-repo)..."
-               curl -u admin:Mouhamed2000** --upload-file ${JWA_FILE} \
-               "http://192.168.193.128:8082/repository/joget-repo/com/wevioo/jwa/${APP_ID}/${JWA_FILE}"                echo ":white_check_mark: Upload completed successfully to joget-repo!"
-               '''
-           }
-       }    */    stage('Prepare SonarQube Scanner') {
+       }       
+      stage('Prepare SonarQube Scanner') {
            steps {
                script {
                    echo ":mag: Checking if SonarQube Scanner is installed..."
