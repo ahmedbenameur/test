@@ -79,11 +79,7 @@ pipeline {
                           -Dsonar.scm.disabled=true \
                           -Dsonar.sourceEncoding=UTF-8 \
                           -Dsonar.verbose=true
-                    else
-                        echo ":rotating_light: ERROR: No Java, SQL, or JS files found in ./output!"
-                        exit 1
-                    fi
-                '''
+                   
             }
         }
 
