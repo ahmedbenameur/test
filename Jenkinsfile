@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-       stage('Prepare SonarQube Scanner') {
+/*       stage('Prepare SonarQube Scanner') {
     steps {
         script {
             echo ":mag: Checking if SonarQube Scanner is installed..."
@@ -63,7 +63,7 @@ pipeline {
                 sh 'ls -R ./output || echo ":rotating_light: No extracted files found!"'
             }
         }
-
+*/
         stage('SonarQube Analysis') {
             steps {
                 script {
