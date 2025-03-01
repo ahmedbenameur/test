@@ -14,56 +14,38 @@ pipeline {
             }
         }
 
-      stage('Prepare SonarQube Scanner') {
-    steps {
-        script {
-            echo ":mag: Checking if SonarQube Scanner is installed..."
-        }
-        sh '''
-            if [ ! -d "sonar-scanner" ]; then
-                echo ":rocket: Installing SonarQube Scanner..."
-                if ! command -v wget &> /dev/null; then
-                    echo ":warning: wget not installed. Installing..."
-                    sudo apt-get update && sudo apt-get install -y wget || exit 1
-                fi
-                wget --quiet https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip -O sonar-scanner.zip
-                unzip -q sonar-scanner.zip
-                mv sonar-scanner-5.0.1.3006-linux sonar-scanner
-                chmod +x sonar-scanner/bin/sonar-scanner
-            else
-                echo ":white_check_mark: SonarQube Scanner is already installed."
-            fi
-        '''
-    }
-}
-/*
-        stage('Create Folder') {
+        stage('Prepare SonarQube Scanner') {
             steps {
                 script {
-                    echo ":open_file_folder: Setting up output directory..."
+                    echo ":mag: Checking if SonarQube Scanner is installed..."
                 }
-                sh 'mkdir -p output'
+                sh '''
+                    # Clean up old SonarQube Scanner installations
+                    rm -rf sonar-scanner-* sonar-scanner-cli-*.zip
+
+                    if [ ! -d "sonar-scanner" ]; then
+                        echo ":rocket: Installing SonarQube Scanner..."
+                        if ! command -v wget &> /dev/null; then
+                            echo ":warning: wget not installed. Installing..."
+                            sudo apt-get update && sudo apt-get install -y wget || exit 1
+                        fi
+                        wget --quiet https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip -O sonar-scanner.zip
+                        if [ $? -eq 0 ]; then
+                            unzip -q -o sonar-scanner.zip
+                            mv sonar-scanner-5.0.1.3006-linux sonar-scanner
+                            chmod +x sonar-scanner/bin/sonar-scanner
+                            rm sonar-scanner.zip  # Clean up the zip file after extraction
+                        else
+                            echo ":rotating_light: Failed to download SonarQube Scanner."
+                            exit 1
+                        fi
+                    else
+                        echo ":white_check_mark: SonarQube Scanner is already installed."
+                    fi
+                '''
             }
         }
 
-        stage('Run Python Script') {
-            steps {
-                script {
-                    echo ":snake: Executing Python script..."
-                }
-                sh 'python3 extract_code.py'
-            }
-        }
-
-        stage('Verify Extracted Files in Jenkins') {
-            steps {
-                script {
-                    echo ":open_file_folder: Listing extracted files in Jenkins workspace..."
-                }
-                sh 'ls -R ./output || echo ":rotating_light: No extracted files found!"'
-            }
-        }
-*/
         stage('SonarQube Analysis') {
             steps {
                 script {
@@ -86,7 +68,6 @@ pipeline {
                 }
             }
         }
-
 
         stage('Post Build Actions') {
             steps {
