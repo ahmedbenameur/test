@@ -8,13 +8,13 @@ pipeline {
        stage('Checkout Code') {
            steps {
                script {
-                   echo ":inbox_tray: Cloning repository: main"
+                   echo ":inbox_tray: Cloning repository: rsu_1"
                }
                git branch: 'rsu_1',
                url: 'https://github.com/ahmedbenameur/test.git'
            }
        }
-   }       
+        
       stage('Prepare SonarQube Scanner') {
            steps {
                script {
