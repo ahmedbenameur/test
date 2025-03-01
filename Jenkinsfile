@@ -13,7 +13,8 @@ pipeline {
                git branch: 'rsu_1',
                url: 'https://github.com/ahmedbenameur/test.git'
            }
-       }       
+       }
+   }       
       stage('Prepare SonarQube Scanner') {
            steps {
                script {
