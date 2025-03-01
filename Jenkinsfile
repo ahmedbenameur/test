@@ -15,7 +15,7 @@ pipeline {
            }
        }
         
-      stage('Prepare SonarQube Scanner') {
+       stage('Prepare SonarQube Scanner') {
            steps {
                script {
                    echo ":mag: Checking if SonarQube Scanner is installed..."
