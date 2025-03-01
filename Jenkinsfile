@@ -14,28 +14,28 @@ pipeline {
             }
         }
 
-        stage('Prepare SonarQube Scanner') {
-            steps {
-                script {
-                    echo ":mag: Checking if SonarQube Scanner is installed..."
-                }
-                sh '''
-                    if [ ! -d "sonar-scanner" ]; then
-                        echo ":rocket: Installing SonarQube Scanner..."
-                        if ! command -v wget &> /dev/null; then
-                            echo ":warning: wget not installed. Installing..."
-                            apt-get update && apt-get install -y wget || exit 1
-                        fi
-                        wget --quiet https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip -O sonar-scanner.zip
-                        unzip -q sonar-scanner.zip
-                        mv sonar-scanner-5.0.1.3006-linux sonar-scanner
-                        chmod +x sonar-scanner/bin/sonar-scanner
-                    else
-                        echo ":white_check_mark: SonarQube Scanner is already installed."
-                    fi
-                '''
-            }
+       stage('Prepare SonarQube Scanner') {
+    steps {
+        script {
+            echo ":mag: Checking if SonarQube Scanner is installed..."
         }
+        sh '''
+            if [ ! -d "sonar-scanner" ]; then
+                echo ":rocket: Installing SonarQube Scanner..."
+                if ! command -v wget &> /dev/null; then
+                    echo ":warning: wget not installed. Installing..."
+                    sudo apt-get update && sudo apt-get install -y wget || exit 1
+                fi
+                wget --quiet https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip -O sonar-scanner.zip
+                unzip -q sonar-scanner.zip
+                mv sonar-scanner-5.0.1.3006-linux sonar-scanner
+                chmod +x sonar-scanner/bin/sonar-scanner
+            else
+                echo ":white_check_mark: SonarQube Scanner is already installed."
+            fi
+        '''
+    }
+}
 
         stage('Create Folder') {
             steps {
