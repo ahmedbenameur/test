@@ -10,7 +10,7 @@ pipeline {
                script {
                    echo ":inbox_tray: Cloning repository: main"
                }
-               git branch: 'rsu_1,
+               git branch: 'rsu_1',
                url: 'https://github.com/ahmedbenameur/test.git'
            }
        }      /*  stage('Export & Upload JWA to Nexus (joget-repo)') {
