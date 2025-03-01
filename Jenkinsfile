@@ -65,8 +65,11 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-             // Run SonarQube Scanner with the correct environment
-                withEnv(["PATH+SCANNER=${WORKSPACE}/sonar-scanner-5.0.1.3006-linux/bin"]) {
+            steps {
+                script {
+                    echo ":mag: Running SonarQube analysis on Java, SQL, and JS files..."
+                }
+                withEnv(["PATH+SCANNER=${WORKSPACE}/sonar-scanner/bin"]) {
                     sh '''
                         sonar-scanner \
                           -Dsonar.projectKey=testtest \
@@ -79,9 +82,11 @@ pipeline {
                           -Dsonar.scm.disabled=true \
                           -Dsonar.sourceEncoding=UTF-8 \
                           -Dsonar.verbose=true
-                   
+                    '''
+                }
             }
         }
+
 
         stage('Post Build Actions') {
             steps {
