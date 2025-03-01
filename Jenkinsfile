@@ -65,14 +65,10 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
-            steps {
-                script {
-                    echo ":mag: Running SonarQube analysis on Java, SQL, and JS files..."
-                }
-                sh '''
-                    if [ -d "./output/java" ] || [ -d "./output/sql" ] || [ -d "./output/js" ]; then
-                        echo ":white_check_mark: Files found, proceeding with SonarQube analysis..."
-                        sonar-scanner/bin/sonar-scanner \
+             // Run SonarQube Scanner with the correct environment
+                withEnv(["PATH+SCANNER=${WORKSPACE}/sonar-scanner-5.0.1.3006-linux/bin"]) {
+                    sh '''
+                        sonar-scanner \
                           -Dsonar.projectKey=testtest \
                           -Dsonar.projectName=testtest \
                           -Dsonar.host.url="${SONAR_HOST_URL}" \
