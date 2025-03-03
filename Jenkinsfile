@@ -43,7 +43,8 @@ pipeline {
                     // Replace 'container_id' with the actual container ID or name
                     // Copy the .jwa file from the container to the host
                     sh '''
-                          curl -u admin:adminADMIN123 --upload-file ./rsu_1.jwa http://localhost:8082/repository/my-repo/rsu_1.jwa
+                       curl -u admin:adminADMIN123 --upload-file ./rsu_1.jwa http://localhost:8081/repository/my-repo/rsu_1.jwa
+
 
                     '''
                 }
