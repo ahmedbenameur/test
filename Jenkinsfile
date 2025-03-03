@@ -3,6 +3,10 @@ pipeline {
     environment {
         SONAR_HOST_URL = 'http://sonarqube:9000'
         SONAR_TOKEN = 'sqp_b1467b24b33dd569eb9ebccb9d4e24f55680e096'
+        NEXUS_URL = "http://172.26.0.2:8081"
+        NEXUS_USER = "admin"
+        NEXUS_PASS = "adminADMIN123"
+        REPO_NAME = "raw-joget"
     }
     stages {
         stage('Checkout Code') {
@@ -37,16 +41,37 @@ pipeline {
                 }
             }
         }*/
-            stage('push') {
+            stage('Create Nexus Repository') {
             steps {
                 script {
-                    // Replace 'container_id' with the actual container ID or name
-                    // Copy the .jwa file from the container to the host
-                    sh '''
-                       curl -u admin:adminADMIN123 --upload-file ./rsu_1.jwa http://172.26.0.2:8081/repository/JOGET/rsu_1.jwa
+                    def createRepoJson = """
+                    {
+                        "name": "${REPO_NAME}",
+                        "online": true,
+                        "storage": {
+                            "blobStoreName": "default",
+                            "strictContentTypeValidation": true,
+                            "writePolicy": "ALLOW"
+                        }
+                    }
+                    """
+                    sh """
+                    curl -X POST -u ${NEXUS_USER}:${NEXUS_PASS} \\
+                         -H "Content-Type: application/json" \\
+                         -d '${createRepoJson}' \\
+                         ${NEXUS_URL}/service/rest/v1/repositories/raw/hosted
+                    """
+                }
+            }
+        }
 
-
-                    '''
+        stage('Upload File to Nexus') {
+            steps {
+                script {
+                    sh """
+                    curl -u ${NEXUS_USER}:${NEXUS_PASS} --upload-file ./rsu_1.jwa \\
+                    ${NEXUS_URL}/repository/${REPO_NAME}/rsu_1.jwa
+                    """
                 }
             }
         }
