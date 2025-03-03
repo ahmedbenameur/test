@@ -32,7 +32,7 @@ pipeline {
                     // Replace 'container_id' with the actual container ID or name
                     // Copy the .jwa file from the container to the host
                     sh '''
-                    docker cp joget:/opt/joget/wflow/app_src/rsu/rsu_1.jwa .
+                    docker cp jogetapp:/opt/joget/wflow/app_src/rsu/rsu_1.jwa .
                     '''
                 }
             }
