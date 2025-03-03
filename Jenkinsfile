@@ -14,7 +14,7 @@ pipeline {
             }
         }
 
-        stage('Export Joget App as .jwa') {
+     /*   stage('Export Joget App as .jwa') {
             steps {
                 script {
                     // Replace 'app_x' with the actual app folder name, e.g. 'rsu_1'
@@ -36,8 +36,8 @@ pipeline {
                     '''
                 }
             }
-        }
-            stage('Copy .jwa to Host') {
+        }*/
+            stage('push') {
             steps {
                 script {
                     // Replace 'container_id' with the actual container ID or name
