@@ -14,13 +14,13 @@ pipeline {
             }
         }
 
-       stage('Export Joget App as .jwa') {
+        stage('Export Joget App as .jwa') {
             steps {
                 script {
                     // Replace 'app_x' with the actual app folder name, e.g. 'rsu_1'
                     sh '''
                     # Navigate to the app folder and create the .jwa file manually
-                    docker exec -it -u root jogetapp bash -c " cd /opt/joget/wflow/app_src/rsu/rsu_1 && zip -r /opt/joget/wflow/rsu_1.jwa *"
+                    docker exec -u root jogetapp bash -c "cd /opt/joget/wflow/app_src/rsu/rsu_1 && zip -r /opt/joget/wflow/rsu_1.jwa *"
                     '''
                 }
             }
