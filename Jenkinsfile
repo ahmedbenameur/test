@@ -63,7 +63,7 @@ pipeline {
                 # :quatre: Créer le dossier d'export dans Joget et fixer les permissions
                 docker exec -u root jogetapp bash -c "mkdir -p /opt/joget/export && chmod -R 777 /opt/joget/export"
                 # :cinq: Exporter l'application Joget en .jwa
-                EXPORT_URL="http://localhost:8083/jw/web/json/apps/export?appId=${APP_ID}"
+                EXPORT_URL="http://172.26.0.4:8080/jw/web/json/apps/export?appId=${APP_ID}"
                 echo ":outbox: Exporting from: $EXPORT_URL"
                 docker exec jogetapp bash -c "curl -u admin:admin -o /opt/joget/export/${JWA_FILE} '${EXPORT_URL}'"
                 # :six: Vérifier la taille du fichier exporté
