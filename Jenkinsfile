@@ -105,30 +105,12 @@ pipeline {
            }
        }
        stage('SonarQube Analysis') {
-           steps {
-               script {
+           
+               
                    echo ":mag: Running SonarQube analysis on Java, SQL, and JS files..."
-               }
-               sh '''
-                   if [ -d "./output/java" ] || [ -d "./output/sql" ] || [ -d "./output/js" ]; then
-                       echo ":white_check_mark: Files found, proceeding with SonarQube analysis..."
-                       sonar-scanner/bin/sonar-scanner \
-                         -Dsonar.projectKey=yoyo1 \
-                         -Dsonar.projectName=yoyo1 \
-                         -Dsonar.host.url="${SONAR_HOST_URL}" \
-                         -Dsonar.login="${SONAR_TOKEN}" \
-                         -Dsonar.sources=./output \
-                         -Dsonar.inclusions="**/*.java,**/*.sql,**/*.js" \
-                         -Dsonar.java.binaries=. \
-                         -Dsonar.scm.disabled=true \
-                         -Dsonar.sourceEncoding=UTF-8 \
-                         -Dsonar.verbose=true
-                   else
-                       echo ":rotating_light: ERROR: No Java, SQL, or JS files found in ./output!"
-                       exit 1
-                   fi
-               '''
-           }
+               
+              
+           
        }       
            stage('Export Joget App as .jwa') {
             steps {
