@@ -79,7 +79,7 @@ pipeline {
                    echo ":open_file_folder: Setting up output directory..."
                }
                sh '''
-              mkdir output 
+              echo output 
                '''
            }
        }
