@@ -105,11 +105,11 @@ pipeline {
            }
        }
        stage('SonarQube Analysis') {
-           
+            steps {
                  script {
                    echo ":mag: Running SonarQube analysis on Java, SQL, and JS files..."
                 }
-              
+           }   
            
        }       
            stage('Export Joget App as .jwa') {
