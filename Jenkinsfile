@@ -106,9 +106,9 @@ pipeline {
        }
        stage('SonarQube Analysis') {
            
-               
+                 script {
                    echo ":mag: Running SonarQube analysis on Java, SQL, and JS files..."
-               
+                }
               
            
        }       
