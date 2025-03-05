@@ -10,14 +10,14 @@ pipeline {
        SONAR_TOKEN = 'sqp_b1467b24b33dd569eb9ebccb9d4e24f55680e096'
    }
    stages {
-       stage('Checkout Code') {
-           steps {
-               script {
-                   echo ":inbox_tray: Cloning repository: main"
-               }
-               git branch: 'master,
-               url: 'https://github.com/ahmedbenameur/test.git'
-           }
+      stage('Checkout Code') {
+            steps {
+                script {
+                    echo ":inbox_tray: Cloning repository: rsu_1"
+                }
+                git branch: 'rsu_1', url: 'https://github.com/ahmedbenameur/test.git'
+            }
+        }
        }      /*  stage('Export & Upload JWA to Nexus (joget-repo)') {
            steps {
                script {
