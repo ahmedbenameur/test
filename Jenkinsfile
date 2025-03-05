@@ -7,7 +7,7 @@ pipeline {
         NEXUS_USER = "admin"
         NEXUS_PASS = "adminADMIN123"
         REPO_NAME = "raw-joget"
-       SONAR_TOKEN = 'sqp_b1467b24b33dd569eb9ebccb9d4e24f55680e096'
+      
    }
    stages {
       stage('Checkout Code') {
